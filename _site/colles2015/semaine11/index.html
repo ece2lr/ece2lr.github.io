@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ece 2 La Rochelle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
+
+    <!--- Fonts ------------------------------------------------------------------------------> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet"> 
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script type="text/javascript" async 
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="/reglages.css">
+
+  </head>
+
+  <body style= " min-height: 100% ">
+    <nav class="navbar">
+  
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#maNavbar">
+          <span class="sr-only">Ouvrir menu</span> <!-- Pour accessibilités screen-readers -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+        </button>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Ece 2 L-R</a>
+      </div>
+      <div class="container">
+        <ul class="nav navbar-nav">
+          
+            
+            
+              <li>
+                <a href="/utile">
+                  Utile
+                </a>
+              </li>
+            
+          
+            
+            
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+                  Maths
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  
+                    
+                    
+                    <li>
+                      <a href="/td">
+                        Td
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    <li>
+                      <a href="/cours">
+                        Cours
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    <li>
+                      <a href="/devoirs">
+                        Devoirs
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          
+            
+            
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+                  Colles
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  
+                    
+                    
+                    <li>
+                      <a href="/colles">
+                        Année courante
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    <li>
+                      <a href="/colles2015">
+                        Année 2015-2016
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          
+            
+            
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+                  Scilab
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  
+                    
+                    
+                    <li>
+                      <a href="/scilabTP">
+                        TP
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    <li>
+                      <a href="/scilabRef">
+                        Ref
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Programme de colles semaine 11</h1>
+      </div>
+
+       
+<h1 id="espaces-vectoriels-de-dimension-finie">Espaces vectoriels de dimension finie</h1>
+<p>: c’est une famille finie <span class="math inline">\(\mathcal B\)</span> à la fois</p>
+<ul>
+<li><p>libre <span><span><em>(pas de relation de dépendance linéaire non-triviale entre les vecteurs de <span class="math inline">\({\mathcal B}\)</span>)</em></span></span></p></li>
+<li><p>génératrice : <span class="math inline">\(\operatorname{Vect}({\mathcal B}) = E\)</span> <span><span><em>(tout entier)</em></span></span></p></li>
+</ul>
+<p>[Dimension finie] </p>
+<p>Un espace vectoriel <span class="math inline">\(E\)</span> est de dimension finie s’il admet une base finie</p>
+<p>Toutes les bases de <span class="math inline">\(E\)</span> ont alors le même nombre <span class="math inline">\(n \in {\mathbb{N}}\)</span> de vecteurs <span><span><em>(cardinal)</em></span></span></p>
+<p>Cet entier <span class="math inline">\(n\)</span> <span><span><em>(card. d’une base)</em></span></span> est la dimension de <span class="math inline">\(E\)</span> : notée <span class="math inline">\(\dim (E)\)</span></p>
+<p> </p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(n=\)</span></td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">3</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(E\)</span> est <span class="math inline">\({\scriptstyle \ldots}\)</span></td>
+<td align="left">le singleton <span class="math inline">\(\left \{{\vec}0 \right \}\)</span></td>
+<td align="left">une droite</td>
+<td align="left">un plan</td>
+<td align="left"><span><span>l’espace physique </span></span></td>
+</tr>
+</tbody>
+</table>
+<p>si <span class="math inline">\(F \subseteq E\)</span> avec <span class="math inline">\(E\)</span> de dim. finie, alors :</p>
+<ul>
+<li><p><span class="math inline">\(F\)</span> est de dim. finie aussi, et <span class="math inline">\(\dim (F) {\leqslant}\dim (E)\)</span></p></li>
+<li><p>il y a égalité <span><em>ssi</em> </span><span class="math inline">\(F = E\)</span> <span><span><em>(tout entier)</em></span></span> .</p></li>
+</ul>
+<p>de vecteurs <span class="math inline">\({\mathcal F}= ({\vec}v_1, \ldots, {\vec}v_p)\)</span> de <span class="math inline">\(E\)</span> où <span class="math inline">\(\dim (E) = n\)</span>.</p>
+<p>le rang de la fam. est la dimension du sous-ev engendré : <span class="math inline">\(\operatorname{rg}({\mathcal F}) = \dim (\operatorname{Vect}({\mathcal F}))\)</span>.</p>
+<p><span class="math inline">\(\operatorname{rg}({\mathcal F})=\)</span> <span><strong>nb de pivots</strong></span>, une fois la matrice de la fam. <span class="math inline">\({\mathcal F}\)</span> échelonnée.</p>
+<p>on a à la fois <span class="math inline">\(\operatorname{rg}({\mathcal F}) {\leqslant}p\)</span> <span><span><em>(nb de vecteurs)</em></span></span> et <span class="math inline">\(\operatorname{rg}({\mathcal F}) {\leqslant}n\)</span> <span><span><em>(dimension)</em></span></span></p>
+<p> </p>
+<ul>
+<li><p>La famille <span class="math inline">\({\mathcal F}\)</span> est <span><strong>libre</strong></span> <span><em>ssi</em> </span><span class="math inline">\(\operatorname{rg}({\mathcal F}) = p\)</span> <span><span><em>(nb de vecteurs)</em></span></span></p></li>
+<li><p>La famille <span class="math inline">\({\mathcal F}\)</span> est <span><strong>génératrice</strong></span> <span><em>ssi</em> </span><span class="math inline">\(\operatorname{rg}({\mathcal F}) = n\)</span> <span><span><em>(dimension)</em></span></span></p></li>
+<li><p>La famille <span class="math inline">\({\mathcal F}\)</span> est <span><strong>une base</strong></span> <span><em>ssi</em> </span><span class="math inline">\(p = n\)</span> <span><span><em>(bon nb de vecteurs)</em></span></span> <span><strong>et</strong></span> <span class="math inline">\(\operatorname{rg}({\mathcal F}) = p = n\)</span></p></li>
+<li><p><span><strong>Si</strong></span> <span class="math inline">\(p = n\)</span>, il suffit d’avoir <span class="math inline">\({\mathcal F}\)</span> libre <span><strong>ou</strong></span> génératrice pr déduire que <span class="math inline">\({\mathcal F}\)</span> est une <span><strong>base</strong></span></p></li>
+</ul>
+<h1 id="vocabulaire-et-représentation-des-applications-linéaires">Vocabulaire et représentation des applications linéaires</h1>
+<p> </p>
+<p>À chaque point, penser à l’interprétation pour <span class="math inline">\(E = {\mathbb{R}}^n\)</span>, <span class="math inline">\(F = {\mathbb{R}}^p\)</span> et <span class="math inline">\(f \leftrightarrow A \in {\mathcal M}_{p,n} ({\mathbb{R}})\)</span>.</p>
+<p>pour <span class="math inline">\(E,F\)</span> espaces vectoriels, <span class="math inline">\(f : E \to F\)</span> est linéaire si<br />
+<span class="math inline">\(\forall \lambda, \mu \in {\mathbb{R}}, \, {\vec}u, {\vec}v \in E, \ f (\lambda {\vec}u + \mu {\vec}v) = \lambda f ({\vec}u) + \mu f ({\vec}v) \)</span></p>
+<p>noté <span class="math inline">\(\mathcal L (E, F)\)</span>, c’est un espace vectoriel.</p>
+<p> </p>
+<p>Pour <span class="math inline">\(f \in \mathcal L (E, F)\)</span> et <span class="math inline">\(g \in \mathcal L (F, G)\)</span>, on a <span class="math inline">\(g \circ f \in \mathcal L (E, G)\)</span>, notion d’application inverse</p>
+<p>Si <span class="math inline">\(E = F\)</span>, on note <span class="math inline">\(\mathcal L (E)\)</span> l’espace des endomorphismes. On peut alors calculer des puissances.</p>
+<p>si <span class="math inline">\(f, g \in \mathcal L (E)\)</span> <span><strong>commutent</strong></span> (<span class="math inline">\(f\circ g = g \circ f\)</span>), alors <span class="math inline">\(\displaystyle(f + g)^n = \sum_{k=0}^{n} {n \choose k} f^{k} g^{n - k}\)</span>.</p>
+<p> </p>
+<p>Construction de la matrice <span class="math inline">\(\operatorname{Mat}_{{\mathcal B}_{E}, {\mathcal B}_{F}} (f)\)</span> pour <span class="math inline">\(f : (E,{\mathcal B}_E) \to (F,{\mathcal B}_F)\)</span> colonne par colonne</p>
+<p>pour un endom. <span class="math inline">\(f : E \to E\)</span> avec <span class="math inline">\({\mathcal B}, {\mathcal B}&#39;\)</span> deux bases.</p>
+<p>Pour <span class="math inline">\(P\)</span> la matrice de passage <span class="math inline">\({\mathcal B}\leadsto {\mathcal B}&#39;\)</span>, et avec <span class="math inline">\(M = \operatorname{Mat}_{{\mathcal B}} (f)  \)</span> et <span class="math inline">\(M&#39;= \operatorname{Mat}_{{\mathcal B}&#39;} (f) \)</span> on a : <span class="math inline">\(M = PM&#39;P^{-1}\)</span>.</p>
+<p> </p>
+<p>Si l’on arrive à écrire <span class="math inline">\(M = P D P^{-1}\)</span>, avec <span class="math inline">\(D\)</span> diagonale, on a <span><strong>diagonalisé</strong></span> <span class="math inline">\(M\)</span>.</p>
+<p>Exemple de l’application au calcul des puissances de <span class="math inline">\(M\)</span>.</p>
+<p><span><span><em>(On verra bientôt comment trouver la matrice diagonale <span class="math inline">\(D\)</span> et la matrice de passage <span class="math inline">\(P\)</span>)</em></span></span></p>
+<p><span class="math inline">\(\vcenter{\hbox{ \includegraphics[width=.5\columnwidth]{./flocons/FloconChaosSansAxes.pdf} }}\)</span> <span class="math inline">\(\vcenter{\hbox{ \includegraphics[width=.5\columnwidth]{./flocons/floconDeterministe.pdf} }}\)</span></p>
+<p><span><span><em>(... et bonne année 2016 !)</em></span></span></p>
+ 
+ 
+
+    </div>
+
+  </body>
+
+</html>
