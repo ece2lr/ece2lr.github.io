@@ -176,34 +176,58 @@ MathJax.Hub.Config({
     <span class="list-group-item">
       <h1 id="remise-en-route-fonctions-et-intégrales" class="unnumbered">Remise en route : fonctions et intégrales</h1>
 <h2 id="pratique-de-la-dérivation" class="unnumbered">Pratique de la dérivation</h2>
-<p>recherche de <span>valeurs interdites </span>, composabilité</p>
-<p><span><span><em>(notamment)</em></span></span> <span class="math inline">\(
+<dl>
+<dt>Domaines de définition</dt>
+<dd><p>recherche de <span>valeurs interdites </span>, composabilité</p>
+</dd>
+<dt>Formules de dérivation</dt>
+<dd><p><span><span><em>(not)</em></span></span> <span class="math inline">\(
         \left ( \operatorname{e}^{u} \right )&#39; = u&#39; \operatorname{e}^{u}, \ 
     \left ( u^n \right )&#39; = n u&#39; u^{n-1}, \
     \left ( \ln(u) \right )&#39; = \frac{u&#39;}{u} 
     \)</span></p>
-<p><span class="math inline">\({\mathcal C}^0, {\mathcal C}^1, {\mathcal C}^2 , , {\mathcal C}^\infty\)</span></p>
-<p><span><span><em>(on n’oublie pas que <span class="math inline">\(f^{(n)}\)</span> doit être continue !)</em></span></span></p>
-<p>Fonctions de référence et opérations usuelles</p>
-<p>par récurrence</p>
+</dd>
+<dt>Classe des fonctions numériques</dt>
+<dd><p><span class="math inline">\({\mathcal C}^0, {\mathcal C}^1, {\mathcal C}^2 , {\scriptstyle \ldots}, {\mathcal C}^\infty\)</span></p>
+<ul>
+<li><p><em>Définition :</em> <span><span><em>(on n’oublie pas que <span class="math inline">\(f^{(n)}\)</span> doit être continue !)</em></span></span></p></li>
+<li><p><em>Justifications de routine :</em> Fonctions de référence et opérations usuelles</p></li>
+<li><p><em>Calculs simples de dérivées successives :</em> par récurrence</p></li>
+</ul>
+</dd>
+</dl>
 <h2 id="études-de-fonctions" class="unnumbered">Études de fonctions</h2>
-<p>Recherche d’extrema, et application aux inégalités</p>
-<p> <br />
+<dl>
+<dt>Tableaux de variations</dt>
+<dd><p>Recherche d’extrema, et application aux inégalités</p>
+</dd>
+<dt>Représentations graphiques de fonctions simples</dt>
+<dd><p> <br />
 On commence par tracer</p>
-<p>des tangentes bien choisies <span><span><em>(horizontales, d’inflexion, en <span class="math inline">\(0\)</span> <span><span class="math inline">\({\scriptstyle \ldots}\)</span></span>)</em></span></span><br />
+<p>des tangentes bien choisies <span><span><em>(horizontales, d’inflexion, en <span class="math inline">\(0\)</span> <span>…</span>)</em></span></span><br />
 les asymptotes</p>
-<p><span><span><em>(on en reparlera un peu plus tard cette année)</em></span></span></p>
-<p>étude de continuité de fonctions définies <span>par des cas </span></p>
-<p>notamment : taux d’accroissement et nombre dérivé</p>
-<p>principe et applications directes</p>
-<p>savoir l’illustrer graphiquement <span><span><em>(voir fiche-<span style="font-variant: small-caps;">Td</span>)</em></span></span></p>
-<p> <br />
+</dd>
+<dt>Vocabulaire des limites</dt>
+<dd><p><span><span><em>(on en reparlera un peu plus tard cette année)</em></span></span></p>
+<ul>
+<li><p><em>Problèmes de recollement :</em> étude de continuité de fonctions définies <span>par des cas </span></p></li>
+<li><p><em>Formes indéterminées :</em> notamment : taux d’accroissement et nombre dérivé</p></li>
+<li><p><em>Croissances comparées :</em> principe et applications directes</p></li>
+</ul>
+</dd>
+<dt>Théorème des valeurs intermédiaires</dt>
+<dd><p>savoir l’illustrer graphiquement <span><span><em>(voir fiche-<span style="font-variant: small-caps;">Td</span>)</em></span></span></p>
+</dd>
+<dt>Théorème de la bijection</dt>
+<dd><p> <br />
 interprétation en terme d’équation numérique <span class="math inline">\(f(x) = y_0\)</span> <span><span><em>(<span class="math inline">\(\leadsto\)</span> existence et unicité de la solution )</em></span></span></p>
+</dd>
+</dl>
 <h2 id="pratique-de-la-démonstration-par-récurrence" class="unnumbered">Pratique de la démonstration par récurrence</h2>
 <dl>
 <dt>Énoncé de l’hypothèse de récurrence</dt>
 <dd><p> <br />
-Pour <span class="math inline">\(n \in {\mathbb{N}}\)</span>, on considère l’hypothèse de récurrence : <span class="math inline">\(\text}} \qquad (H_n)\)</span></p>
+Pour <span class="math inline">\(n \in {\mathbb{N}}\)</span>, on considère l’hypothèse de récurrence : <span><span><em>(énoncé de l’hyp. de rec.)</em></span></span> <span class="math inline">\((H_n)\)</span></p>
 </dd>
 <dt>Initialisation</dt>
 <dd><p> <br />
@@ -217,7 +241,7 @@ On suppose <span class="math inline">\((H_n)\)</span> et on montre <span class="
 <dt>Conclusion</dt>
 <dd><p> <br />
 L’hypothèse de récurrence <span class="math inline">\((H_n)\)</span> est <span><strong>initialisée</strong></span> et <span><strong>héréditaire</strong></span>.<br />
-Par récurrence, on a donc : <span class="math inline">\(\forall n \in {\mathbb{N}}, \quad \text}} \qquad (H_n)\)</span></p>
+Par récurrence, on a donc : <span class="math inline">\(\forall n \in {\mathbb{N}},\)</span> <span><span><em>(énoncé de l’hyp. de rec.)</em></span></span> <span class="math inline">\((H_n)\)</span></p>
 </dd>
 </dl>
 <h2 id="pratique-de-lintégration" class="unnumbered">Pratique de l’intégration</h2>
