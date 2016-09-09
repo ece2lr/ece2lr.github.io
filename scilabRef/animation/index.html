@@ -447,12 +447,13 @@ soit ici $ y = 2 a (x - a) + a^2 = 2ax - a^2$.</p>
 <figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">//cosmetique </span>
 <span class="k">function</span><span class="w"> </span><span class="nf">cosmetiqueAxes</span><span class="p">(</span>axes<span class="p">)</span><span class="w"></span>
 <span class="w">  </span><span class="n">axes</span><span class="p">.</span><span class="n">isoview</span> <span class="p">=</span> <span class="s">&quot;on&quot;</span>
-<span class="c1">//=====================================================================</span>
-<span class="c1">// empécher les nouveaux dessins de décaler les bornes des axes      //</span>
-<span class="c1">// très utile pour les images animées                                //</span>
-  <span class="n">axes</span><span class="p">.</span><span class="n">auto_scale</span> <span class="p">=</span> <span class="s">&quot;off&quot;</span>                                            <span class="c1">//</span>
-  <span class="n">axes</span><span class="p">.</span><span class="n">data_bounds</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="c1">// à adapter                     //</span>
-<span class="c1">//=====================================================================</span>
+<span class="c1">//===============================================</span>
+<span class="c1">// empécher les nouveaux dessins               //</span>
+<span class="c1">// de décaler les bornes des axes              //</span>
+<span class="c1">// très utile pour les images animées          //</span>
+  <span class="n">axes</span><span class="p">.</span><span class="n">auto_scale</span> <span class="p">=</span> <span class="s">&quot;off&quot;</span>                      <span class="c1">//</span>
+  <span class="n">axes</span><span class="p">.</span><span class="n">data_bounds</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="c1">// adapter //</span>
+<span class="c1">//===============================================</span>
   <span class="n">axes</span><span class="p">.</span><span class="n">x_location</span> <span class="p">=</span> <span class="s">&quot;origin&quot;</span>
   <span class="n">axes</span><span class="p">.</span><span class="n">y_location</span> <span class="p">=</span> <span class="s">&quot;origin&quot;</span>
 <span class="k">endfunction</span> 

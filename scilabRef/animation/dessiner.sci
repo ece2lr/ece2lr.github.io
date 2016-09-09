@@ -55,13 +55,13 @@ endfunction
 //cosmetique 
 function cosmetiqueAxes(axes)
   axes.isoview = "on"
-//================================================
-// empécher les nouveaux dessins de             //
-// décaler les bornes des axes                  //
-// très utile pour les images animées           //
-  axes.auto_scale = "off"                       //
-  axes.data_bounds = [-1, -1; 1, 1] // adapter  //
-//================================================
+//===============================================
+// empécher les nouveaux dessins               //
+// de décaler les bornes des axes              //
+// très utile pour les images animées          //
+  axes.auto_scale = "off"                      //
+  axes.data_bounds = [-1, -1; 1, 1] // adapter //
+//===============================================
   axes.x_location = "origin"
   axes.y_location = "origin"
 endfunction 
