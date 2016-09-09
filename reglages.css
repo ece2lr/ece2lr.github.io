@@ -4,6 +4,8 @@ dd { margin-left: 40px; vertical-align: bottom; }
 
 p { vertical-align: bottom; }
 
+code, kbd, pre, samp { font-family: 'Source Code Pro', monospace; }
+
 .list-group-item { padding: 10px 15px; }
 
 body { padding-top: 0px; font-family: 'Gentium Book Basic', serif; font-size: 20px; }
