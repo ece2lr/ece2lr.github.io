@@ -30,6 +30,38 @@ MathJax.Hub.Config({
   </head>
 
   <body style= " min-height: 100% ">
+    <script>
+$( document ).ready(
+function ()
+{
+$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+$prePartialCollapse.css("height","200px") ;
+$prePartialCollapse.addClass("plie") ; 
+}
+) ; 
+function cedric(identifiant) {
+$lePre = $("#"+identifiant+" > figure > pre ") ; 
+if ($lePre.hasClass("plie"))
+{
+$lePre.css("height","auto") ;
+$lePre.removeClass("plie") ; 
+}
+else
+{
+$lePre.css("height","200px") ;
+$lePre.addClass("plie") ; 
+}
+}
+</script>
+
+
+    
+
+
+
+
+
     <nav class="navbar">
   
   <div class="navbar navbar-default navbar-fixed-top">
@@ -50,7 +82,7 @@ MathJax.Hub.Config({
             
               <li>
                 <a href="/utile">
-                  Utile
+                  Documents et liens utiles
                 </a>
               </li>
             
@@ -59,32 +91,35 @@ MathJax.Hub.Config({
             
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
-                  Maths
+                  Mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   
+                    
                     
                     
                     <li>
                       <a href="/td">
-                        Td
+                        Travaux dirigés
                       </a>
                     </li>
                   
+                    
                     
                     
                     <li>
                       <a href="/cours">
-                        Cours
+                        Extraits du cours
                       </a>
                     </li>
                   
+                    
                     
                     
                     <li>
                       <a href="/devoirs">
-                        Devoirs
+                        Les devoirs de maths (Dl, Ds)
                       </a>
                     </li>
                   
@@ -96,24 +131,26 @@ MathJax.Hub.Config({
             
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
-                  Colles
+                  Colles de mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   
+                    
                     
                     
                     <li>
                       <a href="/colles">
-                        Année courante
+                        Colles année courante
                       </a>
                     </li>
                   
                     
                     
+                    
                     <li>
                       <a href="/colles2015">
-                        Année 2015-2016
+                        Colles année 2015-2016
                       </a>
                     </li>
                   
@@ -125,24 +162,26 @@ MathJax.Hub.Config({
             
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
-                  Scilab
+                  Modélisation en Scilab
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   
                     
                     
+                    
                     <li>
                       <a href="/scilabTP">
-                        TP
+                        TP de Scilab
                       </a>
                     </li>
                   
                     
                     
+                    
                     <li>
                       <a href="/scilabRef">
-                        Ref
+                        Fiches de référence Scilab
                       </a>
                     </li>
                   
@@ -169,8 +208,8 @@ Fiches de référence sur Scilab
 </div>
 
 <ul>
-  <li><a href="/scilabRef/arbGraph/">L’arborescence graphique de Scilab</a>2016-08-18 00:00:00 +0200</li>
-  <li><a href="/scilabRef/animation/">Réaliser de petites animations graphiques avec Scilab</a>2016-08-19 00:00:00 +0200</li>
+  <li><a href="/scilabRef/arbGraph/">L’arborescence graphique de Scilab</a> <em>le  18 Aug 2016</em></li>
+  <li><a href="/scilabRef/animation/">Réaliser de petites animations graphiques avec Scilab</a> <em>le  19 Aug 2016</em></li>
 </ul>
  
 

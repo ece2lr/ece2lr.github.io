@@ -30,6 +30,38 @@ MathJax.Hub.Config({
   </head>
 
   <body style= " min-height: 100% ">
+    <script>
+$( document ).ready(
+function ()
+{
+$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+$prePartialCollapse.css("height","200px") ;
+$prePartialCollapse.addClass("plie") ; 
+}
+) ; 
+function cedric(identifiant) {
+$lePre = $("#"+identifiant+" > figure > pre ") ; 
+if ($lePre.hasClass("plie"))
+{
+$lePre.css("height","auto") ;
+$lePre.removeClass("plie") ; 
+}
+else
+{
+$lePre.css("height","200px") ;
+$lePre.addClass("plie") ; 
+}
+}
+</script>
+
+
+    
+
+
+
+
+
     <nav class="navbar">
   
   <div class="navbar navbar-default navbar-fixed-top">
@@ -50,7 +82,7 @@ MathJax.Hub.Config({
             
               <li>
                 <a href="/utile">
-                  Utile
+                  Documents et liens utiles
                 </a>
               </li>
             
@@ -59,32 +91,35 @@ MathJax.Hub.Config({
             
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
-                  Maths
+                  Mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   
+                    
                     
                     
                     <li>
                       <a href="/td">
-                        Td
+                        Travaux dirigés
                       </a>
                     </li>
                   
+                    
                     
                     
                     <li>
                       <a href="/cours">
-                        Cours
+                        Extraits du cours
                       </a>
                     </li>
                   
+                    
                     
                     
                     <li>
                       <a href="/devoirs">
-                        Devoirs
+                        Les devoirs de maths (Dl, Ds)
                       </a>
                     </li>
                   
@@ -96,24 +131,26 @@ MathJax.Hub.Config({
             
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
-                  Colles
+                  Colles de mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   
+                    
                     
                     
                     <li>
                       <a href="/colles">
-                        Année courante
+                        Colles année courante
                       </a>
                     </li>
                   
                     
                     
+                    
                     <li>
                       <a href="/colles2015">
-                        Année 2015-2016
+                        Colles année 2015-2016
                       </a>
                     </li>
                   
@@ -125,24 +162,26 @@ MathJax.Hub.Config({
             
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
-                  Scilab
+                  Modélisation en Scilab
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
                   
                     
                     
+                    
                     <li>
                       <a href="/scilabTP">
-                        TP
+                        TP de Scilab
                       </a>
                     </li>
                   
                     
                     
+                    
                     <li>
                       <a href="/scilabRef">
-                        Ref
+                        Fiches de référence Scilab
                       </a>
                     </li>
                   
@@ -164,27 +203,59 @@ MathJax.Hub.Config({
 
       <article class="page">
 
-  <h1>Sommaire du cours</h1>
+  <h1>Extraits du cours</h1>
 
   <div class="entry">
-    <p>il y a 6 grands chapitres dans le <a href="/utile/progMathEce2.pdf"><span class="glyphicon glyphicon-level-up"></span>programme de deuxième année</a></p>
+    <ul>
+  <li><a href="dichotomie.pdf">La méthode de dichotomie (PDF PAS FINI)</a> : un algorithme permettant de trouver où une fonction continue s’annule</li>
+</ul>
 
-<h2 id="premier-semestre">Premier semestre</h2>
+<p><a href="./index/dichotomie.sce">Le fichier <code>dichotomie.sce</code></a></p>
 
-<h3 id="langage-de-lalgbre-linaire-rduction-des-endomorphismes-et-matrices-carres">Langage de l’algèbre linéaire, réduction des endomorphismes et matrices carrées</h3>
+<h2 id="dichotomiesce">dichotomie.sce</h2>
 
-<h3 id="suites-et-sries-fonctions-et-intgrales">Suites et séries, fonctions et intégrales</h3>
+<div id="snippetdichotomiesce">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="cedric('snippetdichotomiesce')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  
 
-<h3 id="variables-alatoires-discrtes--couples-et-suites-alatoires">Variables aléatoires discrètes : couples et suites aléatoires</h3>
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">// Constantes : données du problème</span>
+<span class="n">GAUCHE_INIT</span> <span class="p">=</span> <span class="mi">0</span>                       <span class="c1">// encadrement initial de la racine</span>
+<span class="n">DROITE_INIT</span> <span class="p">=</span> <span class="mi">2</span>
+<span class="n">PRECISION</span>   <span class="p">=</span> <span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>                 <span class="c1">// précision souhaitée</span>
+<span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span>x<span class="p">)</span><span class="w">                     </span><span class="c1">// fonction étudiée</span>
+  <span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="o">.^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="k">endfunction</span>
 
-<h2 id="second-semestre">Second semestre</h2>
+<span class="c1">// initialisation</span>
+<span class="n">gauche</span> <span class="p">=</span> <span class="n">GAUCHE_INIT</span>
+<span class="n">droite</span> <span class="p">=</span> <span class="n">DROITE_INIT</span>
 
-<h3 id="fonctions-numriques-de-deux-variables">Fonctions numériques de deux variables</h3>
+<span class="c1">// la boucle de l&#39;algorithme</span>
+<span class="k">while</span> <span class="p">(</span> <span class="n">gauche</span> <span class="o">-</span> <span class="n">droite</span> <span class="o">&gt;</span> <span class="n">PRECISION</span> <span class="p">)</span> <span class="c1">// jusqu&#39;à avoir la bonne précision</span>
+  <span class="n">milieu</span> <span class="p">=</span> <span class="p">(</span><span class="n">gauche</span><span class="o">+</span><span class="n">droite</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">f</span><span class="p">(</span><span class="n">gauche</span><span class="p">)</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">milieu</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>  
+    <span class="nb">then</span> <span class="n">gauche</span> <span class="p">=</span> <span class="n">milieu</span>              <span class="c1">// si la racine est à droite de `milieu`</span>
+    <span class="k">else</span> <span class="n">droite</span> <span class="p">=</span> <span class="n">milieu</span>              <span class="c1">// si la racine est à gauche de `milieu`</span>
+  <span class="k">end</span> <span class="c1">// fin du `if`</span>
+<span class="k">end</span>   <span class="c1">// fin du `while`</span>
 
-<h3 id="variables-alatoires-relles">Variables aléatoires réelles</h3>
+<span class="c1">// affichage</span>
+<span class="nb">disp</span> <span class="p">(</span><span class="s">&quot;Approximation par défaut de sqrt(2) à 10^(-3) près :&quot;</span><span class="p">)</span>
+<span class="nb">disp</span> <span class="p">(</span><span class="n">gauche</span><span class="p">)</span></code></pre></figure>
+ 
+</div>
 
-<h3 id="convergences-et-approximations-en-probabilits--estimation-paramtrique">Convergences et approximations en probabilités : estimation paramétrique</h3>
+<h2 id="voir-aussi">Voir aussi</h2>
 
+<p><a href="programme">Les 6 chapitres du  programme Ece 2</a></p>
 
   </div>
 </article>
