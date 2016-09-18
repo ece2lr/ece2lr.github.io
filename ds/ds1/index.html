@@ -201,19 +201,42 @@ $lePre.addClass("plie") ;
         <h1></h1>
       </div>
 
-      <article class="page">
+      <!-- 
+replier/déplier partiellement les <pre> qui contiennent un boutonPartialCollapse mis par l'include includeScilabExtrait.html
+-->
+<!-- 
+<script>
+$( document ).ready(
+function ()
+{
+$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+$prePartialCollapse.css("height","200px") ;
+$prePartialCollapse.addClass("plie") ; 
+}
+) ; 
+function cedric(identifiant) {
+$lePre = $("#"+identifiant+" > figure > pre ") ; 
+if ($lePre.hasClass("plie"))
+{
+$lePre.css("height","auto") ;
+$lePre.removeClass("plie") ; 
+}
+else
+{
+$lePre.css("height","200px") ;
+$lePre.addClass("plie") ; 
+}
+}
+</script>
+-->
 
-  <h1>Devoirs</h1>
 
-  <div class="entry">
-    <h2 id="dl">DL</h2>
+<p><a href="/ds/ds1/enonce.pdf">Énoncé</a> <img src="/ds/ds1/fonctionF.png" alt="le graphe de $f$ (exercice 2)" /></p>
 
-<ol>
-  <li><a href="./dl1/enonce.pdf">Variations</a> <img src="./dl1/grapheF1.png" alt="le graphe de f1" /></li>
-</ol>
+<p><a href="/ds/ds1/correc.pdf">Corrigé</a></p>
 
-  </div>
-</article>
+
  
 
     </div>

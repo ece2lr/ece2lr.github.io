@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ece 2 La Rochelle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
+
+    <!--- Fonts ------------------------------------------------------------------------------> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script type="text/javascript" async 
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="/reglages.css">
+
+  </head>
+
+  <body style= " min-height: 100% ">
+    <script>
+$( document ).ready(
+function ()
+{
+$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+$prePartialCollapse.css("height","200px") ;
+$prePartialCollapse.addClass("plie") ; 
+}
+) ; 
+function cedric(identifiant) {
+$lePre = $("#"+identifiant+" > figure > pre ") ; 
+if ($lePre.hasClass("plie"))
+{
+$lePre.css("height","auto") ;
+$lePre.removeClass("plie") ; 
+}
+else
+{
+$lePre.css("height","200px") ;
+$lePre.addClass("plie") ; 
+}
+}
+</script>
+
+
+    
+
+
+
+
+
+    <nav class="navbar">
+  
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#maNavbar">
+          <span class="sr-only">Ouvrir menu</span> <!-- Pour accessibilités screen-readers -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+        </button>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Ece 2 L-R</a>
+      </div>
+      <div class="container">
+        <ul class="nav navbar-nav">
+          
+            
+            
+              <li>
+                <a href="/utile">
+                  Documents et liens utiles
+                </a>
+              </li>
+            
+          
+            
+            
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+                  Mathématiques
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  
+                    
+                    
+                    
+                    <li>
+                      <a href="/td">
+                        Travaux dirigés
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    
+                    <li>
+                      <a href="/cours">
+                        Extraits du cours
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    
+                    <li>
+                      <a href="/devoirs">
+                        Les devoirs de maths (Dl, Ds)
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          
+            
+            
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+                  Colles de mathématiques
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  
+                    
+                    
+                    
+                    <li>
+                      <a href="/colles">
+                        Colles année courante
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    
+                    <li>
+                      <a href="/colles2015">
+                        Colles année 2015-2016
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          
+            
+            
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+                  Modélisation en Scilab
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  
+                    
+                    
+                    
+                    <li>
+                      <a href="/scilabTP">
+                        TP de Scilab
+                      </a>
+                    </li>
+                  
+                    
+                    
+                    
+                    <li>
+                      <a href="/scilabRef">
+                        Fiches de référence Scilab
+                      </a>
+                    </li>
+                  
+                </ul>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container">
+      <div class="page-header">
+        <h1>Ergonomie et *workflow* sous Scilab</h1>
+      </div>
+
+      <!-- 
+replier/déplier partiellement les <pre> qui contiennent un boutonPartialCollapse mis par l'include includeScilabExtrait.html
+-->
+<!-- 
+<script>
+$( document ).ready(
+function ()
+{
+$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+$prePartialCollapse.css("height","200px") ;
+$prePartialCollapse.addClass("plie") ; 
+}
+) ; 
+function cedric(identifiant) {
+$lePre = $("#"+identifiant+" > figure > pre ") ; 
+if ($lePre.hasClass("plie"))
+{
+$lePre.css("height","auto") ;
+$lePre.removeClass("plie") ; 
+}
+else
+{
+$lePre.css("height","200px") ;
+$lePre.addClass("plie") ; 
+}
+}
+</script>
+-->
+
+
+<script>
+$(document).ready(function() {
+  $("#toc").append('<h2 class="titreToc">Table des matières</h2>') ; 
+  $("#toc").append('<div class="list-group table-of-contents">') ; 
+  $("h2").each(function(i) {
+    var $current = $(this);
+    if (!$current.hasClass("titreToc"))
+    {
+    $current.attr("id", "title" + i);
+
+    $('#toc').append('<a class="list-group-item" id="link' + i + '" href="#title' + i + '" title="' + $current.attr('tagName') + '">' + $current.text() + '</a>');
+    $current[0].innerHTML = $current[0].innerHTML + '<div class="btn-group btn-group-sm pull-right">\n   <a href="#" class="btn btn-primary">Remonter</a>\n </div>' ; 
+    }
+  });
+
+  $("#toc").append('</div>'); 
+});
+</script>
+
+<div class="row">
+  <div class="col-lg-6 col-md-8 col-sm-12">
+    <div id="toc"></div>
+  </div>
+</div>
+
+<h2 id="raccourcis-clavier-usuels">Raccourcis clavier usuels</h2>
+
+<h3 id="raccourcis-environnement">Raccourcis environnement</h3>
+
+<p>L’environnement graphique de votre système d’exploitation vient probablement avec les raccourcis suivants :</p>
+
+<ul>
+  <li><code>Ctrl+Tab</code> et <code>Shift+Ctrl+Tab</code> pour passer à la fenêtre suivante/précédente.</li>
+  <li><code>Alt+F4</code> pour fermer une fenêtre.</li>
+</ul>
+
+<h3 id="raccourcis-clavier-pour-diteurs-de-texte">Raccourcis clavier pour éditeurs de texte</h3>
+
+<p>Les raccourcis suivants fonctionnent pour la plupart des éditeurs de texte (sauv vim !)</p>
+
+<ul>
+  <li><code>Ctrl+Z</code> pour annuler la dernière action et <code>Ctrl+Y</code> pour dés-annuler (avec vim : <code>u</code> et <code>Ctrl-R</code>)</li>
+  <li><code>Ctrl+S</code> pour sauvegarder le fichier courant. (avec vim : <code>:w&lt;CR&gt;</code>)</li>
+  <li><code>Ctrl+Droite</code> et <code>Ctrl+Gauche</code> pour sauter au début du mot suivant/précédent (avec vim : <code>w</code> et <code>b</code> en mode normal)</li>
+  <li><code>Orig.</code> et <code>Fin</code> pour sauter au début/à la fin de ligne en cours (avec vim : <code>0</code> ou <code>^</code> et <code>$</code> en mode normal)</li>
+  <li>Maintenir <code>Shift</code> pour sélectionner du texte au clavier. Compatible avec les mouvements du curseur ci-dessus (avec vim : <code>v</code> en mode normal)</li>
+  <li><code>Ctrl+V</code> pour <strong>copier</strong> le texte sélectionné (avec vim : <code>y</code>)</li>
+  <li><code>Ctrl+X</code> pour <strong>couper</strong> le texte sélectionné (avec vim : <code>x</code>)</li>
+  <li><code>Ctrl+C</code> pour <strong>coller</strong> le texte dans le presse-papier (avec vim : <code>p</code>)</li>
+</ul>
+
+<h2 id="utilisation-de-scinotes">Utilisation de Scinotes</h2>
+
+<h3 id="fonctionnalits">Fonctionnalités</h3>
+
+<p>Le petit <em>ide</em> <code>scinotes</code> inclus dans Scilab propose les deux fonctionnalités suivants :</p>
+
+<ul>
+  <li>coloration syntaxique</li>
+  <li>indentation automatique</li>
+</ul>
+
+<h3 id="commenter-du-code">Commenter du code</h3>
+
+<p>Scilab ne lit rien de ce qui suit un double backslash <code>\\</code>, et jusqu’à la fin de la ligne en cours.</p>
+
+<p>Quelques utilisations :</p>
+
+<ul>
+  <li>Explications du code pour une lecture ultérieure</li>
+  <li>Exemples d’applications d’une fonction</li>
+  <li>Désactivation d’une partie du programme sans avoir à effacer</li>
+</ul>
+
+<h3 id="raccourcis-clavier-pour-scinotes">Raccourcis clavier pour Scinotes</h3>
+
+<p>En plus des raccourcis-clavier usuels ci-dessus, sont très utiles :</p>
+
+<ul>
+  <li><code>F5</code> pour sauvegarder et lancer le script actuel en mode silencieux.<br />
+Équivaut à la commande : <code>exec("/mon/dossier/actuel/monScript.sce",-1)</code></li>
+  <li><code>Ctrl+D</code> pour commenter les lignes sélectionnées. <br />
+Équivaut à insérer <code>//</code> au début de chaque ligne de la sélection</li>
+  <li><code>Shift+Ctrl+D</code> pour décommenter les lignes sélectionnées.<br />
+Équivaut à supprimer <code>//</code> au début de chaque ligne de la sélection</li>
+  <li><code>Ctrl+I</code> pour corriger automatiquement l’indentation des lignes sélectionnées
+(avec vim : <code>=</code> en mode sélection)</li>
+</ul>
+
+<h2 id="la-console">La console</h2>
+
+<h3 id="obtenir-de-laide">Obtenir de l’aide</h3>
+
+<p>On peut obtenir de l’aide sur une commande avec <code>help</code>, avec</p>
+
+<ul>
+  <li>une description de la commande,</li>
+  <li>sa syntaxe,</li>
+  <li>des exemples d’utilisation.</li>
+</ul>
+
+<h3 id="autocompltion-et-historique-dans-la-console">Autocomplétion et historique dans la console</h3>
+
+<p>En plus des raccourcis-clavier usuels ci-dessus, sont très utiles :</p>
+
+<ul>
+  <li><code>Haut</code> et <code>Bas</code> pour parcourir les commandes tapées précédemment.<br />
+<strong>Attention :</strong>
+La recherche se fait à partir du texte à gauche de la position actuelle du curseur !</li>
+  <li><code>Tab</code> pour autocompléter les noms de commandes ou de variables existantes (<code>Shift+Tab</code> pour l’autre sens)</li>
+</ul>
+
+<h3 id="gestion-des-affichages">Gestion des affichages</h3>
+
+<p>On peut faire des calculs en mode muet en terminant une ligne par un point-virgule (<code>;</code>) : pratique pour les grands vecteurs.</p>
+
+<h2 id="window-tiling-dans-linterface-graphique-de-scilab"><em>“Window tiling”</em> dans l’interface graphique de Scilab</h2>
+
+<p>On peut accrocher 
+les fenêtres d’une session Scilab au sein de la fenêtre principale.</p>
+
+<p>C’est souvent une bonne idée de le faire pour la fenêtre d’affichage graphique 
+<code>Graphic window number 0</code> afin de l’avoir toujours sous les yeux.</p>
+
+<p>Si l’espace à l’écran fait défaut, on pourra envisager les sacrifices suivants :</p>
+
+<ul>
+  <li>du navigateur de fichiers de Scilab,</li>
+  <li>de l’explorateur de variables,</li>
+  <li>de l’historique des commandes,</li>
+</ul>
+
+<p>pour ne garder à l’écran que la console, l’éditeur <code>scinotes</code> et la fenêtre graphique.</p>
+
+<h3 id="voir-aussi">Voir aussi</h3>
+
+<p>Je conseille à tout le monde de consulter <a href="https://fr.wikipedia.org/wiki/Tableau_de_raccourcis_clavier#Interagir_avec_le_texte">ce petit tableau très utile</a></p>
+
+ 
+
+    </div>
+
+  </body>
+
+</html>
