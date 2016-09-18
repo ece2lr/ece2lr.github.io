@@ -227,10 +227,10 @@ $lePre.addClass("plie") ;
   
 
 <figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">// Constantes : données du problème</span>
-<span class="n">GAUCHE_INIT</span> <span class="p">=</span> <span class="mi">0</span>                            <span class="c1">// encadrement initial de la racine</span>
+<span class="n">GAUCHE_INIT</span> <span class="p">=</span> <span class="mi">0</span>                           <span class="c1">// encadrement initial de la racine</span>
 <span class="n">DROITE_INIT</span> <span class="p">=</span> <span class="mi">2</span>
-<span class="n">PRECISION</span>   <span class="p">=</span> <span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>                      <span class="c1">// précision souhaitée</span>
-<span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span>x<span class="p">)</span><span class="w">                          </span><span class="c1">// fonction étudiée</span>
+<span class="n">PRECISION</span>   <span class="p">=</span> <span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>                     <span class="c1">// précision souhaitée</span>
+<span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span>x<span class="p">)</span><span class="w">                         </span><span class="c1">// fonction étudiée</span>
   <span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="o">.^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
 <span class="k">endfunction</span>
 
@@ -239,12 +239,12 @@ $lePre.addClass("plie") ;
 <span class="n">droite</span> <span class="p">=</span> <span class="n">DROITE_INIT</span>
 
 <span class="c1">// la boucle de l&#39;algorithme</span>
-<span class="k">while</span> <span class="p">(</span> <span class="n">droite</span> <span class="o">-</span> <span class="n">gauche</span> <span class="o">&gt;</span> <span class="n">PRECISION</span> <span class="p">)</span>      <span class="c1">// jusqu&#39;à avoir la bonne précision</span>
+<span class="k">while</span> <span class="p">(</span> <span class="n">droite</span> <span class="o">-</span> <span class="n">gauche</span> <span class="o">&gt;</span> <span class="n">PRECISION</span> <span class="p">)</span>     <span class="c1">// jusqu&#39;à avoir la bonne précision</span>
   <span class="n">milieu</span> <span class="p">=</span> <span class="p">(</span><span class="n">gauche</span><span class="o">+</span><span class="n">droite</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-  <span class="k">if</span> <span class="p">(</span> <span class="n">f</span><span class="p">(</span><span class="n">gauche</span><span class="p">)</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">milieu</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="nb">then</span> 
-    <span class="n">gauche</span> <span class="p">=</span> <span class="n">milieu</span>                        <span class="c1">// si la racine est à droite de `milieu`</span>
-  <span class="k">else</span> 
-    <span class="n">droite</span> <span class="p">=</span> <span class="n">milieu</span>                        <span class="c1">// si la racine est à gauche de `milieu`</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">f</span><span class="p">(</span><span class="n">gauche</span><span class="p">)</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">milieu</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="nb">then</span>   <span class="c1">// si changement de signe à gauche </span>
+    <span class="n">droite</span> <span class="p">=</span> <span class="n">milieu</span>                       <span class="c1">//   zoomer à gauche</span>
+  <span class="k">else</span>                                    <span class="c1">// sinon</span>
+    <span class="n">gauche</span> <span class="p">=</span> <span class="n">milieu</span>                       <span class="c1">//   zoomer à droite</span>
   <span class="k">end</span> <span class="c1">// fin du `if`</span>
 <span class="k">end</span>   <span class="c1">// fin du `while`</span>
 
