@@ -208,6 +208,110 @@ $lePre.addClass("plie") ;
   
   
   
+  <div class="list-group-item">Semaine 3
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
+      <a href="/collesPdf/semaine3.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div class="aCollapser list-group-item">
+      <h1 id="études-de-suites-récurrentes">Études de suites récurrentes</h1>
+<h2 id="généralités">Généralités</h2>
+<dl>
+<dt>Sens de variations</dt>
+<dd><p>Critère <span class="math inline">\(u_{n + 1 } - u_n\)</span> et <span class="math inline">\(\frac{u_{n + 1 }}{u_n}\)</span> (mais attention aux signes !)</p>
+</dd>
+<dt>Notion de bornes, de limites</dt>
+<dd><p>Formes indéterminées</p>
+</dd>
+<dt>Suites de références</dt>
+<dd><p>Arithmétiques, géométriques, arith-géométriques, leurs limites</p>
+</dd>
+</dl>
+<h2 id="les-3-critères-de-convergence">Les 3 critères de convergence</h2>
+<dl>
+<dt>Théorème de la limite monotone</dt>
+<dd><p>une suite croissante majorée converge.</p>
+</dd>
+<dt>Théorème d’encadrement</dt>
+<dd><p>(<em>th. des gendarmes</em>). Aussi la version <span class="math inline">\(|u_n - \ell| {\leqslant}\epsilon_n \to 0 \)</span>.</p>
+</dd>
+<dt>Théorème des suites adjacentes.</dt>
+<dd><p>Exemple d’application à <span class="math inline">\(\sum_{k {\geqslant}1} \frac{1}{k^2}\)</span></p>
+</dd>
+</dl>
+<h2 id="études-de-suites-définies-par-récurrence">Études de suites définies par récurrence</h2>
+<p>[Rappels semaine dernière]</p>
+<ul>
+<li><p>Transformation de relations <span class="math inline">\(f(x)     \longleftrightarrow  x\)</span> en relations <span class="math inline">\(u_{n+1}  \longleftrightarrow u_n\)</span><br />
+<span><span><em>(<span><strong>exemple :</strong></span> <span><span class="math inline">\(\forall x, \ f(x) {\leqslant}x\)</span> </span> implique <span><span class="math inline">\(\forall n , \ u_{n+1} {\leqslant}u_n\)</span> </span>, soit <span class="math inline">\((u_n)\)</span> décroissante)</em></span></span></p></li>
+<li><p>Exploitation de telles relations par récurrence<br />
+<span><span><em>(<span><strong>exemple :</strong></span> <span><span class="math inline">\(\forall x, \  0 {\leqslant}f(x) {\leqslant}\frac{x}{2}\)</span> </span> implique <span><span class="math inline">\(\forall n , \ 0 {\leqslant}u_{n} {\leqslant}\frac{u_0}{2^n}\)</span> </span>)</em></span></span></p></li>
+</ul>
+<dl>
+<dt>Théorème du point fixe</dt>
+<dd><p>Pour <span class="math inline">\((u_n)\)</span> définie par <span class="math inline">\(u_{n + 1 } = f(u_n)\)</span>, avec <span class="math inline">\(f\)</span> continue, <span><strong>si</strong></span> <span class="math inline">\((u_n)\)</span> converge, c’est vers un point fixe de <span class="math inline">\(f\)</span> : <span class="math inline">\(f (\ell) = \ell\)</span>. Étude graphique.</p>
+</dd>
+<dt>Inégalité des accroissements finis</dt>
+<dd><p> <br />
+Si on a <span class="math inline">\(k &gt; 0\)</span> tel que <span class="math inline">\(\forall x \in I, \ {\left\lvert f&#39;(x)\right\rvert} {\leqslant}k\)</span>,</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">alors</td>
+<td align="left"><span class="math inline">\(\displaystyle {\left\lvert \frac{f(b) - f(a)}{b - a}\right\rvert}\)</span></td>
+<td align="left"><span class="math inline">\({\leqslant}k\)</span> <span><span><em>(<span class="math inline">\(a, b \in I\)</span>)</em></span></span></td>
+</tr>
+<tr class="even">
+<td align="left">soit</td>
+<td align="left"><span class="math inline">\({\left\lvert f(b) - f(a)\right\rvert}\)</span></td>
+<td align="left"><span class="math inline">\({\leqslant}k {\left\lvert b - a\right\rvert}\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Application aux suites récurrentes</dt>
+<dd><p> <br />
+Pour <span class="math inline">\(a = \ell\)</span> <span><span><em>(un point fixe : <span class="math inline">\(f(\ell) = \ell\)</span>)</em></span></span>, et <span class="math inline">\(b = u_n\)</span>, on a <span><span><em>(<span class="math inline">\(k\)</span> comme ci-dessus)</em></span></span> <span class="math inline">\({\left\lvert u_{n+1} - \ell\right\rvert} {\leqslant}k {\left\lvert u_{n} - \ell\right\rvert}\phantom{t}\)</span>.</p>
+<p>On trouve alors par récurrence : <span class="math inline">\({\left\lvert u_{n} - \ell\right\rvert} {\leqslant}k^n {\left\lvert u_0 - \ell\right\rvert}\)</span>.<br />
+<span><span><em>(on parle de <span><strong>vitesse de convergence géométrique</strong></span> de raison <span class="math inline">\(k &lt;1\)</span>)</em></span></span></p>
+</dd>
+</dl>
+<h1 id="relations-o-négligeable-devant-et-sim-équivalent-à">Relations <span class="math inline">\(o\)</span> (négligeable devant) et <span class="math inline">\(\sim\)</span> (équivalent à)</h1>
+<p><span><span><em>(On part toujours des définitions !)</em></span></span></p>
+<dl>
+<dt>Négligeabilité</dt>
+<dd><p>Notation <span class="math inline">\(u_n = o (v_n)\)</span> si <span class="math inline">\(\frac{u_n}{v_n} \longrightarrow 0 \)</span>.</p>
+</dd>
+<dt>Pour les suites géométriques</dt>
+<dd><p>pour <span class="math inline">\(0 &lt; q &lt;  r\)</span>, on a <span class="math inline">\(q^n = o \left ( r^n \right )\)</span>.</p>
+</dd>
+<dt>Pour les suites puissances</dt>
+<dd><p>pour <span class="math inline">\(a &lt; b\)</span>, on a <span class="math inline">\(n^a = o \left ( n^b \right )\)</span>.</p>
+</dd>
+<dt>Exemples d’applications des croissances comparées</dt>
+<dd><p> </p>
+<p><span class="math inline">\(
+      \begin{array}{lllr@{\ }l}
+        \bullet &amp; \forall a &gt; 0,    &amp;                                     &amp; \quad \ln(n) &amp; = o \left ( n^a \right ). \\
+        \bullet &amp; \forall a \in {\mathbb{R}}, &amp; \ \forall q &gt; 1,                    &amp; \quad n^a    &amp; = o \left ( q^n \right ). \\
+            &amp;                   &amp; \ \forall q \in {\mathopen{]}0\,;1\mathclose{[}} &amp; \quad q^n    &amp; = o \left ( n^a \right ). \\
+      \end{array}
+      \)</span></p>
+</dd>
+<dt>Équivalence</dt>
+<dd><p>Notation <span class="math inline">\(u_n \sim (v_n)\)</span> si <span class="math inline">\(\frac{u_n}{v_n} \longrightarrow 1 \)</span>.</p>
+</dd>
+<dt>Exemples de recherche de terme prépondérant</dt>
+<dd><p>dans des expressions usuelles et obtention d’équivalents.</p>
+</dd>
+</dl>
+
+  </div>
+  
+  
+  
+  
   <div class="list-group-item">Semaine 2
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
