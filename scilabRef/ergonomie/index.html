@@ -166,8 +166,8 @@ $(document).ready(function() {
 <p>L’environnement graphique de votre système d’exploitation vient probablement avec les raccourcis suivants :</p>
 
 <ul>
-  <li><code>Ctrl+Tab</code> et <code>Shift+Ctrl+Tab</code> pour passer à la fenêtre suivante/précédente.</li>
-  <li><code>Alt+F4</code> pour fermer une fenêtre.</li>
+  <li><kbd>Alt</kbd>+<kbd>Tab</kbd> et <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>Tab</kbd> pour passer à la fenêtre suivante/précédente.</li>
+  <li><kbd>Alt</kbd>+<kbd>F4</kbd> pour fermer une fenêtre.</li>
 </ul>
 
 <h3 id="raccourcis-clavier-pour-diteurs-de-texte">Raccourcis clavier pour éditeurs de texte</h3>
@@ -175,25 +175,26 @@ $(document).ready(function() {
 <p>Les raccourcis suivants fonctionnent pour la plupart des éditeurs de texte (sauv vim !)</p>
 
 <ul>
-  <li><code>Ctrl+Z</code> pour annuler la dernière action et <code>Ctrl+Y</code> pour dés-annuler (avec vim : <code>u</code> et <code>Ctrl-R</code>)</li>
-  <li><code>Ctrl+S</code> pour sauvegarder le fichier courant. (avec vim : <code>:w&lt;CR&gt;</code>)</li>
-  <li><code>Ctrl+Droite</code> et <code>Ctrl+Gauche</code> pour sauter au début du mot suivant/précédent (avec vim : <code>w</code> et <code>b</code> en mode normal)</li>
-  <li><code>Orig.</code> et <code>Fin</code> pour sauter au début/à la fin de ligne en cours (avec vim : <code>0</code> ou <code>^</code> et <code>$</code> en mode normal)</li>
-  <li>Maintenir <code>Shift</code> pour sélectionner du texte au clavier. Compatible avec les mouvements du curseur ci-dessus (avec vim : <code>v</code> en mode normal)</li>
-  <li><code>Ctrl+V</code> pour <strong>copier</strong> le texte sélectionné (avec vim : <code>y</code>)</li>
-  <li><code>Ctrl+X</code> pour <strong>couper</strong> le texte sélectionné (avec vim : <code>x</code>)</li>
-  <li><code>Ctrl+C</code> pour <strong>coller</strong> le texte dans le presse-papier (avec vim : <code>p</code>)</li>
+  <li><kbd>Ctrl</kbd>+<kbd>Z</kbd> pour annuler la dernière action et <kbd>Ctrl</kbd>+<kbd>Y</kbd> pour dés-annuler (avec vim : <code>u</code> et <code>Ctrl-R</code>)</li>
+  <li><kbd>Ctrl</kbd>+<kbd>S</kbd> pour sauvegarder le fichier courant. (avec vim : <code>:w&lt;CR&gt;</code>)</li>
+  <li><kbd>Ctrl</kbd>+<kbd>Droite</kbd> et <kbd>Ctrl</kbd>+<kbd>Gauche</kbd> pour sauter au début du mot suivant/précédent (avec vim : <code>w</code> et <code>b</code> en mode normal)</li>
+  <li><kbd>Orig.</kbd> et <kbd>Fin</kbd> pour sauter au début/à la fin de ligne en cours (avec vim : <code>0</code> ou <code>^</code> et <code>$</code> en mode normal)</li>
+  <li>Maintenir <kbd>Shift</kbd> pour sélectionner du texte au clavier. Compatible avec les mouvements du curseur ci-dessus (avec vim : <code>v</code> en mode normal)</li>
+  <li><kbd>Ctrl</kbd>+<kbd>V</kbd> pour <strong>copier</strong> le texte sélectionné (avec vim : <code>y</code>)</li>
+  <li><kbd>Ctrl</kbd>+<kbd>X</kbd> pour <strong>couper</strong> le texte sélectionné (avec vim : <code>x</code>)</li>
+  <li><kbd>Ctrl</kbd>+<kbd>C</kbd> pour <strong>coller</strong> le texte dans le presse-papier (avec vim : <code>p</code>)</li>
 </ul>
 
 <h2 id="utilisation-de-scinotes">Utilisation de Scinotes</h2>
 
 <h3 id="fonctionnalits">Fonctionnalités</h3>
 
-<p>Le petit <em>ide</em> <code>scinotes</code> inclus dans Scilab propose les deux fonctionnalités suivants :</p>
+<p>Le petit <em>ide</em> <code>scinotes</code> inclus dans Scilab propose les fonctionnalités suivantes :</p>
 
 <ul>
   <li>coloration syntaxique</li>
   <li>indentation automatique</li>
+  <li>complétion automatique de quelques mots-clés : <code>for</code>, <code>function</code>…</li>
 </ul>
 
 <h3 id="commenter-du-code">Commenter du code</h3>
@@ -213,13 +214,13 @@ $(document).ready(function() {
 <p>En plus des raccourcis-clavier usuels ci-dessus, sont très utiles :</p>
 
 <ul>
-  <li><code>F5</code> pour sauvegarder et lancer le script actuel en mode silencieux.<br />
+  <li><kbd>F5</kbd> pour sauvegarder et lancer le script actuel en mode silencieux.<br />
 Équivaut à la commande : <code>exec("/mon/dossier/actuel/monScript.sce",-1)</code></li>
-  <li><code>Ctrl+D</code> pour commenter les lignes sélectionnées. <br />
+  <li><kbd>Ctrl</kbd>+<kbd>D</kbd> pour commenter les lignes sélectionnées. <br />
 Équivaut à insérer <code>//</code> au début de chaque ligne de la sélection</li>
-  <li><code>Shift+Ctrl+D</code> pour décommenter les lignes sélectionnées.<br />
+  <li><kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>D</kbd> pour décommenter les lignes sélectionnées.<br />
 Équivaut à supprimer <code>//</code> au début de chaque ligne de la sélection</li>
-  <li><code>Ctrl+I</code> pour corriger automatiquement l’indentation des lignes sélectionnées
+  <li><kbd>Ctrl</kbd>+<kbd>I</kbd> pour corriger automatiquement l’indentation des lignes sélectionnées
 (avec vim : <code>=</code> en mode sélection)</li>
 </ul>
 
@@ -240,10 +241,10 @@ $(document).ready(function() {
 <p>En plus des raccourcis-clavier usuels ci-dessus, sont très utiles :</p>
 
 <ul>
-  <li><code>Haut</code> et <code>Bas</code> pour parcourir les commandes tapées précédemment.<br />
+  <li><kbd>Haut</kbd> et <kbd>Bas</kbd> pour parcourir les commandes tapées précédemment.<br />
 <strong>Attention :</strong>
 La recherche se fait à partir du texte à gauche de la position actuelle du curseur !</li>
-  <li><code>Tab</code> pour autocompléter les noms de commandes ou de variables existantes (<code>Shift+Tab</code> pour l’autre sens)</li>
+  <li><kbd>Tab</kbd> pour autocompléter les noms de commandes ou de variables existantes (<kbd>Shift</kbd>+<kbd>Tab</kbd> pour l’autre sens)</li>
 </ul>
 
 <h3 id="gestion-des-affichages">Gestion des affichages</h3>
