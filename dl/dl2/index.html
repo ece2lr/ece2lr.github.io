@@ -130,35 +130,87 @@ function deplierReplier(identifiant) {
 
 
     <div class="container">
-<article class="page">
+<!-- 
+replier/déplier partiellement les <pre> qui contiennent un boutonPartialCollapse mis par l'include includeScilabExtrait.html
+-->
+<!-- 
+<script>
+$( document ).ready(
+function ()
+{
+$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+$prePartialCollapse.css("height","200px") ;
+$prePartialCollapse.addClass("plie") ; 
+}
+) ; 
+function cedric(identifiant) {
+$lePre = $("#"+identifiant+" > figure > pre ") ; 
+if ($lePre.hasClass("plie"))
+{
+$lePre.css("height","auto") ;
+$lePre.removeClass("plie") ; 
+}
+else
+{
+$lePre.css("height","200px") ;
+$lePre.addClass("plie") ; 
+}
+}
+</script>
+-->
 
-  <h1>Sommaire du cours</h1>
-
-  <div class="entry">
-    <p>il y a 6 grands chapitres dans le <a href="/utile/progMathEce2.pdf"><span class="glyphicon glyphicon-level-up"></span>programme de deuxième année</a></p>
-
-<h2 id="premier-semestre">Premier semestre</h2>
-
-<h3 id="langage-de-lalgbre-linaire-rduction-des-endomorphismes-et-matrices-carres">Langage de l’algèbre linéaire, réduction des endomorphismes et matrices carrées</h3>
-
-<h3 id="suites-et-sries-fonctions-et-intgrales">Suites et séries, fonctions et intégrales</h3>
 
 <ul>
-  <li>La  méthode de dichotomie</li>
+  <li><a href="/dl/dl2/enonce.pdf">Énoncé</a></li>
+  <li><a href="approxAlphaACompleter.sce" download="">Le fichier <code>approxAlphaACompleter.sce</code></a></li>
 </ul>
 
-<h3 id="variables-alatoires-discrtes--couples-et-suites-alatoires">Variables aléatoires discrètes : couples et suites aléatoires</h3>
+<!--
+- [Corrigé](/dl/dl2/correc.pdf)
+-->
 
-<h2 id="second-semestre">Second semestre</h2>
+<h3 id="approxalphaacompletersce">approxAlphaACompleter.sce</h3>
 
-<h3 id="fonctions-numriques-de-deux-variables">Fonctions numériques de deux variables</h3>
-
-<h3 id="variables-alatoires-relles">Variables aléatoires réelles</h3>
-
-<h3 id="convergences-et-approximations-en-probabilits--estimation-paramtrique">Convergences et approximations en probabilités : estimation paramétrique</h3>
-
+<div id="snippetapproxAlphaACompletersce">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetapproxAlphaACompletersce')">
+    Déplier/Replier le snippet
+  </button>
   </div>
-</article>
+</div>
+  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">// CONSTANTES : les données du problème</span>
+<span class="n">U0</span> <span class="p">=</span> <span class="mi">1</span>
+<span class="n">ESTIM_ERREUR_INIT</span> <span class="p">=</span> <span class="no">%e</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">PRECISION</span> <span class="p">=</span> <span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span>x<span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span> <span class="p">=</span> <span class="n">___</span>                       <span class="c1">// &lt;- compléter cette ligne SUR VOTRE COPIE</span>
+<span class="k">endfunction</span>                     <span class="c1">//               (sans recopier les autres)</span>
+
+<span class="c1">// initialisation</span>
+<span class="n">u</span> <span class="p">=</span> <span class="n">U0</span>
+<span class="n">estimErreur</span> <span class="p">=</span> <span class="n">ESTIM_ERREUR_INIT</span>
+
+<span class="c1">// la boucle </span>
+<span class="k">while</span> <span class="p">(</span><span class="n">estimErreur</span> <span class="o">&gt;</span> <span class="n">PRECISION</span><span class="p">)</span>
+  <span class="n">u</span> <span class="p">=</span> <span class="n">___</span>                       <span class="c1">// &lt;- compléter cette ligne SUR VOTRE COPIE</span>
+  <span class="n">estimErreur</span> <span class="p">=</span> <span class="n">estimErreur</span> <span class="o">/</span> <span class="mi">2</span> <span class="c1">// l&#39;erreur estimée est géométrique de raison 1/2</span>
+<span class="k">end</span>                             <span class="c1">//                             (voir question 7.)</span>
+
+<span class="c1">// affichage du résultat</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&quot;approximation de alpha à 10^(-3) près :&quot;</span><span class="p">)</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>     <span class="c1">// retourne 1.7268515 -&gt; comment vérifier ce résultat ?</span></code></pre></figure>
+ 
+</div>
+
+<p><img src="/dl/dl2/dynamique.png" alt="La dynamique de la suite (un)" /></p>
+
+
  
     </div>
   </body>

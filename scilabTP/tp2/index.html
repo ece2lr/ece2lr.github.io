@@ -30,40 +30,38 @@ MathJax.Hub.Config({
   </head>
 
   <body style= " min-height: 100% ">
-    <script>
+<script>
 $( document ).ready(
-function ()
-{
-$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
-$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
-$prePartialCollapse.css("height","200px") ;
-$prePartialCollapse.addClass("plie") ; 
-}
+  function ()
+  {
+    $divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+    $prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+    $prePartialCollapse.css("height","200px") ;
+    $prePartialCollapse.addClass("plie") ; 
+  }
 ) ; 
-function cedric(identifiant) {
-$lePre = $("#"+identifiant+" > figure > pre ") ; 
-if ($lePre.hasClass("plie"))
-{
-$lePre.css("height","auto") ;
-$lePre.removeClass("plie") ; 
-}
-else
-{
-$lePre.css("height","200px") ;
-$lePre.addClass("plie") ; 
-}
+function deplierReplier(identifiant) {
+  $lePre = $("#"+identifiant+" > figure > pre ") ; 
+  if ($lePre.hasClass("plie"))
+  {
+    $lePre.css("height","auto") ;
+    $lePre.removeClass("plie") ; 
+  }
+  else
+  {
+    $lePre.css("height","200px") ;
+    $lePre.addClass("plie") ; 
+  }
 }
 </script>
 
 
-    
 
 
 
 
 
-    <nav class="navbar">
-  
+<nav class="navbar">
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -77,118 +75,53 @@ $lePre.addClass("plie") ;
       </div>
       <div class="container">
         <ul class="nav navbar-nav">
-          
-            
-            
-              <li>
-                <a href="/utile">
-                  Documents et liens utiles
-                </a>
-              </li>
-            
-          
-            
-            
+            <li><a href="/utile">Documents et liens utiles</a>
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/td">
-                        Travaux dirigés
-                      </a>
+                      <a href="/td">Travaux dirigés</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/cours">
-                        Extraits du cours
-                      </a>
+                      <a href="/cours">Extraits du cours</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/devoirs">
-                        Les devoirs de maths (Dl, Ds)
-                      </a>
+                      <a href="/devoirs">Les devoirs de maths (Dl, Ds)</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
-            
-            
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Colles de mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/colles">
-                        Colles année courante
-                      </a>
+                      <a href="/colles">Colles année courante</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/colles2015">
-                        Colles année 2015-2016
-                      </a>
+                      <a href="/colles2015">Colles année 2015-2016</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
-            
-            
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Modélisation en Scilab
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/scilabTP">
-                        TP de Scilab
-                      </a>
+                      <a href="/scilabTP">TP de Scilab</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/scilabRef">
-                        Fiches de référence Scilab
-                      </a>
+                      <a href="/scilabRef">Fiches de référence Scilab</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
+            </li>
         </ul>
       </div>
     </div>
@@ -197,41 +130,10 @@ $lePre.addClass("plie") ;
 
 
     <div class="container">
-      <div class="page-header">
-        <h1>TP Scilab 2. Statistiques univariées</h1>
-      </div>
 
-      <!-- 
-replier/déplier partiellement les <pre> qui contiennent un boutonPartialCollapse mis par l'include includeScilabExtrait.html
--->
-<!-- 
-<script>
-$( document ).ready(
-function ()
-{
-$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
-$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
-$prePartialCollapse.css("height","200px") ;
-$prePartialCollapse.addClass("plie") ; 
-}
-) ; 
-function cedric(identifiant) {
-$lePre = $("#"+identifiant+" > figure > pre ") ; 
-if ($lePre.hasClass("plie"))
-{
-$lePre.css("height","auto") ;
-$lePre.removeClass("plie") ; 
-}
-else
-{
-$lePre.css("height","200px") ;
-$lePre.addClass("plie") ; 
-}
-}
-</script>
--->
-
-
+<div class="page-header">
+  <h1>Statistiques univariées</h1>
+</div>
 <script>
 $(document).ready(function() {
   $("#toc").append('<h2 class="titreToc">Table des matières</h2>') ; 
@@ -261,17 +163,17 @@ $(document).ready(function() {
 
 <ul>
   <li><a href="tp2.pdf">l’énoncé du tp</a></li>
-  <li><a href="densGauss.sci">Le fichier <code>densGauss.sci</code></a></li>
+  <li><a href="densGauss.sci" download="">Le fichier <code>densGauss.sci</code></a></li>
 </ul>
 
-<h2 id="densgausssci">densGauss.sci</h2>
+<h3 id="densgausssci">densGauss.sci</h3>
 
 <div id="snippetdensGausssci">
   <span class="aremplir"></span>
   
 <div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
   <div class="btn-group btn-group-sm" role="group">
-  <button class="btn btn-default" onclick="cedric('snippetdensGausssci')">
+  <button class="btn btn-default" onclick="deplierReplier('snippetdensGausssci')">
     Déplier/Replier le snippet
   </button>
   </div>
@@ -300,11 +202,215 @@ $(document).ready(function() {
  
 </div>
 
+<h2 id="correction-du-tp">Correction du TP</h2>
+
+<ul>
+  <li>
+    <p><a href="exercice1.sce" download="">le fichier <code>exercice1.sce</code></a></p>
+  </li>
+  <li>
+    <p><a href="exercice2Correc.sce" download="">le fichier <code>exercice2Correc.sce</code></a></p>
+  </li>
+  <li>
+    <p><a href="exercice3Correc.sce" download="">le fichier <code>exercice3Correc.sce</code></a></p>
+  </li>
+  <li>
+    <p><a href="exercice4.sce" download="">le fichier <code>exercice4.sce</code></a></p>
+  </li>
+</ul>
+
+<h3 id="exercice1sce">exercice1.sce</h3>
+
+<div id="snippetexercice1sce">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetexercice1sce')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">// Requiert les fonctions définies dans &quot;densGauss.sci&quot;</span>
+
+<span class="c1">// On trace la gaussienne N(0,1)</span>
+<span class="n">XMIN</span> <span class="p">=</span> <span class="o">-</span><span class="mi">4</span>
+<span class="n">XMAX</span> <span class="p">=</span> <span class="mi">4</span>
+<span class="n">x</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="n">XMIN</span><span class="p">,</span><span class="n">XMAX</span><span class="p">)</span>   <span class="c1">// 100 points</span>
+<span class="c1">//y = densNCR(x)          // la gaussienne centrée réduite</span>
+<span class="c1">//y = densGauss(2, 1, x)  // la gaussienne question 2</span>
+<span class="n">y</span> <span class="p">=</span> <span class="n">densGauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>    <span class="c1">// la gaussienne question 3</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span></code></pre></figure>
+ 
+</div>
+
+<h3 id="exercice2correcsce">exercice2Correc.sce</h3>
+
+<div id="snippetexercice2Correcsce">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetexercice2Correcsce')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">// // ceci est un commentaire : pas lu par Scilab </span>
+<span class="c1">// </span>
+<span class="k">function</span><span class="w"> </span><span class="nf">question1</span><span class="p">()</span><span class="w"></span>
+<span class="c1">// test de la fonction binomial(p,n)</span>
+  <span class="n">p</span> <span class="p">=</span> <span class="p">.</span><span class="mi">3</span>
+  <span class="n">n</span> <span class="p">=</span> <span class="mi">10</span> 
+  
+  <span class="n">y</span> <span class="p">=</span> <span class="nb">binomial</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1">// les proba en ordonnées</span>
+  <span class="n">x</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="mi">10</span>           <span class="c1">// les valeurs en abscisses</span>
+   
+  <span class="c1">// On trace la distribution de probabilités binomiale</span>
+  <span class="n">clf</span><span class="p">()</span>
+  <span class="c1">//              // au choix parmi : </span>
+  <span class="c1">//plot(x, y)    // version reliée</span>
+  <span class="c1">//plot2d2(x, y) // test version escaliers</span>
+  <span class="nb">plot2d3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>   <span class="c1">// test version batons</span>
+<span class="k">endfunction</span>
+<span class="c1">//// décommenter la ligne ci-dessous pour </span>
+<span class="c1">//// appeler la fonction et exécuter le code </span>
+<span class="c1">//question1()             // &lt;- à décommenter </span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">question2</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="k">function</span> <span class="n">probas</span> <span class="p">=</span> <span class="n">loiUnif</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="c1">// ones(lignes, colonnes) retourne une matrice remplie de 1</span>
+    <span class="n">probas</span> <span class="p">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="nb">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">endfunction</span>
+
+  <span class="n">n</span> <span class="p">=</span> <span class="mi">6</span>
+  <span class="n">x</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="n">n</span>
+  <span class="n">y</span> <span class="p">=</span> <span class="n">loiUnif</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="n">clf</span><span class="p">()</span>
+  <span class="nb">plot2d3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="k">endfunction</span>
+<span class="c1">//question2()</span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">question3</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="k">function</span> <span class="n">probas</span> <span class="p">=</span> <span class="n">loiGeom</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">k</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+    <span class="n">q</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">p</span>
+    <span class="n">probas</span> <span class="p">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="o">.^</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
+  <span class="k">endfunction</span>
+  
+  <span class="n">n</span> <span class="p">=</span> <span class="mi">20</span>
+  <span class="n">x</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+  <span class="n">p</span> <span class="p">=</span> <span class="mf">0.3</span>
+  <span class="n">y</span> <span class="p">=</span> <span class="n">loiGeom</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+  <span class="c1">//clf()</span>
+  <span class="nb">plot2d2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="k">endfunction</span>
+<span class="c1">//question3()</span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">question4</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="k">function</span> <span class="n">probas</span> <span class="p">=</span> <span class="n">loiPois</span><span class="p">(</span><span class="n">lambda</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">k</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="n">n</span>
+    <span class="n">probas</span> <span class="p">=</span> <span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">lambda</span><span class="p">)</span> <span class="o">*</span> <span class="n">lambda</span><span class="o">.^</span><span class="n">k</span> <span class="o">./</span> <span class="nb">factorial</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+  <span class="k">endfunction</span>
+
+  <span class="c1">// version fixe sur la fenêtre graphique 0</span>
+  <span class="n">n</span> <span class="p">=</span> <span class="mi">20</span>
+  <span class="n">x</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="n">n</span>
+  <span class="n">lambda</span> <span class="p">=</span> <span class="mi">5</span>
+  <span class="n">y</span> <span class="p">=</span> <span class="n">loiPois</span><span class="p">(</span><span class="n">lambda</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+  <span class="n">clf</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="nb">plot2d2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+  <span class="c1">// version multiple sur la fenêtre graphique 1</span>
+  <span class="n">clf</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">lambda</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="mi">30</span>
+    <span class="c1">// tracer la loi de Poisson de param lambda entre 0 et 40</span>
+    <span class="n">x</span> <span class="p">=</span> <span class="mi">0</span><span class="p">:</span><span class="mi">40</span>
+    <span class="n">y</span> <span class="p">=</span> <span class="n">loiPois</span><span class="p">(</span><span class="n">lambda</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">endfunction</span> 
+<span class="c1">//question4()</span></code></pre></figure>
+ 
+</div>
+
+<h3 id="exercice3correcsce">exercice3Correc.sce</h3>
+
+<div id="snippetexercice3Correcsce">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetexercice3Correcsce')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="n">x</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="c1">// vérifier à la main combien de valeurs de x sont dans chaque classe</span>
+
+<span class="c1">// on fait deux  histogrammes selon 5 classes délimitées par : </span>
+<span class="c1">// 0.0, 0.2, 0.4, 0.6, 0.8, 1.0</span>
+
+<span class="n">clf</span><span class="p">()</span>
+<span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>      <span class="c1">// dessin à gauche</span>
+<span class="n">histplot</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>     <span class="c1">// histogramme approx. uniforme</span>
+
+<span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>      <span class="c1">// dessin à droite</span>
+<span class="n">histplot</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">x</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span> <span class="c1">// histogramme approx. décroissant</span></code></pre></figure>
+ 
+</div>
+
+<h3 id="exercice4sce">exercice4.sce</h3>
+
+<div id="snippetexercice4sce">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetexercice4sce')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="n">LIGNES</span> <span class="p">=</span> <span class="mi">1</span>
+<span class="n">COLONNES</span> <span class="p">=</span> <span class="mi">10</span>^<span class="mi">5</span>
+
+<span class="c1">// // pour la loi uniforme</span>
+<span class="c1">// echUnif = grand (LIGNES, COLONNES, &quot;uin&quot;, 0,20)</span>
+<span class="c1">// </span>
+<span class="c1">// clf()</span>
+<span class="c1">// classes = 21</span>
+<span class="c1">// histplot(classes, echUnif)</span>
+
+<span class="c1">//les parametres de la loi binomiale B(n,p)</span>
+<span class="n">n</span> <span class="p">=</span> <span class="mi">50</span>   <span class="c1">// essayez de changer ! exemples : </span>
+<span class="c1">//n = 10 // ou </span>
+<span class="c1">//n = 300</span>
+<span class="n">p</span> <span class="p">=</span> <span class="p">.</span><span class="mi">3</span>
+<span class="c1">// mon échantillon </span>
+<span class="n">echBin</span> <span class="p">=</span> <span class="nb">grand</span> <span class="p">(</span><span class="n">LIGNES</span><span class="p">,</span> <span class="n">COLONNES</span><span class="p">,</span> <span class="s">&quot;bin&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>
+<span class="n">clf</span><span class="p">()</span>
+<span class="n">classes</span> <span class="p">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span>
+<span class="n">histplot</span><span class="p">(</span><span class="n">classes</span><span class="p">,</span> <span class="n">echBin</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">,</span> <span class="nb">binomial</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+
+<span class="c1">// disp(echUnif) // affichage de l&#39;échantillon</span></code></pre></figure>
+ 
+</div>
+
 
  
-
     </div>
-
   </body>
-
 </html>

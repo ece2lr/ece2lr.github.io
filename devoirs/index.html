@@ -30,40 +30,38 @@ MathJax.Hub.Config({
   </head>
 
   <body style= " min-height: 100% ">
-    <script>
+<script>
 $( document ).ready(
-function ()
-{
-$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
-$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
-$prePartialCollapse.css("height","200px") ;
-$prePartialCollapse.addClass("plie") ; 
-}
+  function ()
+  {
+    $divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+    $prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+    $prePartialCollapse.css("height","200px") ;
+    $prePartialCollapse.addClass("plie") ; 
+  }
 ) ; 
-function cedric(identifiant) {
-$lePre = $("#"+identifiant+" > figure > pre ") ; 
-if ($lePre.hasClass("plie"))
-{
-$lePre.css("height","auto") ;
-$lePre.removeClass("plie") ; 
-}
-else
-{
-$lePre.css("height","200px") ;
-$lePre.addClass("plie") ; 
-}
+function deplierReplier(identifiant) {
+  $lePre = $("#"+identifiant+" > figure > pre ") ; 
+  if ($lePre.hasClass("plie"))
+  {
+    $lePre.css("height","auto") ;
+    $lePre.removeClass("plie") ; 
+  }
+  else
+  {
+    $lePre.css("height","200px") ;
+    $lePre.addClass("plie") ; 
+  }
 }
 </script>
 
 
-    
 
 
 
 
 
-    <nav class="navbar">
-  
+<nav class="navbar">
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -77,118 +75,53 @@ $lePre.addClass("plie") ;
       </div>
       <div class="container">
         <ul class="nav navbar-nav">
-          
-            
-            
-              <li>
-                <a href="/utile">
-                  Documents et liens utiles
-                </a>
-              </li>
-            
-          
-            
-            
+            <li><a href="/utile">Documents et liens utiles</a>
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/td">
-                        Travaux dirigés
-                      </a>
+                      <a href="/td">Travaux dirigés</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/cours">
-                        Extraits du cours
-                      </a>
+                      <a href="/cours">Extraits du cours</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/devoirs">
-                        Les devoirs de maths (Dl, Ds)
-                      </a>
+                      <a href="/devoirs">Les devoirs de maths (Dl, Ds)</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
-            
-            
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Colles de mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/colles">
-                        Colles année courante
-                      </a>
+                      <a href="/colles">Colles année courante</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/colles2015">
-                        Colles année 2015-2016
-                      </a>
+                      <a href="/colles2015">Colles année 2015-2016</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
-            
-            
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Modélisation en Scilab
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/scilabTP">
-                        TP de Scilab
-                      </a>
+                      <a href="/scilabTP">TP de Scilab</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/scilabRef">
-                        Fiches de référence Scilab
-                      </a>
+                      <a href="/scilabRef">Fiches de référence Scilab</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
+            </li>
         </ul>
       </div>
     </div>
@@ -197,33 +130,33 @@ $lePre.addClass("plie") ;
 
 
     <div class="container">
-      <div class="page-header">
-        <h1></h1>
-      </div>
-
-      <article class="page">
+<article class="page">
 
   <h1>Devoirs</h1>
 
   <div class="entry">
-    <h2 id="devoirs-en-temps-libres">Devoirs en temps libres</h2>
+    <h2 id="devoirs-en-temps-libre">Devoirs en temps libre</h2>
 
 <ul>
-  <li><a href="/dl/dl1">Devoir 1</a> <em>pour le  08 Sep 2016</em></li>
+  <li><a href="/dl/dl1">Devoir 1</a> <strong>Un exemple de dérivation logarithmique</strong> <em>pour le  08 Sep 2016</em></li>
+  <li><a href="/dl/dl2">Devoir 2</a> <strong>Une étude de suite récurrente par accroissements finis</strong> <em>pour le  29 Sep 2016</em></li>
 </ul>
 
 <h2 id="devoirs-surveills">Devoirs surveillés</h2>
 
 <ul>
-  <li><a href="/ds/ds1">Devoir surveillé 1</a> <em>le  15 Sep 2016</em></li>
+  <li><a href="/ds/ds1">Devoir surveillé 1</a> <em>le  15 Sep 2016</em>
+    <ol>
+      <li>Étude des puissances d’une matrice, application à un calcul de somme</li>
+      <li>Une étude de fonction, avec tracé de courbe, et un encadrement d’intégrales</li>
+      <li>Une fonction densité, le théorème de la bijection, et l’algorithme de dichotomie.</li>
+    </ol>
+  </li>
 </ul>
 
   </div>
 </article>
  
-
     </div>
-
   </body>
-
 </html>

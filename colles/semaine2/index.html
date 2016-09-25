@@ -30,40 +30,38 @@ MathJax.Hub.Config({
   </head>
 
   <body style= " min-height: 100% ">
-    <script>
+<script>
 $( document ).ready(
-function ()
-{
-$divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
-$prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
-$prePartialCollapse.css("height","200px") ;
-$prePartialCollapse.addClass("plie") ; 
-}
+  function ()
+  {
+    $divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+    $prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+    $prePartialCollapse.css("height","200px") ;
+    $prePartialCollapse.addClass("plie") ; 
+  }
 ) ; 
-function cedric(identifiant) {
-$lePre = $("#"+identifiant+" > figure > pre ") ; 
-if ($lePre.hasClass("plie"))
-{
-$lePre.css("height","auto") ;
-$lePre.removeClass("plie") ; 
-}
-else
-{
-$lePre.css("height","200px") ;
-$lePre.addClass("plie") ; 
-}
+function deplierReplier(identifiant) {
+  $lePre = $("#"+identifiant+" > figure > pre ") ; 
+  if ($lePre.hasClass("plie"))
+  {
+    $lePre.css("height","auto") ;
+    $lePre.removeClass("plie") ; 
+  }
+  else
+  {
+    $lePre.css("height","200px") ;
+    $lePre.addClass("plie") ; 
+  }
 }
 </script>
 
 
-    
 
 
 
 
 
-    <nav class="navbar">
-  
+<nav class="navbar">
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -77,118 +75,53 @@ $lePre.addClass("plie") ;
       </div>
       <div class="container">
         <ul class="nav navbar-nav">
-          
-            
-            
-              <li>
-                <a href="/utile">
-                  Documents et liens utiles
-                </a>
-              </li>
-            
-          
-            
-            
+            <li><a href="/utile">Documents et liens utiles</a>
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/td">
-                        Travaux dirigés
-                      </a>
+                      <a href="/td">Travaux dirigés</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/cours">
-                        Extraits du cours
-                      </a>
+                      <a href="/cours">Extraits du cours</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/devoirs">
-                        Les devoirs de maths (Dl, Ds)
-                      </a>
+                      <a href="/devoirs">Les devoirs de maths (Dl, Ds)</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
-            
-            
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Colles de mathématiques
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/colles">
-                        Colles année courante
-                      </a>
+                      <a href="/colles">Colles année courante</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/colles2015">
-                        Colles année 2015-2016
-                      </a>
+                      <a href="/colles2015">Colles année 2015-2016</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
-            
-            
+            </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
                   Modélisation en Scilab
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/scilabTP">
-                        TP de Scilab
-                      </a>
+                      <a href="/scilabTP">TP de Scilab</a>
                     </li>
-                  
-                    
-                    
-                    
                     <li>
-                      <a href="/scilabRef">
-                        Fiches de référence Scilab
-                      </a>
+                      <a href="/scilabRef">Fiches de référence Scilab</a>
                     </li>
-                  
                 </ul>
-              </li>
-            
-          
+            </li>
         </ul>
       </div>
     </div>
@@ -197,11 +130,7 @@ $lePre.addClass("plie") ;
 
 
     <div class="container">
-      <div class="page-header">
-        <h1>Programme de colles semaine 02</h1>
-      </div>
-
-      <h1 id="rappels-sur-les-suites-numériques">Rappels sur les suites numériques</h1>
+<h1 id="rappels-sur-les-suites-numériques">Rappels sur les suites numériques</h1>
 <h2 id="remarquables">Suites de référence</h2>
 <dl>
 <dt>Suites arithmétiques</dt>
@@ -263,9 +192,6 @@ Vérification <em>a posteriori</em> de la formule <span class="math inline">\(\f
 <li><p>Reconnaître des suites remarquables <span><span><em>(comme ci-dessus)</em></span></span> pour des coef. de <span class="math inline">\(A^n\)</span> et déduction de terme général.</p></li>
 </ul>
  
-
     </div>
-
   </body>
-
 </html>
