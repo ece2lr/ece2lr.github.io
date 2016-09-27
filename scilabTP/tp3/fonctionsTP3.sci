@@ -6,13 +6,13 @@ endfunction
 // appel de la fonction
 //xmin = -4
 //xmax = 4
-//mu = 0 
-//sigma = 0 
+//mu = 0
+//sigma = 1
 //x = linspace(xmin, xmax)
 //plot(x, densGauss(mu, sigma, x))
 
 ////La loi binomiale
-//n = 10 
+//n = 10
 //p = .3
 //valeurs = 0:n
 //probas = binomial(p, n)
@@ -24,7 +24,7 @@ function [probas, valeurs] = loiUnif(n)
   probas = 1/n * ones(1, n) // ones(lignes, colonnes) retourne une matrice remplie de 1
   valeurs = 1:n
 endfunction
-//// Appel de la fonction 
+//// Appel de la fonction
 //n = 6
 //[probas, valeurs] = loiUnif(n)
 //plot2d3(valeurs, probas) // représentation en bâtons
@@ -34,10 +34,10 @@ function [probas, valeurs] = loiGeom(p, n)
   // optionnellement les valeurs prises, soit 1:n
   k = 1:n
   q = 1 - p
-  probas = p * q.^(k-1) 
+  probas = p * q.^(k-1)
   valeurs = k
 endfunction
-//// Appel de la fonction 
+//// Appel de la fonction
 //n = 20
 //p = 0.3
 //[probas, valeurs] = loiGeom(p, n)
@@ -50,7 +50,7 @@ function [probas, valeurs] = loiPois(lambda, n)
   probas = exp(-lambda) * lambda.^k ./ factorial(k)
   valeurs = k
 endfunction
-//// Appel de la fonction 
+//// Appel de la fonction
 //n = 20
 //lambda = 5
 //[probas, valeurs] = loiPois(lambda, n)

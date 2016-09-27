@@ -262,13 +262,13 @@ $(document).ready(function() {
 <span class="c1">// appel de la fonction</span>
 <span class="c1">//xmin = -4</span>
 <span class="c1">//xmax = 4</span>
-<span class="c1">//mu = 0 </span>
-<span class="c1">//sigma = 0 </span>
+<span class="c1">//mu = 0</span>
+<span class="c1">//sigma = 1</span>
 <span class="c1">//x = linspace(xmin, xmax)</span>
 <span class="c1">//plot(x, densGauss(mu, sigma, x))</span>
 
 <span class="c1">////La loi binomiale</span>
-<span class="c1">//n = 10 </span>
+<span class="c1">//n = 10</span>
 <span class="c1">//p = .3</span>
 <span class="c1">//valeurs = 0:n</span>
 <span class="c1">//probas = binomial(p, n)</span>
@@ -280,7 +280,7 @@ $(document).ready(function() {
   <span class="n">probas</span> <span class="p">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">n</span> <span class="o">*</span> <span class="nb">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1">// ones(lignes, colonnes) retourne une matrice remplie de 1</span>
   <span class="n">valeurs</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">n</span>
 <span class="k">endfunction</span>
-<span class="c1">//// Appel de la fonction </span>
+<span class="c1">//// Appel de la fonction</span>
 <span class="c1">//n = 6</span>
 <span class="c1">//[probas, valeurs] = loiUnif(n)</span>
 <span class="c1">//plot2d3(valeurs, probas) // représentation en bâtons</span>
@@ -290,10 +290,10 @@ $(document).ready(function() {
   <span class="c1">// optionnellement les valeurs prises, soit 1:n</span>
   <span class="n">k</span> <span class="p">=</span> <span class="mi">1</span><span class="p">:</span><span class="n">n</span>
   <span class="n">q</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">p</span>
-  <span class="n">probas</span> <span class="p">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="o">.^</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
+  <span class="n">probas</span> <span class="p">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span><span class="o">.^</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
   <span class="n">valeurs</span> <span class="p">=</span> <span class="n">k</span>
 <span class="k">endfunction</span>
-<span class="c1">//// Appel de la fonction </span>
+<span class="c1">//// Appel de la fonction</span>
 <span class="c1">//n = 20</span>
 <span class="c1">//p = 0.3</span>
 <span class="c1">//[probas, valeurs] = loiGeom(p, n)</span>
@@ -306,7 +306,7 @@ $(document).ready(function() {
   <span class="n">probas</span> <span class="p">=</span> <span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">lambda</span><span class="p">)</span> <span class="o">*</span> <span class="n">lambda</span><span class="o">.^</span><span class="n">k</span> <span class="o">./</span> <span class="nb">factorial</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
   <span class="n">valeurs</span> <span class="p">=</span> <span class="n">k</span>
 <span class="k">endfunction</span>
-<span class="c1">//// Appel de la fonction </span>
+<span class="c1">//// Appel de la fonction</span>
 <span class="c1">//n = 20</span>
 <span class="c1">//lambda = 5</span>
 <span class="c1">//[probas, valeurs] = loiPois(lambda, n)</span>

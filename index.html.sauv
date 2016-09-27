@@ -205,30 +205,21 @@ function deplierReplier(identifiant) {
 
     <div class="container">
 <h2>Plan du site</h2>
-<p>Voici le plan de ce site :</p>
+Voici le plan de ce site : 
 
-<ul>
-  <li><a href="/utile">Utile</a></li>
-  <li>Maths
-    <ul>
-      <li><a href="/td">Td</a></li>
-      <li><a href="/cours">Cours</a></li>
-      <li><a href="/devoirs">Devoirs</a></li>
-    </ul>
-  </li>
-  <li>Colles
-    <ul>
-      <li><a href="/colles">Année courante</a></li>
-      <li><a href="/colles2015">Année 2015-2016</a></li>
-    </ul>
-  </li>
-  <li>Scilab
-    <ul>
-      <li><a href="/scilabTP">TP</a></li>
-      <li><a href="/scilabRef">Ref</a></li>
-    </ul>
-  </li>
-</ul>
+
+  - [Utile](/utile)
+  - Maths
+    - [Td](/td)
+    - [Cours](/cours)
+    - [Devoirs](/devoirs)
+  - Colles
+    - [Année courante](/colles)
+    - [Année 2015-2016](/colles2015)
+  - Scilab
+    - [TP](/scilabTP)
+    - [Ref](/scilabRef)
+
 
 <div class="posts">
   
