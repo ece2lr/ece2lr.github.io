@@ -208,6 +208,101 @@ function deplierReplier(identifiant) {
 
 <div class="panel list-group" id="tableColles">
 
+  <div class="list-group-item">Semaine 4
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
+      <a href="/collesPdf/semaine4.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div class="aCollapser list-group-item">
+      <h1 id="sommes-finies">Sommes finies</h1>
+<dl>
+<dt>Généralités</dt>
+<dd><p>nombre de termes, indice de sommation, valeur moyenne</p>
+</dd>
+<dt>Propriétés</dt>
+<dd><p>Linéarité, croissance <span><span><em>(majorer, minorer une somme)</em></span></span>, relation de Chasles</p>
+</dd>
+<dt>Sommation télescopique</dt>
+<dd><p>Formule <span class="math inline">\(\displaystyle \sum_{k=m}^n (u_{k+1} - u_k) = u_{n+1} - u_m\)</span> et variantes</p>
+<ul>
+<li><p>On décompose la série par linéarité, puis changement d’indice.<br />
+<span><span><em>(éventuellement appoche directe : on développe la somme avec des <span class="math inline">\(\ldots+\ldots+\ldots\)</span> et on simplifie)</em></span></span></p></li>
+<li><p>Télescopage de décomposition en éléments simples. L’exemple <span class="math inline">\(\sum\limits_{k=1}^n \tfrac{1}{k(k+1)} = 1 - \tfrac{1}{n+1}\)</span>.</p></li>
+</ul>
+</dd>
+</dl>
+<h1 id="convergence">Convergence</h1>
+<h2 id="définitions">Définitions</h2>
+<p>La série <span class="math inline">\(\sum\limits_{n{\geqslant}0} a_n\)</span> converge si la <span><strong>suite des sommes partielles</strong></span> <span class="math inline">\(\left( S_N = \sum\limits_{n=0}^N a_n \right)\)</span> converge.</p>
+<dl>
+<dt>Somme de la série</dt>
+<dd><p>La somme de la série est alors la limite <span class="math inline">\(S = \lim_{N\to\infty}S_N\)</span>.</p>
+</dd>
+<dt>Exemple</dt>
+<dd><p>Calcul de <span class="math inline">\(\sum\limits_{k=1}^{+\infty} \tfrac{1}{k(k+1)} = 1\)</span>.</p>
+</dd>
+<dt>Divergence grossière</dt>
+<dd><p>Pour que la série <span class="math inline">\(\sum\limits_{n{\geqslant}0} a_n\)</span> converge, il <span><strong>faut</strong></span> que <span class="math inline">\(a_n \stackrel[\infty]\longrightarrow{} 0\)</span>.<br />
+<span><span><em>(mais cette condition n’est <span><strong>pas suffisante</strong></span>, comme pour <span class="math inline">\(H_n = \sum_{k=1}^n \frac{1}{k}\)</span>, divergente)</em></span></span></p>
+</dd>
+</dl>
+<h2 id="séries-à-termes-positifs-sàtp">Séries à termes positifs <span>(<span style="font-variant: small-caps;">Sàtp</span>)</span></h2>
+<dl>
+<dt>Sommes partielles</dt>
+<dd><p>Si <span class="math inline">\((a_n)\)</span> est une suite <span class="math inline">\({\geqslant}0\)</span>, alors la suite <span class="math inline">\(\left( \sum\limits_{k=0}^n a_k \right)\)</span> est <span><strong>croissante</strong></span>.</p>
+</dd>
+<dt>Alternative des suites croissantes.</dt>
+<dd><p>Pour <span class="math inline">\((S_n)\)</span> croissante, alors <span><span><em>(de deux choses l’une)</em></span></span>:</p>
+<p><span class="math inline">\((S_n)\)</span> est majorée, et alors <span class="math inline">\((S_n)\)</span> converge,<br />
+<span class="math inline">\((S_n)\)</span> n’est pas majorée, et alors <span class="math inline">\((S_n)\)</span> tend vers <span class="math inline">\(+\infty\)</span>.<br />
+</p>
+</dd>
+<dt>Exemples</dt>
+<dd><p>de maj-minoration des sommes partielles. Application : convergence de <span style="font-variant: small-caps;">Sàtp</span>.</p>
+</dd>
+</dl>
+<h2 id="convergence-par-comparaison">Convergence par comparaison</h2>
+<dl>
+<dt>Pour chacun des cas</dt>
+<dd><p><span class="math inline">\(
+    \begin{array}[t]{|@{\ }r@{\ }l@{\ }l@{\ }|}
+      u_n            &amp; {\leqslant}&amp; v_n,   \\
+      \text{ou } u_n &amp; \sim &amp; v_n,   \\
+      \text{ou } u_n &amp; =    &amp; o(v_n) \\
+    \end{array}
+    \)</span> <span><strong>si</strong></span> <span class="math inline">\(\sum v_n\)</span> converge, <span><strong>alors</strong></span> <span class="math inline">\(\sum u_n\)</span> aussi.</p>
+</dd>
+<dt>Séries de référence</dt>
+<dd><p> <br />
+</p>
+<p><span><span><em>(Séries géométriques)</em></span></span> La série <span class="math inline">\(\sum_{n{\geqslant}0} q^{n}\)</span> converge <span><em>ssi</em> </span> <span class="math inline">\(|q| &lt; 1\)</span>, <span><span><em>( la somme est alors <span class="math inline">\(\frac{1}{1-q}\)</span>)</em></span></span><br />
+<span><span><em>(Séries de Riemann)</em></span></span> La série <span class="math inline">\(\sum_{n{\geqslant}1} \frac{1}{n^\alpha}\)</span> converge <span><em>ssi</em> </span> <span class="math inline">\(\alpha &gt; 1\)</span></p>
+</dd>
+<dt>Utilisation notable</dt>
+<dd><p>si <span class="math inline">\(u_{n} = \left( \frac{1}{n^2} \right)\)</span>, alors la série <span class="math inline">\(\sum_{n{\geqslant}0} u_n\)</span> converge.</p>
+</dd>
+</dl>
+<h2 id="convergence-absolue">Convergence absolue</h2>
+<dl>
+<dt>Définition</dt>
+<dd><p>La série <span class="math inline">\(\sum\limits_{n{\geqslant}0} a_n\)</span> converge absolument si la série <span class="math inline">\(\sum\limits_{n{\geqslant}0} {\left\lvert a_n\right\rvert}\)</span> converge.</p>
+</dd>
+<dt>Propriété fondamentale</dt>
+<dd><p>Toute série absolument convergente est aussi convergente.</p>
+</dd>
+<dt>Contre-exemple de la réciproque</dt>
+<dd><p> <br />
+La série alternée <span class="math inline">\(\sum_{k{\geqslant}1} \frac{(-1)^n}{n+1}\)</span> converge <span><span><em>(vers <span class="math inline">\(\ln(2)\)</span> !)</em></span></span>, mais n’est pas absolument convergente.</p>
+</dd>
+<dt>Relation de comparaisons et convergence absolue</dt>
+<dd><p> <br />
+Les résultats de [comparaisons] s’appliquent aussi avec <span class="math inline">\(|u_n|\)</span> par convergence absolue.</p>
+</dd>
+</dl>
+
+  </div>
+  
   <div class="list-group-item">Semaine 3
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
