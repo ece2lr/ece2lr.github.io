@@ -215,8 +215,7 @@ function deplierReplier(identifiant) {
 <dt>Sommation télescopique</dt>
 <dd><p>Formule <span class="math inline">\(\displaystyle \sum_{k=m}^n (u_{k+1} - u_k) = u_{n+1} - u_m\)</span> et variantes</p>
 <ul>
-<li><p>On décompose la série par linéarité, puis changement d’indice.<br />
-<span><span><em>(éventuellement appoche directe : on développe la somme avec des <span class="math inline">\(\ldots+\ldots+\ldots\)</span> et on simplifie)</em></span></span></p></li>
+<li><p>On décompose la série par linéarité, puis changement d’indice.   <span><span><em>(éventuellement approche directe : on développe la somme avec des <span class="math inline">\(\ldots+\ldots+\ldots\)</span> et on simplifie)</em></span></span></p></li>
 <li><p>Télescopage de décomposition en éléments simples. L’exemple <span class="math inline">\(\sum\limits_{k=1}^n \tfrac{1}{k(k+1)} = 1 - \tfrac{1}{n+1}\)</span>.</p></li>
 </ul>
 </dd>
@@ -239,19 +238,20 @@ function deplierReplier(identifiant) {
 <h2 id="séries-à-termes-positifs-sàtp">Séries à termes positifs <span>(<span style="font-variant: small-caps;">Sàtp</span>)</span></h2>
 <dl>
 <dt>Sommes partielles</dt>
-<dd><p>Si <span class="math inline">\((a_n)\)</span> est une suite <span class="math inline">\({\geqslant}0\)</span>, alors la suite <span class="math inline">\(\left( \sum\limits_{k=0}^n a_k \right)\)</span> est <span><strong>croissante</strong></span>.</p>
+<dd><p>Si <span class="math inline">\((a_n)\)</span> est <span class="math inline">\({\geqslant}0\)</span>, alors la suite <span class="math inline">\(\left( S_n = \sum\limits_{k=0}^n a_k \right)\)</span> est <span><strong>croissante</strong></span>.</p>
 </dd>
 <dt>Alternative des suites croissantes.</dt>
 <dd><p>Pour <span class="math inline">\((S_n)\)</span> croissante, alors <span><span><em>(de deux choses l’une)</em></span></span>:</p>
-<p><span class="math inline">\((S_n)\)</span> est majorée, et alors <span class="math inline">\((S_n)\)</span> converge,<br />
-<span class="math inline">\((S_n)\)</span> n’est pas majorée, et alors <span class="math inline">\((S_n)\)</span> tend vers <span class="math inline">\(+\infty\)</span>.<br />
-</p>
+<ul>
+<li><p><span class="math inline">\((S_n)\)</span> est majorée, et alors <span class="math inline">\((S_n)\)</span> converge,</p></li>
+<li><p><span class="math inline">\((S_n)\)</span> n’est pas majorée, et alors <span class="math inline">\((S_n)\)</span> tend vers <span class="math inline">\(+\infty\)</span>.</p></li>
+</ul>
 </dd>
 <dt>Exemples</dt>
 <dd><p>de maj-minoration des sommes partielles. Application : convergence de <span style="font-variant: small-caps;">Sàtp</span>.</p>
 </dd>
 </dl>
-<h2 id="convergence-par-comparaison">Convergence par comparaison</h2>
+<h2 id="convergence-par-comparaison-pour-les-séries-à-termes-positifs">Convergence par comparaison <span><span><em>(pour les <span><strong>séries à termes positifs</strong></span>)</em></span></span></h2>
 <dl>
 <dt>Pour chacun des cas</dt>
 <dd><p><span class="math inline">\(
@@ -286,7 +286,7 @@ La série alternée <span class="math inline">\(\sum_{k{\geqslant}1} \frac{(-1)^
 </dd>
 <dt>Relation de comparaisons et convergence absolue</dt>
 <dd><p> <br />
-Les résultats de [comparaisons] s’appliquent aussi avec <span class="math inline">\(|u_n|\)</span> par convergence absolue.</p>
+Les résultats de convergence par comparaison s’appliquent en remplaçant <span class="math inline">\(u_n\)</span> par <span class="math inline">\(|u_n|\)</span> et en convergeant par convergence absolue.</p>
 </dd>
 </dl>
  
