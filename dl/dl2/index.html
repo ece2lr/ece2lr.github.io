@@ -238,47 +238,42 @@ $lePre.addClass("plie") ;
 <ul>
   <li><a href="/dl/dl2/enonce.pdf">Énoncé</a></li>
   <li><a href="approxAlphaACompleter.sce" download="">Le fichier <code>approxAlphaACompleter.sce</code></a></li>
+  <li><a href="/dl/dl2/correc.pdf">Corrigé</a></li>
+  <li><a href="approxAlpha.sce" download="">Le fichier <code>approxAlpha.sce</code></a></li>
 </ul>
 
-<!--
-- [Corrigé](/dl/dl2/correc.pdf)
--->
+<h3 id="approxalphasce">approxAlpha.sce</h3>
 
-<h3 id="approxalphaacompletersce">approxAlphaACompleter.sce</h3>
-
-<div id="snippetapproxAlphaACompletersce">
+<div id="snippetapproxAlphasce">
   <span class="aremplir"></span>
   
 <div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
   <div class="btn-group btn-group-sm" role="group">
-  <button class="btn btn-default" onclick="deplierReplier('snippetapproxAlphaACompletersce')">
+  <button class="btn btn-default" onclick="deplierReplier('snippetapproxAlphasce')">
     Déplier/Replier le snippet
   </button>
   </div>
 </div>
   
 
-<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">// CONSTANTES : les données du problème</span>
-<span class="n">U0</span> <span class="p">=</span> <span class="mi">1</span>
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="n">U0</span> <span class="p">=</span> <span class="mi">1</span>
 <span class="n">ESTIM_ERREUR_INIT</span> <span class="p">=</span> <span class="no">%e</span> <span class="o">-</span> <span class="mi">1</span>
 <span class="n">PRECISION</span> <span class="p">=</span> <span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
-<span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span>x<span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="n">y</span> <span class="p">=</span> <span class="n">___</span>                       <span class="c1">// &lt;- compléter cette ligne SUR VOTRE COPIE</span>
-<span class="k">endfunction</span>                     <span class="c1">//               (sans recopier les autres)</span>
 
-<span class="c1">// initialisation</span>
+<span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span>x<span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">y</span> <span class="p">=</span> <span class="mi">2</span> <span class="o">-</span> <span class="nb">log</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="k">endfunction</span> 
+
 <span class="n">u</span> <span class="p">=</span> <span class="n">U0</span>
 <span class="n">estimErreur</span> <span class="p">=</span> <span class="n">ESTIM_ERREUR_INIT</span>
 
-<span class="c1">// la boucle </span>
 <span class="k">while</span> <span class="p">(</span><span class="n">estimErreur</span> <span class="o">&gt;</span> <span class="n">PRECISION</span><span class="p">)</span>
-  <span class="n">u</span> <span class="p">=</span> <span class="n">___</span>                       <span class="c1">// &lt;- compléter cette ligne SUR VOTRE COPIE</span>
-  <span class="n">estimErreur</span> <span class="p">=</span> <span class="n">estimErreur</span> <span class="o">/</span> <span class="mi">2</span> <span class="c1">// l&#39;erreur estimée est géométrique de raison 1/2</span>
-<span class="k">end</span>                             <span class="c1">//                             (voir question 7.)</span>
+  <span class="n">u</span> <span class="p">=</span> <span class="n">f</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+  <span class="n">estimErreur</span> <span class="p">=</span> <span class="n">estimErreur</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="k">end</span>
 
-<span class="c1">// affichage du résultat</span>
-<span class="nb">disp</span><span class="p">(</span><span class="s">&quot;approximation de alpha à 10^(-3) près :&quot;</span><span class="p">)</span>
-<span class="nb">disp</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>     <span class="c1">// retourne 1.7268515 -&gt; comment vérifier ce résultat ?</span></code></pre></figure>
+<span class="nb">disp</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="nb">disp</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">u</span><span class="p">))</span></code></pre></figure>
  
 </div>
 
