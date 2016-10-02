@@ -4,7 +4,7 @@ ESTIM_ERREUR_INIT = %e - 1 // majorant de l'erreur initiale
 RAISON_ESTIM_ERREUR = 1/2  // constante des accroissements finis
 PRECISION = 10^(-3)        // précision souhaitée sur la limite
 function y = f(x)          // fonction itérée
-  y = 2 - log(2)/2
+  y = 2 - log(x)/2
 endfunction  
 
 // initialisation
