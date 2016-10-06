@@ -586,6 +586,124 @@ Les résultats de convergence par comparaison s’appliquent en remplaçant <spa
     </span>
   </div>
   
+  
+  
+  
+  <div class="list-group-item" >Semaine 5
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" data-target="#collapseColle5" class="btn btn-default">Déplier</a>
+      <a href="/collesPdf/semaine5.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div id="collapseColle5" class="collapse">
+    <span class="list-group-item">
+      <h1 id="séries-géométriques-et-dérivées">Séries géométriques et dérivées</h1>
+<p><span class="math inline">\(\displaystyle S_n = \sum_{k=0}^n q^k = \frac{1-q^{n+1}\hspace{-15pt}}{1-q}\)</span></p>
+<p>pour <span class="math inline">\(n \in {\mathbb{N}}\)</span>,  <span class="math inline">\(q \neq 1\)</span>.</p>
+<p><span class="math inline">\(
+          \begin{array}[t]{r*{10}{@{\ }l}}
+            S_n        &amp; = 1 &amp; + &amp; q &amp; + &amp; q^2 &amp; + &amp; \ldots + &amp; q^{n} &amp;   &amp;         \\
+            qS_n       &amp; =   &amp;   &amp; q &amp; + &amp; q^2 &amp; + &amp; \ldots + &amp; q^{n} &amp; + &amp; q^{n+1} \\
+            \hline     
+            \rule{0pt}{2.7ex}            (1 - q)S_n &amp; = 1 &amp;   &amp;   &amp;   &amp;     &amp;   &amp;          &amp;       &amp; - &amp; q^{n+1} \\
+          \end{array}
+          \)</span></p>
+<p>pour <span class="math inline">\(|\text{raison}| &lt;1\)</span>, on a <span class="math inline">\(\displaystyle \sum^{\infty} \text{géom.} = \frac{\text{1\up{er} terme}}{1 - \text{raison}}
+    \)</span></p>
+<p> </p>
+<p>pour <span class="math inline">\(q \neq 1\)</span> : <span class="math display">\[\begin{aligned}
+          \displaystyle \sum_{k=0}^{n} k q^{k-1} = 
+          \left( \sum_{k=0}^{n} q^{k} \right )&#39; = \left ( \frac{1}{1-q} - \frac{q^{n+1}\hspace{-10pt}}{1 - q} \hspace{7pt}\right )&#39; 
+          = 
+                                                  \frac{1}{(1-q)^2} + o(1)_{n\to\infty}        \end{aligned}\]</span></p>
+<p>pour <span class="math inline">\(|q| &lt;1\)</span> <span><span><em>(on peut aussi partir de <span class="math inline">\(n = 0\)</span>)</em></span></span> <span class="math display">\[\begin{aligned}
+          \sum_{n = 0}^{\infty} q^n = \frac{1}{1-q}
+          &amp; &amp;  \sum_{n = 1}^{\infty} nq^{n-1} = \frac{1}{(1-q)^2}
+          &amp; &amp;  \sum_{n = 2}^{\infty} n(n-1)q^{n-1} = \frac{2}{(1-q)^3}
+        \end{aligned}\]</span></p>
+<p>Calcul de sommes <span class="math inline">\(\displaystyle \sum_{n=n_0}^{\infty} (an^2 + bn + c)q^n\)</span> pour <span class="math inline">\(n_0 = 0 , 1 , 2\)</span><br />
+<span><span><em>(on décompose le trinôme en termes de <span class="math inline">\(n(n-1)\)</span>, <span class="math inline">\(n\)</span> et <span class="math inline">\(1\)</span>)</em></span></span></p>
+<h1 id="formulaire-des-variables-aléatoires-discrètes">Formulaire des variables aléatoires discrètes</h1>
+<p><span><span><em>(L’exemple-<span>fil rouge </span> est la loi géométrique <span class="math inline">\({\mathcal G}(p)\)</span>, pour laquelle <span><strong>tout se calcule explicitement</strong></span>)</em></span></span></p>
+<dl>
+<dt>Distribution de probabilités discrète</dt>
+<dd><p> <br />
+Une suite <span class="math inline">\((p_n)_{n \in S}\)</span> avec</p>
+<p><span class="math inline">\(\forall n \in S , \ p_n {\geqslant}0\)</span> <span><span><em>(positivité)</em></span></span><br />
+<span class="math inline">\(\sum_{n \in S} p_n\)</span> converge <span><span><em>(si <span class="math inline">\(S\)</span> infini)</em></span></span> et vaut 1.<br />
+</p>
+<p>Une variable aléatoire <span class="math inline">\(X\)</span> suit cette loi si <span class="math inline">\(X(\Omega) = S\)</span> <span><span><em>(support de <span class="math inline">\(X\)</span>)</em></span></span> et <span class="math inline">\(\forall n \in S,\  {\mathbb P}(X = n) = p_n\)</span></p>
+</dd>
+<dt>Événements <span class="math inline">\(X\)</span>-mesurables</dt>
+<dd><p>Pour <span class="math inline">\(A \subseteq S\)</span>, on a <span class="math inline">\(\displaystyle {\mathbb P}(X \in A) = \sum_{n \in A} {\mathbb P}(X = n)\)</span><br />
+<span><span><em>(sommes des probabilités des événements élémentaires <span><strong>favorables</strong></span>)</em></span></span></p>
+</dd>
+<dt>Fonction de répartition</dt>
+<dd><p><span class="math inline">\(\displaystyle \forall N \in S,\  F_X (N) = {\mathbb P}(X {\leqslant}N) = \sum_{
+      \substack{
+        n \in S \\ 
+      n {\leqslant}N \\ 
+    }
+  }{\mathbb P}(X = n)\)</span></p>
+</dd>
+<dt>Espérance</dt>
+<dd><p>C’est la <span><strong>moyenne</strong></span> des valeurs prises par la variable aléatoire discrète <span class="math inline">\(X\)</span>,<br />
+<span><span><em>(moyenne)</em></span></span> <span><strong>pondérée</strong></span> par les probabilités <span><span><em>(<span><strong>coefficients</strong></span> de la moyenne, ou <span><strong>poids relatifs</strong></span>)</em></span></span><br />
+</p>
+<p>soit <span class="math inline">\(\displaystyle {\mathbb E}[X] = \sum_{n \in S} n p_n\)</span> <span><span><em>(sous réserve de <span><strong>convergence absolue</strong></span>)</em></span></span></p>
+</dd>
+<dt>Transfert pour l’espérance</dt>
+<dd><p><span><span><em>(sous réserve de cv. absolue)</em></span></span> <span class="math inline">\(\displaystyle {\mathbb E}\left [{\varphi}(X) \right ] = 
+    \sum_{n \in S} {\varphi}(n) p_n\)</span>,<br />
+notamment <span class="math inline">\(\displaystyle {\mathbb E}\left [X(X-1) \right ] = 
+    \sum_{n \in S} n(n-1) p_n\)</span>.</p>
+</dd>
+<dt>Variance</dt>
+<dd><p><span><span><em>(un bon indicateur de <span><strong>dispersion</strong></span>)</em></span></span><br />
+</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="right">La formule de Kœnig-Huygens <span><span><em>(orthographe !)</em></span></span></td>
+<td align="left"><span class="math inline">\( \operatorname{Var}(X)\)</span></td>
+<td align="left"><span class="math inline">\(= {\mathbb E}\left[ X^2 \right] - \left ( {\mathbb E}\left[ X \right] \right )^2\)</span></td>
+</tr>
+<tr class="even">
+<td align="right">et l’utile variante</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(= {\mathbb E}\left[ X(X-1) \right] + {\mathbb E}[X] - \left ( {\mathbb E}\left[ X \right] \right )^2.\)</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<h1 id="les-questions-de-cours">Les questions de cours</h1>
+<ol>
+<li><p>Énoncer et retrouver la formule de sommation d’une suite géométrique</p>
+<p><br />
+</p>
+<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
+<li><p>Les séries géométriques-et-dérivées</p>
+<p><br />
+</p>
+<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
+<li><p>Calculer la fonction de répartition de <span class="math inline">\({\mathcal G}(p)\)</span></p>
+<p><br />
+</p>
+<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
+<li><p>La formule de transfert pour <span class="math inline">\({\mathbb E}[X(X-1)]\)</span></p>
+<p><br />
+</p>
+<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
+<li><p>La formule de Kœnig-Huygens + orthographe + la variante avec <span class="math inline">\({\mathbb E}\left[ X(X-1) \right]\)</span></p>
+<p><br />
+</p>
+<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
+</ol>
+
+    </span>
+  </div>
+  
 </div>
 
  
