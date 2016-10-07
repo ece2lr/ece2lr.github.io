@@ -205,31 +205,48 @@ function deplierReplier(identifiant) {
 
     <div class="container">
 <h1 id="séries-géométriques-et-dérivées">Séries géométriques et dérivées</h1>
-<p><span class="math inline">\(\displaystyle S_n = \sum_{k=0}^n q^k = \frac{1-q^{n+1}\hspace{-15pt}}{1-q}\)</span></p>
+<h2 id="séries-géométriques">Séries géométriques</h2>
+<dl>
+<dt>Sommation géométrique</dt>
+<dd><p><span class="math inline">\(\displaystyle S_n = \sum_{k=0}^n q^k = \frac{1-q^{n+1}\hspace{-15pt}}{1-q}\)</span></p>
 <p>pour <span class="math inline">\(n \in {\mathbb{N}}\)</span>,  <span class="math inline">\(q \neq 1\)</span>.</p>
-<p><span class="math inline">\(
+</dd>
+<dt>Démonstration</dt>
+<dd><p><span class="math inline">\(
           \begin{array}[t]{r*{10}{@{\ }l}}
             S_n        &amp; = 1 &amp; + &amp; q &amp; + &amp; q^2 &amp; + &amp; \ldots + &amp; q^{n} &amp;   &amp;         \\
             qS_n       &amp; =   &amp;   &amp; q &amp; + &amp; q^2 &amp; + &amp; \ldots + &amp; q^{n} &amp; + &amp; q^{n+1} \\
             \hline     
-            \rule{0pt}{2.7ex}            (1 - q)S_n &amp; = 1 &amp;   &amp;   &amp;   &amp;     &amp;   &amp;          &amp;       &amp; - &amp; q^{n+1} \\
+                        (1 - q)S_n &amp; = 1 &amp;   &amp;   &amp;   &amp;     &amp;   &amp;          &amp;       &amp; - &amp; q^{n+1} \\
           \end{array}
           \)</span></p>
-<p>pour <span class="math inline">\(|\text{raison}| &lt;1\)</span>, on a <span class="math inline">\(\displaystyle \sum^{\infty} \text{géom.} = \frac{\text{1\up{er} terme}}{1 - \text{raison}}
+</dd>
+<dt>Formule générale</dt>
+<dd><p>pour <span class="math inline">\(|\text{raison}| &lt;1\)</span>, on a <span class="math inline">\(\displaystyle \sum^{\infty} \text{géom.} = \frac{\text{1\up{er} terme}}{1 - \text{raison}}
     \)</span></p>
-<p> </p>
-<p>pour <span class="math inline">\(q \neq 1\)</span> : <span class="math display">\[\begin{aligned}
+</dd>
+</dl>
+<h2 id="séries-géométriques-dérivées">Séries géométriques dérivées</h2>
+<dl>
+<dt>Calcul de la somme partielle</dt>
+<dd><p>pour <span class="math inline">\(q \neq 1\)</span> : <span class="math display">\[\begin{aligned}
           \displaystyle \sum_{k=0}^{n} k q^{k-1} = 
           \left( \sum_{k=0}^{n} q^{k} \right )&#39; = \left ( \frac{1}{1-q} - \frac{q^{n+1}\hspace{-10pt}}{1 - q} \hspace{7pt}\right )&#39; 
           = 
                                                   \frac{1}{(1-q)^2} + o(1)_{n\to\infty}        \end{aligned}\]</span></p>
-<p>pour <span class="math inline">\(|q| &lt;1\)</span> <span><span><em>(on peut aussi partir de <span class="math inline">\(n = 0\)</span>)</em></span></span> <span class="math display">\[\begin{aligned}
+</dd>
+<dt>Formulaires des sommes</dt>
+<dd><p>pour <span class="math inline">\(|q| &lt;1\)</span> <span><span><em>(on peut aussi partir de <span class="math inline">\(n = 0\)</span>)</em></span></span> <span class="math display">\[\begin{aligned}
           \sum_{n = 0}^{\infty} q^n = \frac{1}{1-q}
           &amp; &amp;  \sum_{n = 1}^{\infty} nq^{n-1} = \frac{1}{(1-q)^2}
           &amp; &amp;  \sum_{n = 2}^{\infty} n(n-1)q^{n-1} = \frac{2}{(1-q)^3}
         \end{aligned}\]</span></p>
-<p>Calcul de sommes <span class="math inline">\(\displaystyle \sum_{n=n_0}^{\infty} (an^2 + bn + c)q^n\)</span> pour <span class="math inline">\(n_0 = 0 , 1 , 2\)</span><br />
+</dd>
+<dt>Application</dt>
+<dd><p>Calcul de sommes <span class="math inline">\(\displaystyle \sum_{n=n_0}^{\infty} (an^2 + bn + c)q^n\)</span> pour <span class="math inline">\(n_0 = 0 , 1 , 2\)</span><br />
 <span><span><em>(on décompose le trinôme en termes de <span class="math inline">\(n(n-1)\)</span>, <span class="math inline">\(n\)</span> et <span class="math inline">\(1\)</span>)</em></span></span></p>
+</dd>
+</dl>
 <h1 id="formulaire-des-variables-aléatoires-discrètes">Formulaire des variables aléatoires discrètes</h1>
 <p><span><span><em>(L’exemple-<span>fil rouge </span> est la loi géométrique <span class="math inline">\({\mathcal G}(p)\)</span>, pour laquelle <span><strong>tout se calcule explicitement</strong></span>)</em></span></span></p>
 <dl>
@@ -286,26 +303,11 @@ notamment <span class="math inline">\(\displaystyle {\mathbb E}\left [X(X-1) \ri
 </dl>
 <h1 id="les-questions-de-cours">Les questions de cours</h1>
 <ol>
-<li><p>Énoncer et retrouver la formule de sommation d’une suite géométrique</p>
-<p><br />
-</p>
-<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
-<li><p>Les séries géométriques-et-dérivées</p>
-<p><br />
-</p>
-<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
-<li><p>Calculer la fonction de répartition de <span class="math inline">\({\mathcal G}(p)\)</span></p>
-<p><br />
-</p>
-<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
-<li><p>La formule de transfert pour <span class="math inline">\({\mathbb E}[X(X-1)]\)</span></p>
-<p><br />
-</p>
-<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
-<li><p>La formule de Kœnig-Huygens + orthographe + la variante avec <span class="math inline">\({\mathbb E}\left[ X(X-1) \right]\)</span></p>
-<p><br />
-</p>
-<p>[yscale=1] (0 , 0 ) grid [xstep = 8mm , ystep = 2mm] ( , <span>5</span>* 8mm - 1mm) ; (0 , 0 ) grid [xstep = 1000 , ystep = 8mm] ( , <span>5</span>* 8mm - 1mm) ;</p></li>
+<li><p>Énoncer et retrouver la formule de sommation d’une suite géométrique</p></li>
+<li><p>Les séries géométriques-et-dérivées</p></li>
+<li><p>Calculer la fonction de répartition de <span class="math inline">\({\mathcal G}(p)\)</span></p></li>
+<li><p>La formule de transfert pour <span class="math inline">\({\mathbb E}[X(X-1)]\)</span></p></li>
+<li><p>La formule de Kœnig-Huygens + orthographe + la variante avec <span class="math inline">\({\mathbb E}\left[ X(X-1) \right]\)</span></p></li>
 </ol>
  
     </div>
