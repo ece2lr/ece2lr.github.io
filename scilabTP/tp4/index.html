@@ -205,6 +205,11 @@ function deplierReplier(identifiant) {
 
     <div class="container">
 
+
+
+
+
+
 <div class="page-header">
   <h1>Marches de Bernoulli</h1>
 </div>
@@ -240,19 +245,19 @@ $(document).ready(function() {
     <p><a href="tp4.pdf">l’énoncé du tp</a></p>
   </li>
   <li>
-    <p><a href="marcheBernoulli.sce" download="">le fichier <code>marcheBernoulli.sce</code></a></p>
+    <p><a href="marcheBernoulli.sce" download="marcheBernoulli.sce">le fichier <code>marcheBernoulli.sce</code></a></p>
   </li>
   <li>
-    <p><a href="simulGeom.sce" download="">le fichier <code>simulGeom.sce</code></a></p>
+    <p><a href="simulGeom.sce" download="simulGeom.sce">le fichier <code>simulGeom.sce</code></a></p>
   </li>
   <li>
-    <p><a href="echantillonGeom.sce" download="">le fichier <code>echantillonGeom.sce</code></a></p>
+    <p><a href="echantillonGeom.sce" download="echantillonGeom.sce">le fichier <code>echantillonGeom.sce</code></a></p>
   </li>
   <li>
-    <p><a href="marcheBernoulliCentree.sce" download="">le fichier <code>marcheBernoulliCentree.sce</code></a></p>
+    <p><a href="marcheBernoulliCentree.sce" download="marcheBernoulliCentree.sce">le fichier <code>marcheBernoulliCentree.sce</code></a></p>
   </li>
   <li>
-    <p><a href="circulante.sci" download="">le fichier <code>circulante.sci</code></a></p>
+    <p><a href="circulante.sci" download="circulante.sci">le fichier <code>circulante.sci</code></a></p>
   </li>
 </ul>
 
@@ -399,9 +404,9 @@ $(document).ready(function() {
 <span class="n">p</span> <span class="p">=.</span><span class="mi">5</span>    <span class="c1">// probabilité de succès</span>
 <span class="n">q</span> <span class="p">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">p</span>  <span class="c1">// probabilité d&#39;échec</span>
 
-<span class="n">echBer</span> <span class="p">=</span> <span class="nb">grand</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="s">&quot;bin&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">)</span> <span class="c1">// sauts vers le haut</span>
-<span class="n">sautsCentres</span> <span class="p">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">echBer</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1">// on centre</span>
-<span class="n">marche</span> <span class="p">=</span> <span class="nb">cumsum</span><span class="p">(</span><span class="n">sauts</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">)</span>   <span class="c1">// trajectoires</span>
+<span class="n">echBer</span> <span class="p">=</span> <span class="nb">grand</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="s">&quot;bin&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="p">)</span>      <span class="c1">// sauts vers le haut</span>
+<span class="n">sautsCentres</span> <span class="p">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">echBer</span> <span class="o">-</span> <span class="mi">1</span>      <span class="c1">// on centre</span>
+<span class="n">marche</span> <span class="p">=</span> <span class="nb">cumsum</span><span class="p">(</span><span class="n">sautsCentres</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">)</span> <span class="c1">// trajectoires</span>
 <span class="n">clf</span><span class="p">()</span>
 <span class="nb">plot2d2</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">T</span><span class="p">,</span><span class="n">marche</span><span class="o">&#39;</span><span class="p">)</span>          <span class="c1">// tracer les trajectoires</span>
 
