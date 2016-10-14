@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ece 2 La Rochelle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
+
+    <!--- Fonts ------------------------------------------------------------------------------> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script type="text/javascript" async 
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <link rel="stylesheet" href="/reglages.css">
+
+  </head>
+
+  <body style= " min-height: 100% ">
+<script>
+$( document ).ready(
+  function ()
+  {
+    $divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+    $prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+    $prePartialCollapse.css("height","200px") ;
+    $prePartialCollapse.addClass("plie") ; 
+  }
+) ; 
+function deplierReplier(identifiant) {
+  $lePre = $("#"+identifiant+" > figure > pre ") ; 
+  if ($lePre.hasClass("plie"))
+  {
+    $lePre.css("height","auto") ;
+    $lePre.removeClass("plie") ; 
+  }
+  else
+  {
+    $lePre.css("height","200px") ;
+    $lePre.addClass("plie") ; 
+  }
+}
+</script>
+
+
+
+
+
+
+
+<nav class="navbar">
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#maNavbar">
+          <span class="sr-only">Ouvrir menu</span> <!-- Pour accessibilités screen-readers -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+        </button>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Ece 2 L-R</a>
+      </div>
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="/utile">
+              <span class = "visible-sm">
+                Utile
+              </span>
+              <span class = "hidden-sm">
+                Documents et liens utiles
+              </span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+              <span class = "visible-sm">
+                Maths
+                <span class="caret"></span>
+              </span>
+              <span class = "hidden-sm">
+                Mathématiques
+                <span class="caret"></span>
+              </span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/td">
+                  <span class = "visible-sm">
+                    Td
+                  </span>
+                  <span class = "hidden-sm">
+                    Travaux dirigés
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/cours">
+                  <span class = "visible-sm">
+                    Cours
+                  </span>
+                  <span class = "hidden-sm">
+                    Extraits du cours
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/devoirs">
+                  <span class = "visible-sm">
+                    Devoirs
+                  </span>
+                  <span class = "hidden-sm">
+                    Les devoirs de maths (Dl, Ds)
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+              <span class = "visible-sm">
+                Colles
+                <span class="caret"></span>
+              </span>
+              <span class = "hidden-sm">
+                Colles de mathématiques
+                <span class="caret"></span>
+              </span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/colles">
+                  <span class = "visible-sm">
+                    Année courante
+                  </span>
+                  <span class = "hidden-sm">
+                    Colles année courante
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/colles2015">
+                  <span class = "visible-sm">
+                    Année 2015-2016
+                  </span>
+                  <span class = "hidden-sm">
+                    Colles année 2015-2016
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+              <span class = "visible-sm">
+                Scilab
+                <span class="caret"></span>
+              </span>
+              <span class = "hidden-sm">
+                Modélisation en Scilab
+                <span class="caret"></span>
+              </span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/scilabTP">
+                  <span class = "visible-sm">
+                    TP
+                  </span>
+                  <span class = "hidden-sm">
+                    TP de Scilab
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/scilabRef">
+                  <span class = "visible-sm">
+                    Ref
+                  </span>
+                  <span class = "hidden-sm">
+                    Fiches de référence Scilab
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container">
+
+<h1 id="vocabulaire-et-formules-usuels">Vocabulaire et formules usuels</h1>
+<h2 id="conditionnement">Conditionnement</h2>
+<dl>
+<dt>Probabilité conditionnelle</dt>
+<dd><p>: interpréter l’énoncé, arbre de probabilités <span><span><em>(à bon escient)</em></span></span></p>
+</dd>
+<dt>Formule de conditionnement</dt>
+<dd><p><span class="math inline">\({\mathbb P}(A \cap B) = {\mathbb P}(A) \times {\mathbb P}_A(B)\)</span> et retournements</p>
+</dd>
+<dt>Formule des probabilités composées</dt>
+<dd><p><span><span><em>(Exemples en dénombrement : équiprobabilité)</em></span></span></p>
+<p><span class="math inline">\(\displaystyle {\mathbb P}(A_1 \cap A_2 \cap \ldots \cap A_n) = {\mathbb P}(A_1) \times {\mathbb P}_{A_1} (A_2) \times \ldots \times {\mathbb P}_{A_1 \cap \ldots \cap A_{n-1} } (A_n)\)</span></p>
+</dd>
+<dt>Formule de Bayes</dt>
+<dd><p><span class="math inline">\(
+    \frac{{\mathbb P}_A(B)}{{\mathbb P}_B(A)}
+    =
+    \frac{{\mathbb P}(B)}{{\mathbb P}(A)}
+    \)</span></p>
+</dd>
+</dl>
+<h2 id="la-formule-des-probabilités-totales">La formule des probabilités totales</h2>
+<dl>
+<dt>Système complet d’événements</dt>
+<dd><p><span><span><em>(principe de la disjonction des cas)</em></span></span></p>
+<ul>
+<li><p>deux-à-deux incompatibles  <br />
+<span class="math inline">\(A_i \cap A_j = {\varnothing}\)</span>, pour <span class="math inline">\(i\neq j\)</span></p></li>
+<li><p>collectivement exhaustifs  <br />
+<span class="math inline">\(A_1 \cup  A_2 \cup \ldots \cup A_n = \Omega\)</span></p></li>
+</ul>
+</dd>
+<dt>Formule des probabilités totales</dt>
+<dd><p>qui décompose <span class="math inline">\(E\)</span> dans le système complet :</p>
+</dd>
+</dl>
+<p><span class="math inline">\(
+  \begin{array}[t]{l*{6}{@{\ }l}}
+    {\mathbb P}(E) &amp; = &amp; {\mathbb P}(A_1 \cap E)          &amp; + &amp; {\mathbb P}(A_2 \cap E)          &amp; + \quad \ldots \quad + &amp; {\mathbb P}(A_n \cap E)          \\
+           &amp; = &amp; {\mathbb P}(A_1) \, {\mathbb P}_{A_1} (E) &amp; + &amp; {\mathbb P}(A_2) \, {\mathbb P}_{A_2} (E) &amp; + \quad \ldots \quad + &amp; {\mathbb P}(A_n) \, {\mathbb P}_{A_n} (E) \\
+  \end{array}
+  \)</span></p>
+<h2 id="reconnaître-une-situation-markovienne">Reconnaître une situation Markovienne</h2>
+<p>Pour une suite d’expérience consécutives, savoir, le cas échéant :</p>
+<dl>
+
+<dd><p>Identifier les états possibles</p>
+</dd>
+
+<dd><p>Identifier les probabilités de transition</p>
+</dd>
+
+<dd><p>Faire le graphe de transitions</p>
+</dd>
+
+<dd><p>Faire la mise en équation par la formule des probabilités totales.</p>
+</dd>
+<dt>Chaîne à deux états</dt>
+<dd><p> <br />
+<span class="math inline">\(\leadsto\)</span> proba. arith.-géom. <span><span><em>(cf. exo 5 td 5)</em></span></span></p>
+</dd>
+</dl>
+<h1 id="répétition-dépreuves-de-bernoulli-le-processus-de-bernoulli">Répétition d’épreuves de Bernoulli <span><span><em>(le processus de Bernoulli)</em></span></span></h1>
+<dl>
+<dt>Description de l’expérience</dt>
+<dd><p> <br />
+Épreuve à 2 issues : Échec / Succès <span class="math inline">\(\leadsto\)</span> v.a. <span class="math inline">\(\epsilon_1 \ldots \epsilon_n \ldots  \hookrightarrow {\mathcal B}(p)\)</span> mutuellement indépendantes</p>
+</dd>
+<dt>Le nombre de succès</dt>
+<dd><p>après <span class="math inline">\(n\)</span> épreuves</p>
+<ul>
+<li><p><span class="math inline">\(X_n = \sum\limits_{k=1}^n \epsilon_k \hookrightarrow {\mathcal B}(n , p )\)</span> <span><span><em>(loi binomiale)</em></span></span> , formule <span class="math inline">\({\mathbb P}(X_n = k) = {n \choose k } p^k q^{n-k}\)</span> et interprétation.</p></li>
+<li><p>Thèmes connexes : coefficients binomiaux, binôme de Newton, espérance, variance</p></li>
+</ul>
+</dd>
+<dt>Le rang d’apparition du premier succès</dt>
+<dd><p><span class="math inline">\(T = \min \{k {\geqslant}1 | \epsilon_k = 1\}\)</span> de loi <span class="math inline">\({\mathcal G}( p )\)</span></p>
+</dd>
+</dl>
+<h1 id="les-questions-de-cours">Les questions de cours</h1>
+<ol>
+<li><p>La formule des probabilités totales</p></li>
+<li><p>Plan d’étude d’une suite arithmético-géométrique</p></li>
+<li><p>Loi de <span class="math inline">\(X \hookrightarrow {\mathcal B}(n,p)\)</span> : son expression et calcul de <span class="math inline">\(\sum\limits_{k=0}^n {\mathbb P}(X = k)\)</span></p></li>
+<li><p>Développer <span class="math inline">\((a + b)^n,\)</span> pour <span class="math inline">\(n = 1, 2, 3, 4\)</span>. Expression de <span class="math inline">\({n \choose 0}, {n \choose 1} , {n \choose 2}, {n \choose 3}\)</span></p></li>
+<li><p>La loi géométrique <span class="math inline">\({\mathcal G}(p)\)</span> et calcul de <span class="math inline">\({\mathbb E}[T]\)</span>.</p></li>
+</ol>
+
+ 
+    </div>
+  </body>
+</html>
