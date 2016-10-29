@@ -225,6 +225,18 @@ Voici le plan de ce site :
   
     <article class="post">
 
+      <h1><a href="/2016/10/29/nouveauRepo/">Un nouveau repo</a></h1>
+
+      <div class="entry">
+        <p>Ce site est dorénavant aussi accessible à cette url : <a href="https://ece2lr.github.io"><code>https://ece2lr.github.io</code></a></p>
+
+      </div>
+
+      <a href="/2016/10/29/nouveauRepo/" class="read-more">Lire le post</a>
+    </article>
+  
+    <article class="post">
+
       <h1><a href="/2016/09/27/planDuSite/">Ajout du plan de ce site</a></h1>
 
       <div class="entry">
