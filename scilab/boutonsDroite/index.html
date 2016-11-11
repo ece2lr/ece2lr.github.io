@@ -810,6 +810,140 @@ notamment <span class="math inline">\(\displaystyle {\mathbb E}\left [X(X-1) \ri
     </span>
   </div>
   
+  
+  
+  
+  <div class="list-group-item" >Semaine 7
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" data-target="#collapseColle7" class="btn btn-default">Déplier</a>
+      <a href="/collesPdf/semaine7.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div id="collapseColle7" class="collapse">
+    <span class="list-group-item">
+      
+<h1 id="les-espaces-vectoriels-mathbbr2-et-mathbbr3">Les espaces vectoriels <span class="math inline">\({\mathbb{R}}^2\)</span> et <span class="math inline">\({\mathbb{R}}^3\)</span></h1>
+<dl>
+<dt>Algèbre linéaire dans <span class="math inline">\({\mathbb{R}}^2\)</span></dt>
+<dd><p> </p>
+<ul>
+<li><p>Représentation des vecteurs dans le plan <span><span><em>(interprétation de la colinéarité)</em></span></span></p></li>
+<li><p>Droites vectorielles : présentation par un vecteur directeur <span><span><em>(not. <span class="math inline">\({\mathcal D}= \operatorname{Vect}(\vec{d})\)</span>)</em></span></span></p></li>
+<li><p>Équations de droite vectorielle <span class="math inline">\(a x + b y = 0\)</span>, et aller-retour : équation <span class="math inline">\(\longleftrightarrow\)</span> vect. dir.</p></li>
+</ul>
+</dd>
+<dt>Algèbre linéaire dans <span class="math inline">\({\mathbb{R}}^3\)</span></dt>
+<dd><p> </p>
+<ul>
+<li><p>Droites, plans vect. : présent par vecteur, couple directeur <span><span><em>(<span class="math inline">\({\mathcal P}= \operatorname{Vect}(\vec{u} , \vec{v})\)</span>, <span class="math inline">\({\mathcal D}= \operatorname{Vect}(\vec{d})\)</span>)</em></span></span></p></li>
+<li><p>Équation de plan vectoriel : <span class="math inline">\(a x + b y + c z = 0\)</span>, et aller-retour : éq <span class="math inline">\(\longleftrightarrow\)</span> couple dir.</p></li>
+<li><p>Intersection de deux plans vectoriels</p></li>
+</ul>
+</dd>
+</dl>
+<h1 id="généralités-sur-les-espaces-vectoriels">Généralités sur les espaces vectoriels</h1>
+<dl>
+<dt>Notion d’espace vectoriel</dt>
+<dd><p>Un ensemble <span class="math inline">\(E\)</span> dont les éléments sont des <span>vecteurs </span> <span class="math inline">\(\vec{u} \in E \)</span> :</p>
+<ul>
+<li><p>il y a un <span>vecteur nul </span> <span class="math inline">\(\vec{0}\)</span>.</p></li>
+<li><p>on y fait des <span><strong>combinaisons linéaires</strong></span> de <span class="math inline">\(\vec{u} , \vec{v} \)</span> : <span class="math inline">\(\lambda \vec{u} + \mu \vec{v}\)</span> <span><span><em>(règles de calcul usuelles)</em></span></span>.</p></li>
+</ul>
+</dd>
+<dt>Appliquer le vocabulaire</dt>
+<dd><p>sur les exemples au programme :</p>
+<p><span>2</span></p>
+<ul>
+<li><p>Les espaces cartésiens <span class="math inline">\({\mathbb{R}}^n\)</span> <span><span><em>(à coordonnées)</em></span></span></p></li>
+<li><p>Les espaces de matrices <span class="math inline">\({\mathcal M}_{n , p } ({\mathbb{R}})\)</span></p></li>
+<li><p>Les espaces de polynômes <span class="math inline">\({\mathbb{R}}[X]\)</span>, <span class="math inline">\({\mathbb{R}}_n[X]\)</span></p></li>
+<li><p>L’espace des applications <span class="math inline">\({\mathcal F}(D , {\mathbb{R}})\)</span>, où <span class="math inline">\(D \subseteq {\mathbb{R}}\)</span>.</p></li>
+<li><p>L’espace des suites réelles <span class="math inline">\({\mathbb{R}}^{\mathbb{N}}\)</span>.</p></li>
+</ul>
+</dd>
+<dt>Combinaisons linéaires</dt>
+<dd><p>de <span class="math inline">\({\mathcal F}= ( \vec{u_1}, \vec{u_2}, {\ensuremath{{\scriptstyle \ldots}}}, \vec{u_p} )\)</span> :</p>
+<p>elles s’écrivent <span class="math inline">\( \vec{v} =  \lambda_1 \vec{u_1} + \lambda_2 \vec{u_2} + {\ensuremath{{\scriptstyle \ldots}}}+ \lambda_p \vec{u_p} = {\sum\limits}_{i=1}^p \lambda_i \vec{u_i} \)</span> pour des coefficients <span class="math inline">\(\lambda_1 , \lambda_2 , \ldots , \lambda_p \in {\mathbb{R}}\)</span>.</p>
+<p><span><span><em>(<span class="math inline">\({\mathbb{R}}^n\)</span>)</em></span></span> : <span class="math inline">\({\sum\limits}_{i=1}^p \lambda_i \vec{u_i} = U \vec{\Lambda} \)</span>, où <span class="math inline">\(
+            A = 
+              \begin{tikzpicture}
+                [
+                  baseline=(etiq-1.base),
+                  &gt;=stealth&#39;,
+                  etiquette/.style=
+                  {
+                    fill=white, 
+                    inner sep=1.5pt,
+                    midway,
+                  },
+                  fleche/.style=
+                  {
+                    thick,
+                    &lt;-&gt;
+                  },
+                ]
+                \node (matrice)
+                [
+                                    matrix of nodes,
+                  nodes in empty cells,
+                  inner xsep=0pt,
+                  nodes={
+                                        minimum width=width(&quot;$C_k$\,&quot;),
+                    minimum height=1.2cm,
+                  },
+                  left delimiter={[}, 
+                  right delimiter ={]},
+                ]
+                {
+                  &amp; &amp; \ldots &amp; \\ 
+                };
+              
+              \newcommand{\placerVecteur}[2]
+              {
+                \draw  [fleche] (matrice-1-#1.north) -- (matrice-1-#1.south) 
+                  node [etiquette] (etiq-#1) {#2} ;
+              }
+                  \placerVecteur{1}{$\vec{u_1}$}
+                  \placerVecteur{2}{$\vec{u_2}$}
+                  \placerVecteur{4}{$\vec{u_p}$}
+              
+              
+              \end{tikzpicture}
+            \)</span> <span><span><em>(mat. de la fam. <span class="math inline">\(F\)</span>)</em></span></span> et <span class="math inline">\(\vec{\Lambda} = 
+            \begin{bmatrix}
+              \lambda_1     \\ 
+              \vdots        \\ 
+              \lambda_p     \\ 
+            \end{bmatrix}
+            \)</span> <span><span><em>(vect des coeff.)</em></span></span>.</p>
+</dd>
+</dl>
+<h1 id="sous-espaces-vectoriels">Sous-espaces vectoriels</h1>
+<p> <br />
+Un <span><strong>sous-espace vectoriel</strong></span> <span class="math inline">\(F\)</span> d’un espace vectoriel <span class="math inline">\(E\)</span> est un sous-ensemble <span class="math inline">\(F \subseteq E\)</span> qui</p>
+<ul>
+<li><p>est non-vide et contient le vecteur nul : <span class="math inline">\(\vec{0} \in F\)</span> et qui</p></li>
+<li><p>est stable par combinaisons linéaires : <span class="math inline">\(\forall \vec{u} , \vec{v} \in F, \ \forall \lambda, \mu \in {\mathbb{R}},\)</span> on a <span class="math inline">\(\lambda \vec{u} + \mu \vec{v} \in F\)</span>.</p></li>
+</ul>
+<p>par une famille <span class="math inline">\({\mathcal F}\)</span>, <span><span><em>(not. <span class="math inline">\(\operatorname{Vect}({\mathcal F})\)</span>)</em></span></span> : l’ensemble des c.l. de <span class="math inline">\({\mathcal F}\)</span>.</p>
+<p> <br />
+Aller-retour entre deux présentations d’un sous-espace vectoriel de <span class="math inline">\({\mathbb{R}}^n\)</span> par l’alg. du pivot.</p>
+<p> </p>
+<ul>
+<li><p>on échelonne le système d’équations</p></li>
+<li><p>on exprime les inc. principales en termes des inc. secondaires <span><span><em>(paramètres)</em></span></span></p></li>
+<li><p>on fait apparaître des vecteurs à droite <span><span><em>(éq. tautologique pour les paramètres)</em></span></span></p></li>
+</ul>
+<p> </p>
+<ul>
+<li><p>on échelonne la matrice augmentée générique de la famille génératrice <span class="math inline">\({\mathcal F}\)</span></p></li>
+<li><p>les conditions de compatibilité donnent un système d’équations du sous-espace.</p></li>
+</ul>
+
+
+    </span>
+  </div>
+  
 </div>
 
  
