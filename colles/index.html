@@ -256,54 +256,15 @@ function deplierReplier(identifiant) {
 </ul>
 </dd>
 <dt>Combinaisons linéaires</dt>
-<dd><p>de <span class="math inline">\({\mathcal F}= ( \vec{u_1}, \vec{u_2}, {\ensuremath{{\scriptstyle \ldots}}}, \vec{u_p} )\)</span> :</p>
-<p>elles s’écrivent <span class="math inline">\( \vec{v} =  \lambda_1 \vec{u_1} + \lambda_2 \vec{u_2} + {\ensuremath{{\scriptstyle \ldots}}}+ \lambda_p \vec{u_p} = {\sum\limits}_{i=1}^p \lambda_i \vec{u_i} \)</span> pour des coefficients <span class="math inline">\(\lambda_1 , \lambda_2 , \ldots , \lambda_p \in {\mathbb{R}}\)</span>.</p>
+<dd><p>de <span class="math inline">\({\mathcal F}= ( \vec{u_1}, \vec{u_2}, \ldots, \vec{u_p} )\)</span> :</p>
+<p>elles s’écrivent <span class="math inline">\( \vec{v} =  \lambda_1 \vec{u_1} + \lambda_2 \vec{u_2} + \ldots + \lambda_p \vec{u_p} = {\sum\limits}_{i=1}^p \lambda_i \vec{u_i} \)</span> pour des coefficients <span class="math inline">\(\lambda_1 , \lambda_2 , \ldots , \lambda_p \in {\mathbb{R}}\)</span>.</p>
 <p><span><span><em>(<span class="math inline">\({\mathbb{R}}^n\)</span>)</em></span></span> : <span class="math inline">\({\sum\limits}_{i=1}^p \lambda_i \vec{u_i} = U \vec{\Lambda} \)</span>, où <span class="math inline">\(
             A = 
-              \begin{tikzpicture}
-                [
-                  baseline=(etiq-1.base),
-                  &gt;=stealth&#39;,
-                  etiquette/.style=
-                  {
-                    fill=white, 
-                    inner sep=1.5pt,
-                    midway,
-                  },
-                  fleche/.style=
-                  {
-                    thick,
-                    &lt;-&gt;
-                  },
-                ]
-                \node (matrice)
-                [
-                                    matrix of nodes,
-                  nodes in empty cells,
-                  inner xsep=0pt,
-                  nodes={
-                                        minimum width=width(&quot;$C_k$\,&quot;),
-                    minimum height=1.2cm,
-                  },
-                  left delimiter={[}, 
-                  right delimiter ={]},
-                ]
-                {
-                  &amp; &amp; \ldots &amp; \\ 
-                };
-              
-              \newcommand{\placerVecteur}[2]
-              {
-                \draw  [fleche] (matrice-1-#1.north) -- (matrice-1-#1.south) 
-                  node [etiquette] (etiq-#1) {#2} ;
-              }
-                  \placerVecteur{1}{$\vec{u_1}$}
-                  \placerVecteur{2}{$\vec{u_2}$}
-                  \placerVecteur{4}{$\vec{u_p}$}
-              
-              
-              \end{tikzpicture}
-            \)</span> <span><span><em>(mat. de la fam. <span class="math inline">\(F\)</span>)</em></span></span> et <span class="math inline">\(\vec{\Lambda} = 
+            \begin{bmatrix}
+            \uparrow    &amp; \uparrow   &amp;        &amp; \uparrow   \\
+              \vec{u_1} &amp; \vec{u_2}  &amp; \ldots &amp; \vec{u_p}  \\
+            \downarrow  &amp; \downarrow &amp;        &amp; \downarrow \\
+            \end{bmatrix}\)</span> <span><span><em>(mat. de la fam. <span class="math inline">\(F\)</span>)</em></span></span> et <span class="math inline">\(\vec{\Lambda} = 
             \begin{bmatrix}
               \lambda_1     \\ 
               \vdots        \\ 
