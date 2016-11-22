@@ -204,85 +204,36 @@ function deplierReplier(identifiant) {
 
 
     <div class="container">
-<article class="page">
+<h1 id="notes-de-cours-de-maths">Notes de cours de maths</h1>
 
-  <h1>Extraits du cours</h1>
+<div class="panel list-group" id="tableCours">
 
-  <div class="entry">
-    
-<h3 id="la-mthode-de-dichotomie">La méthode de dichotomie</h3>
-
-<p>Un algorithme permettant de trouver une approximation d’un point d’annulation d’une fonction continue.</p>
-
-<ul>
-  <li><a href="dichotomie.pdf">Résumé (PDF)</a></li>
-  <li><a href="./index/dichotomie.sce">Le fichier <code>dichotomie.sce</code></a></li>
-</ul>
-
-<h3 id="dichotomiesce">dichotomie.sce</h3>
-
-<div id="snippetdichotomiesce">
-  <span class="aremplir"></span>
-  
-<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
-  <div class="btn-group btn-group-sm" role="group">
-  <button class="btn btn-default" onclick="deplierReplier('snippetdichotomiesce')">
-    Déplier/Replier le snippet
-  </button>
+  <div class="list-group-item">La méthode de dichotomie (fiche) 
+    <div class="btn-group btn-group-sm pull-right">
+      <a href="dichotomie.pdf" class="btn btn-primary">Fichier PDF</a>
+    </div>
+  </div>
+  <div class="list-group-item">L'inégalité des accroissements finis (fiche) 
+    <div class="btn-group btn-group-sm pull-right">
+      <a href="accroissementsFinis.pdf" class="btn btn-primary">Fichier PDF</a>
+    </div>
+  </div>
+  <div class="list-group-item">Autour des coefficients binomiaux 
+    <div class="btn-group btn-group-sm pull-right">
+      <a href="binomiaux.pdf" class="btn btn-primary">Fichier PDF</a>
+    </div>
+  </div>
+  <div class="list-group-item">Dérivation et convexité 
+    <div class="btn-group btn-group-sm pull-right">
+      <a href="derivation.pdf" class="btn btn-primary">Fichier PDF</a>
+    </div>
+  </div>
+  <div class="list-group-item">Espaces vectoriels, dimension finie 
+    <div class="btn-group btn-group-sm pull-right">
+      <a href="ev.pdf" class="btn btn-primary">Fichier PDF</a>
+    </div>
   </div>
 </div>
-  
-
-<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">// Constantes : données du problème</span>
-<span class="n">GAUCHE_INIT</span> <span class="p">=</span> <span class="mi">0</span>                           <span class="c1">// encadrement initial de la racine</span>
-<span class="n">DROITE_INIT</span> <span class="p">=</span> <span class="mi">2</span>
-<span class="n">PRECISION</span>   <span class="p">=</span> <span class="mi">10</span>^<span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>                     <span class="c1">// précision souhaitée</span>
-<span class="k">function</span><span class="w"> </span>y <span class="p">=</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span>x<span class="p">)</span><span class="w">                         </span><span class="c1">// fonction étudiée</span>
-  <span class="n">y</span> <span class="p">=</span> <span class="n">x</span><span class="o">.^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
-<span class="k">endfunction</span>
-
-<span class="c1">// initialisation</span>
-<span class="n">gauche</span> <span class="p">=</span> <span class="n">GAUCHE_INIT</span>
-<span class="n">droite</span> <span class="p">=</span> <span class="n">DROITE_INIT</span>
-
-<span class="c1">// la boucle de l&#39;algorithme</span>
-<span class="k">while</span> <span class="p">(</span> <span class="n">droite</span> <span class="o">-</span> <span class="n">gauche</span> <span class="o">&gt;</span> <span class="n">PRECISION</span> <span class="p">)</span>     <span class="c1">// jusqu&#39;à avoir la bonne précision</span>
-  <span class="n">milieu</span> <span class="p">=</span> <span class="p">(</span><span class="n">gauche</span><span class="o">+</span><span class="n">droite</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-  <span class="k">if</span> <span class="p">(</span> <span class="n">f</span><span class="p">(</span><span class="n">gauche</span><span class="p">)</span> <span class="o">*</span> <span class="n">f</span><span class="p">(</span><span class="n">milieu</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="nb">then</span>   <span class="c1">// si changement de signe à gauche </span>
-    <span class="n">droite</span> <span class="p">=</span> <span class="n">milieu</span>                       <span class="c1">//   zoomer à gauche</span>
-  <span class="k">else</span>                                    <span class="c1">// sinon</span>
-    <span class="n">gauche</span> <span class="p">=</span> <span class="n">milieu</span>                       <span class="c1">//   zoomer à droite</span>
-  <span class="k">end</span> <span class="c1">// fin du `if`</span>
-<span class="k">end</span>   <span class="c1">// fin du `while`</span>
-
-<span class="c1">// affichage</span>
-<span class="nb">disp</span> <span class="p">(</span><span class="s">&quot;Approximation par défaut de sqrt(2) à 10^(-3) près :&quot;</span><span class="p">)</span>
-<span class="nb">disp</span> <span class="p">(</span><span class="n">gauche</span><span class="p">)</span>                              <span class="c1">// retourne 1.4140625  </span></code></pre></figure>
- 
-</div>
-
-<h3 id="application-des-accroissements-finis-aux-suites-rcurrentes">Application des accroissements finis aux suites récurrentes</h3>
-
-<ul>
-  <li><a href="accroissementsFinis.pdf">Résumé (PDF)</a></li>
-</ul>
-
-<p>Voir aussi <a href="/dl/dl2">le dl 2</a> pour un exemple corrigé.</p>
-
-<h3 id="notes-de-cours-pas-finies-mais-bon">Notes de cours (pas finies, mais bon…)</h3>
-
-<ul>
-  <li><a href="ev.pdf">Espaces vectoriels, familles de vecteurs</a></li>
-  <li><a href="binomiaux.pdf">Autour des coefficients binomiaux</a></li>
-  <li><a href="derivation.pdf">Dérivation</a></li>
-</ul>
-
-<h2 id="voir-aussi">Voir aussi</h2>
-
-<p><a href="programme">Les 6 chapitres du  programme Ece 2</a></p>
-
-  </div>
-</article>
  
     </div>
   </body>
