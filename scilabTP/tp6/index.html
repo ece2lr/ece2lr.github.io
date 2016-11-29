@@ -247,6 +247,9 @@ $(document).ready(function() {
   <li>
     <p><a href="xbis.sce" download="xbis.sce">le fichier <code>xbis.sce</code></a></p>
   </li>
+  <li>
+    <p><a href="cosmetique.sce" download="cosmetique.sce">le fichier <code>cosmetique.sce</code></a></p>
+  </li>
 </ul>
 
 <h3 id="xbissce">xbis.sce</h3>
@@ -278,6 +281,36 @@ $(document).ready(function() {
 <span class="c1">//mprintf(&#39;Estimation version naïve :   %f    Erreur commise : %f\n&#39;, estimNaive, abs(estimNaive-log(2)))</span>
 <span class="c1">//mprintf(&#39;Estimation version centrée : %f    Erreur commise : %f\n&#39;, estimCentree, abs(estimCentree-log(2)))</span>
 <span class="c1">//mprintf(&#39;Vraie valeur :               %f&#39;,log(2))</span></code></pre></figure>
+ 
+</div>
+
+<h3 id="cosmetiquesce">cosmetique.sce</h3>
+
+<div id="snippetcosmetiquesce">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetcosmetiquesce')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="c1">//cosmétique nuage de points</span>
+<span class="n">e</span> <span class="p">=</span> <span class="n">gce</span><span class="p">()</span>                      <span class="c1">// attraper le résultat du `plot`</span>
+<span class="n">courbe</span> <span class="p">=</span> <span class="n">e</span><span class="p">.</span><span class="n">children</span>            <span class="c1">// attraper la courbe</span>
+<span class="n">courbe</span><span class="p">.</span><span class="n">mark_mode</span>       <span class="p">=</span> <span class="s">&quot;on&quot;</span>  <span class="c1">// dessiner les points</span>
+<span class="n">courbe</span><span class="p">.</span><span class="n">mark_size</span>       <span class="p">=</span> <span class="mi">0</span>     <span class="c1">// taille des points</span>
+<span class="n">courbe</span><span class="p">.</span><span class="n">line_mode</span>       <span class="p">=</span> <span class="s">&quot;off&quot;</span> <span class="c1">// ne pas joindre les points</span>
+<span class="n">courbe</span><span class="p">.</span><span class="n">mark_foreground</span> <span class="p">=</span> <span class="mi">13</span>    <span class="c1">// couleur des points</span>
+
+<span class="no">a</span> <span class="p">=</span> <span class="n">gca</span><span class="p">()</span>                 <span class="c1">// attraper le système d&#39;axes</span>
+<span class="no">a</span><span class="p">.</span><span class="n">data_bounds</span> <span class="p">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// bornes de la fenêtre</span>
+<span class="no">a</span><span class="p">.</span><span class="n">x_location</span>  <span class="p">=</span> <span class="s">&quot;origin&quot;</span>  <span class="c1">// axe des x</span>
+<span class="no">a</span><span class="p">.</span><span class="n">y_location</span>  <span class="p">=</span> <span class="s">&quot;origin&quot;</span>  <span class="c1">// axe des y</span>
+<span class="no">a</span><span class="p">.</span><span class="n">box</span>         <span class="p">=</span> <span class="s">&quot;off&quot;</span>     <span class="c1">// pas de cadre</span></code></pre></figure>
  
 </div>
 
