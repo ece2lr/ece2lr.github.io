@@ -266,14 +266,18 @@ $(document).ready(function() {
 <figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="n">N</span> <span class="p">=</span> <span class="mi">11</span>
 <span class="n">x</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
 
-<span class="n">xbis</span> <span class="p">=</span> <span class="p">(</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span>$<span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span>$<span class="p">)</span> <span class="p">)</span> <span class="o">/</span><span class="mi">2</span>
+<span class="n">xBis</span> <span class="p">=</span> <span class="p">(</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span>$<span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span>$<span class="p">)</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 
-<span class="n">estimNaive</span> <span class="p">=</span> <span class="nb">mean</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">estimCentree</span> <span class="p">=</span> <span class="nb">mean</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">xbis</span><span class="p">))</span>
+<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;x    :   %f&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;xBis :   %f&#39;</span><span class="p">,</span> <span class="n">xBis</span><span class="p">)</span>
 
-<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;Estimation version centree : %f    Erreur commise : %f\n&#39;</span><span class="p">,</span><span class="n">estimCentree</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">estimCentree</span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
-<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;Estimation version naïve :   %f    Erreur commise : %f\n&#39;</span><span class="p">,</span><span class="n">estimNaive</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">estimNaive</span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
-<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;Vraie valeur :               %f&#39;</span><span class="p">,</span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span></code></pre></figure>
+<span class="c1">//////////////////////////////////// On a besoin dans la suite d&#39;avoir défini la fonction f /////////////////</span>
+<span class="c1">//estimNaive = mean(f(x))</span>
+<span class="c1">//estimCentree = mean(f(xbis))</span>
+<span class="c1">//</span>
+<span class="c1">//mprintf(&#39;Estimation version naïve :   %f    Erreur commise : %f\n&#39;, estimNaive, abs(estimNaive-log(2)))</span>
+<span class="c1">//mprintf(&#39;Estimation version centrée : %f    Erreur commise : %f\n&#39;, estimCentree, abs(estimCentree-log(2)))</span>
+<span class="c1">//mprintf(&#39;Vraie valeur :               %f&#39;,log(2))</span></code></pre></figure>
  
 </div>
 
