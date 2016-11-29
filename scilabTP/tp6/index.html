@@ -204,42 +204,79 @@ function deplierReplier(identifiant) {
 
 
     <div class="container">
-<h2 id="fiches-de-rfrences-sur-scilab">Fiches de références sur Scilab</h2>
 
-<div class="panel list-group" id="tableScilabRef">
-  
-    
-    <a href="/scilabRef/arbGraph" class="list-group-item">Arbgraph</a>
-  
-    
-    <a href="/scilabRef/animation" class="list-group-item">Animation</a>
-  
-    
-    <a href="/scilabRef/ergonomie" class="list-group-item">Ergonomie</a>
-  
+
+
+
+
+
+<div class="page-header">
+  <h1>Divers (intégrales, indépendance de *v.a.*)</h1>
+</div>
+<script>
+$(document).ready(function() {
+  $("#toc").append('<h2 class="titreToc">Table des matières</h2>') ; 
+  $("#toc").append('<div class="list-group table-of-contents">') ; 
+  $("h2").each(function(i) {
+    var $current = $(this);
+    if (!$current.hasClass("titreToc"))
+    {
+    $current.attr("id", "title" + i);
+
+    $('#toc').append('<a class="list-group-item" id="link' + i + '" href="#title' + i + '" title="' + $current.attr('tagName') + '">' + $current.text() + '</a>');
+    $current[0].innerHTML = $current[0].innerHTML + '<div class="btn-group btn-group-sm pull-right">\n   <a href="#" class="btn btn-primary">Remonter</a>\n </div>' ; 
+    }
+  });
+
+  $("#toc").append('</div>'); 
+});
+</script>
+
+<div class="row">
+  <div class="col-lg-6 col-md-8 col-sm-12">
+    <div id="toc"></div>
+  </div>
 </div>
 
-<h2 id="travaux-pratiques-de-scilab">Travaux pratiques de Scilab</h2>
+<h2 id="les-fichiers--tlcharger">Les fichiers à télécharger</h2>
 
-<div class="panel list-group" id="tableScilabTP">
+<ul>
+  <li>
+    <p><a href="tp6.pdf">l’énoncé du tp</a></p>
+  </li>
+  <li>
+    <p><a href="xbis.sce" download="xbis.sce">le fichier <code>xbis.sce</code></a></p>
+  </li>
+</ul>
+
+<h3 id="xbissce">xbis.sce</h3>
+
+<div id="snippetxbissce">
+  <span class="aremplir"></span>
   
-    <div class="list-group-item">Tp1</div>
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetxbissce')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
   
-    <div class="list-group-item">Tp2</div>
-  
-    <div class="list-group-item">Tp3</div>
-  
-    <div class="list-group-item">Tp4</div>
-  
-    <div class="list-group-item">Tp5</div>
-  
-    <div class="list-group-item">Tp6</div>
-  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="n">N</span> <span class="p">=</span> <span class="mi">11</span>
+<span class="n">x</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="n">xbis</span> <span class="p">=</span> <span class="p">(</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span>$<span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span>$<span class="p">)</span> <span class="p">)</span> <span class="o">/</span><span class="mi">2</span>
+
+<span class="n">estimNaive</span> <span class="p">=</span> <span class="nb">mean</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">estimCentree</span> <span class="p">=</span> <span class="nb">mean</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">xbis</span><span class="p">))</span>
+
+<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;Estimation version centree : %f    Erreur commise : %f\n&#39;</span><span class="p">,</span><span class="n">estimCentree</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">estimCentree</span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
+<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;Estimation version naïve :   %f    Erreur commise : %f\n&#39;</span><span class="p">,</span><span class="n">estimNaive</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">estimNaive</span><span class="o">-</span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span>
+<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;Vraie valeur :               %f&#39;</span><span class="p">,</span><span class="nb">log</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span></code></pre></figure>
+ 
 </div>
 
-<div class="panel list-group" id="tableScilab">
-  
-</div>
 
  
     </div>
