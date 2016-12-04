@@ -271,12 +271,12 @@ $(document).ready(function() {
 
 <span class="n">xBis</span> <span class="p">=</span> <span class="p">(</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span>$<span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span>$<span class="p">)</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 
-<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;x    :   %f&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">mprintf</span><span class="p">(</span><span class="s">&#39;xBis :   %f&#39;</span><span class="p">,</span> <span class="n">xBis</span><span class="p">)</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&quot;x :&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">disp</span><span class="p">(</span><span class="s">&quot;xBis :&quot;</span><span class="p">,</span> <span class="n">xBis</span><span class="p">)</span>
 
 <span class="c1">//////////////////////////////////// On a besoin dans la suite d&#39;avoir défini la fonction f /////////////////</span>
 <span class="c1">//estimNaive = mean(f(x))</span>
-<span class="c1">//estimCentree = mean(f(xbis))</span>
+<span class="c1">//estimCentree = mean(f(xBis))</span>
 <span class="c1">//</span>
 <span class="c1">//mprintf(&#39;Estimation version naïve :   %f    Erreur commise : %f\n&#39;, estimNaive, abs(estimNaive-log(2)))</span>
 <span class="c1">//mprintf(&#39;Estimation version centrée : %f    Erreur commise : %f\n&#39;, estimCentree, abs(estimCentree-log(2)))</span>
