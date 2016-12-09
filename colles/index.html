@@ -208,10 +208,101 @@ function deplierReplier(identifiant) {
 
 <div class="panel list-group" id="tableColles">
 
-  <div class="list-group-item">Semaine 8
+  <div class="list-group-item">Semaine 10
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine8.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine10.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div class="aCollapser list-group-item">
+      
+<h1 id="intégration-sur-un-segment">Intégration sur un segment</h1>
+<p>pour une fonction <span><strong>continue sur un segment</strong></span>.<br />
+</p>
+<p><span><span><em>(ou <span><strong>continue par morceaux</strong></span> : discontinuités avec limites finies.)</em></span></span></p>
+<p>Linéarité, Chasles, positivité, intégrale d’une constante.</p>
+<p><span class="math inline">\(\displaystyle  \int_a^b f (t) {\,\mathrm{d}}t = F (b) - F (a)\)</span> si <span class="math inline">\(F\)</span> est <span class="math inline">\( {\mathcal C}^1 \)</span> sur <span class="math inline">\({\mathopen{[}a\,;b\mathclose{]}}\)</span> et <span class="math inline">\(F&#39;= f\)</span>.</p>
+<p>pour <span class="math inline">\(u, v\)</span> de classe <span class="math inline">\({\mathcal C}^1\)</span> sur <span class="math inline">\({\mathopen{[}a\,;b\mathclose{]}}\)</span>, on a : <span class="math inline">\(\displaystyle \int_a^b u&#39;v = \big [uv \big ]_a^b - \int_a^b uv&#39;. \)</span><br />
+</p>
+<p><span><span><em>(<span><strong>Stratégie :</strong></span> on essaie de se rapprocher de la sortie du calcul)</em></span></span></p>
+<p><span><span><em>(le changement de variables est indiqué par l’énoncé)</em></span></span></p>
+<p><span class="math inline">\(u : [a , b] \to {\mathbb{R}}\)</span> de classe <span class="math inline">\({\mathcal C}^1\)</span>, <span class="math inline">\(f\)</span> continue sur <span class="math inline">\(u ([a , b])\)</span>.</p>
+<p><span class="math inline">\(\displaystyle \int_a^b f \big ( u (t) \big ) \, u&#39;(t) {\,\mathrm{d}}t = \int_{u (a)}^{u (b)} f (x ) \, {\,\mathrm{d}}x \)</span><br />
+</p>
+<p><span><span><em>(On remplace tous les <span><span class="math inline">\(u(t)\)</span></span> par des <span class="math inline">\(x\)</span>, et <span class="math inline">\(u&#39;(t) {\,\mathrm{d}}t\)</span> par <span class="math inline">\({\,\mathrm{d}}x\)</span>.)</em></span></span></p>
+<p>on a posé <span class="math inline">\(x = u (t)\)</span> et <span class="math inline">\(dx = u&#39;(t) {\,\mathrm{d}}t\)</span>. Alors <span class="math inline">\(t=a \leadsto x = u (a)\)</span> …</p>
+<h1 id="intégration-sur-un-intervalle-quelconque">Intégration sur un intervalle quelconque</h1>
+<dl>
+<dt>Convergence d’une intégrale</dt>
+<dd><p>étude en <span class="math inline">\(\pm \infty\)</span>, en un point <span class="math inline">\(x_0^{\pm}\)</span>.</p>
+</dd>
+<dt>Intégrales convergentes de référence</dt>
+<dd><p> </p>
+<ul>
+<li><p>Fonctions exponentielles <span class="math inline">\(\operatorname{e}^{-ax}\)</span>, <span class="math inline">\(a &gt; 0\)</span> sur <span class="math inline">\({{\mathopen{[}0\,;+\infty\mathclose{[}}}\)</span>.</p></li>
+<li><p>En <span class="math inline">\(+ \infty\)</span> : <span class="math inline">\(\displaystyle \int_1^{+ \infty} \frac{{\,\mathrm{d}}t}{t^\alpha }\)</span> converge <span><em>ssi</em> </span><span class="math inline">\(\alpha &gt; 1\)</span>.</p></li>
+<li><p>En <span class="math inline">\(0^+\)</span> : <span class="math inline">\(\displaystyle \int_{0^+}^{1} \frac{{\,\mathrm{d}}t}{t^\alpha }\)</span> converge <span><em>ssi</em> </span><span class="math inline">\(\alpha &lt; 1\)</span>.</p>
+<p><span><span><em>(retournement de ci-dessus)</em></span></span></p></li>
+</ul>
+</dd>
+<dt>Critère de convergence absolue</dt>
+<dd><p>par comparaison <span class="math inline">\(= o (g(t))\)</span>, <span class="math inline">\(\sim g(t)\)</span> ou <span class="math inline">\(|.| {\leqslant}g(t)\)</span>.</p>
+<ul>
+<li><p>souvent <span class="math inline">\(\frac{1}{t^2}\)</span> pour une intégrale en <span class="math inline">\(+ \infty\)</span>.</p></li>
+<li><p>souvent <span class="math inline">\(\frac{1}{\sqrt{t}}\)</span> pour une intégrale en <span class="math inline">\(0^+\)</span>.</p></li>
+</ul>
+</dd>
+</dl>
+<h1 id="densités-de-probabilité">Densités de probabilité</h1>
+<dl>
+<dt>Définition</dt>
+<dd><p>une fonction <span class="math inline">\(f : {\mathbb{R}}\to {\mathbb{R}}\)</span>,</p>
+<p>continue sauf év en un nb. fini de points,<br />
+<span class="math inline">\(\forall t \in {\mathbb{R}}, \quad f (t) {\geqslant}0\)</span>, et<br />
+convergence et valeur de l’intégrale : <span class="math inline">\(\displaystyle \int_{-\infty}^{\infty} f(t) {\,\mathrm{d}}t = 1 \)</span>.<br />
+</p>
+</dd>
+<dt>Variable aléatoire à densité</dt>
+<dd><p> <br />
+une <em>v.a.r.</em> <span class="math inline">\(X\)</span> admet pour densité <span class="math inline">\(f\)</span> si <span class="math inline">\(\forall a &lt; b \in {\mathbb{R}}, \)</span> on a : <span class="math inline">\(\displaystyle 
+        {\mathbb P}(a {\leqslant}X {\leqslant}b)  = 
+          \int_{a}^{b} f(t) {\,\mathrm{d}}t  = 1 \)</span>.</p>
+</dd>
+<dt>Fonction de répartition associée</dt>
+<dd><p>Alors <span class="math inline">\(\displaystyle \forall x \in {\mathbb{R}}, \quad {\mathbb P}(X {\leqslant}x ) = \int_{-\infty}^{x} f(t) {\,\mathrm{d}}t \stackrel{\text{(déf)}}{=} F_X(x)\)</span>.</p>
+</dd>
+<dt>Espérance et moments, variance</dt>
+<dd><p>Sous réserve de convergence absolue : <span class="math display">\[\begin{aligned}
+              {\mathbb E}[X]               = \int_{-\infty}^{\infty} x f(x) {\,\mathrm{d}}x, &amp; &amp; 
+              \forall n \in {\mathbb{N}}, \ \mu_n(X) = {\mathbb E}[X^n]  = \int_{-\infty}^{\infty} x^n f(x) {\,\mathrm{d}}x,   \\ 
+            \end{aligned}\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+              \operatorname{Var}(X) \stackrel{\text{(déf)}}{=} {\mathbb E}\Big [ \big (X - {\mathbb E}[X] \big ) ^2 \Big ] \stackrel{\text{(K-H)}}{=} {\mathbb E}\big [X^2 \big ] - \big ( {\mathbb E}[X] \big )
+            \end{aligned}\]</span></p>
+</dd>
+<dt>Densités usuelles</dt>
+<dd><p>Densité exponentielle<br />
+Densité uniforme<br />
+Densité normale<br />
+</p>
+</dd>
+</dl>
+<h1 id="questions-de-cours">Questions de cours</h1>
+<ol>
+<li><p>Définition d’une fonction densité ? La densité de <span class="math inline">\({\mathcal E}(\lambda)\)</span>.</p></li>
+<li><p>Énoncer le critère de convergence de Riemann en <span class="math inline">\(+ \infty\)</span> et en <span class="math inline">\(0^+\)</span>.</p></li>
+<li><p>Convergence et calcul de <span class="math inline">\(\int_{0}^1 \ln(t) {\,\mathrm{d}}t\)</span>.</p></li>
+<li><p>Énoncer le principe du changement de variables pour une intégrale sur un segment.</p></li>
+<li><p>Définir et exprimer le moment d’ordre <span class="math inline">\(n\)</span> pour variable à densité <span class="math inline">\(f\)</span>.</p></li>
+</ol>
+
+
+  </div>
+  
+  <div class="list-group-item">Semaine 08
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
+      <a href="/collesPdf/semaine08.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
@@ -382,10 +473,10 @@ Soit <span class="math inline">\({\mathcal F}= ({\vec{u}}_1, \ldots , {\vec{u}}_
 
   </div>
   
-  <div class="list-group-item">Semaine 7
+  <div class="list-group-item">Semaine 07
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine7.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine07.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
@@ -480,10 +571,10 @@ Aller-retour entre deux présentations d’un sous-espace vectoriel de <span cla
 
   </div>
   
-  <div class="list-group-item">Semaine 6
+  <div class="list-group-item">Semaine 06
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine6.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine06.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
@@ -579,10 +670,10 @@ Aller-retour entre deux présentations d’un sous-espace vectoriel de <span cla
 
   </div>
   
-  <div class="list-group-item">Semaine 5
+  <div class="list-group-item">Semaine 05
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine5.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine05.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
@@ -694,10 +785,10 @@ notamment <span class="math inline">\(\displaystyle {\mathbb E}\left [X(X-1) \ri
 
   </div>
   
-  <div class="list-group-item">Semaine 4
+  <div class="list-group-item">Semaine 04
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine4.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine04.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
@@ -789,10 +880,10 @@ Les résultats de convergence par comparaison s’appliquent en remplaçant <spa
 
   </div>
   
-  <div class="list-group-item">Semaine 3
+  <div class="list-group-item">Semaine 03
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine3.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine03.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
@@ -890,10 +981,10 @@ Pour <span class="math inline">\(a = \ell\)</span> <span><span><em>(un point fix
 
   </div>
   
-  <div class="list-group-item">Semaine 2
+  <div class="list-group-item">Semaine 02
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine2.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine02.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
@@ -961,10 +1052,10 @@ Vérification <em>a posteriori</em> de la formule <span class="math inline">\(\f
 
   </div>
   
-  <div class="list-group-item">Semaine 1
+  <div class="list-group-item">Semaine 01
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
-      <a href="/collesPdf/semaine1.pdf" class="btn btn-primary">Fichier Pdf</a>
+      <a href="/collesPdf/semaine01.pdf" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>
   <div class="aCollapser list-group-item">
