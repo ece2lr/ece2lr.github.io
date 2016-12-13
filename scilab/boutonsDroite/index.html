@@ -1105,20 +1105,34 @@ Soit <span class="math inline">\({\mathcal F}= ({\vec{u}}_1, \ldots , {\vec{u}}_
     <span class="list-group-item">
       
 <h1 id="intégration-sur-un-segment">Intégration sur un segment</h1>
-<p>pour une fonction <span><strong>continue sur un segment</strong></span>.<br />
+<dl>
+<dt>Intégrabilité automatique</dt>
+<dd><p>pour une fonction <span><strong>continue sur un segment</strong></span>.<br />
 </p>
 <p><span><span><em>(ou <span><strong>continue par morceaux</strong></span> : discontinuités avec limites finies.)</em></span></span></p>
-<p>Linéarité, Chasles, positivité, intégrale d’une constante.</p>
-<p><span class="math inline">\(\displaystyle  \int_a^b f (t) {\,\mathrm{d}}t = F (b) - F (a)\)</span> si <span class="math inline">\(F\)</span> est <span class="math inline">\( {\mathcal C}^1 \)</span> sur <span class="math inline">\({\mathopen{[}a\,;b\mathclose{]}}\)</span> et <span class="math inline">\(F&#39;= f\)</span>.</p>
-<p>pour <span class="math inline">\(u, v\)</span> de classe <span class="math inline">\({\mathcal C}^1\)</span> sur <span class="math inline">\({\mathopen{[}a\,;b\mathclose{]}}\)</span>, on a : <span class="math inline">\(\displaystyle \int_a^b u&#39;v = \big [uv \big ]_a^b - \int_a^b uv&#39;. \)</span><br />
+</dd>
+<dt>Propriétés générales</dt>
+<dd><p>Linéarité, Chasles, positivité, intégrale d’une constante.</p>
+</dd>
+<dt>Intégrale et primitive</dt>
+<dd><p><span class="math inline">\(\displaystyle  \int_a^b f (t) {\,\mathrm{d}}t = F (b) - F (a)\)</span> si <span class="math inline">\(F\)</span> est <span class="math inline">\( {\mathcal C}^1 \)</span> sur <span class="math inline">\({\mathopen{[}a\,;b\mathclose{]}}\)</span> et <span class="math inline">\(F&#39;= f\)</span>.</p>
+</dd>
+<dt>Intégration par parties</dt>
+<dd><p>pour <span class="math inline">\(u, v\)</span> de classe <span class="math inline">\({\mathcal C}^1\)</span> sur <span class="math inline">\({\mathopen{[}a\,;b\mathclose{]}}\)</span>, on a : <span class="math inline">\(\displaystyle \int_a^b u&#39;v = \big [uv \big ]_a^b - \int_a^b uv&#39;. \)</span><br />
 </p>
 <p><span><span><em>(<span><strong>Stratégie :</strong></span> on essaie de se rapprocher de la sortie du calcul)</em></span></span></p>
-<p><span><span><em>(le changement de variables est indiqué par l’énoncé)</em></span></span></p>
-<p><span class="math inline">\(u : [a , b] \to {\mathbb{R}}\)</span> de classe <span class="math inline">\({\mathcal C}^1\)</span>, <span class="math inline">\(f\)</span> continue sur <span class="math inline">\(u ([a , b])\)</span>.</p>
-<p><span class="math inline">\(\displaystyle \int_a^b f \big ( u (t) \big ) \, u&#39;(t) {\,\mathrm{d}}t = \int_{u (a)}^{u (b)} f (x ) \, {\,\mathrm{d}}x \)</span><br />
+</dd>
+<dt>Changement de variables</dt>
+<dd><p><span><span><em>(le changement de variables est indiqué par l’énoncé)</em></span></span></p>
+<ul>
+<li><p><span><span><em>(Hypothèses)</em></span></span> <span class="math inline">\(u : [a , b] \to {\mathbb{R}}\)</span> de classe <span class="math inline">\({\mathcal C}^1\)</span>, <span class="math inline">\(f\)</span> continue sur <span class="math inline">\(u ([a , b])\)</span>.</p></li>
+<li><p><span><span><em>(Formule)</em></span></span> <span class="math inline">\(\displaystyle \int_a^b f \big ( u (t) \big ) \, u&#39;(t) {\,\mathrm{d}}t = \int_{u (a)}^{u (b)} f (x ) \, {\,\mathrm{d}}x \)</span><br />
 </p>
-<p><span><span><em>(On remplace tous les <span><span class="math inline">\(u(t)\)</span></span> par des <span class="math inline">\(x\)</span>, et <span class="math inline">\(u&#39;(t) {\,\mathrm{d}}t\)</span> par <span class="math inline">\({\,\mathrm{d}}x\)</span>.)</em></span></span></p>
-<p>on a posé <span class="math inline">\(x = u (t)\)</span> et <span class="math inline">\(dx = u&#39;(t) {\,\mathrm{d}}t\)</span>. Alors <span class="math inline">\(t=a \leadsto x = u (a)\)</span> …</p>
+<p><span><span><em>(On remplace tous les <span><span class="math inline">\(u(t)\)</span></span> par des <span class="math inline">\(x\)</span>, et <span class="math inline">\(u&#39;(t) {\,\mathrm{d}}t\)</span> par <span class="math inline">\({\,\mathrm{d}}x\)</span>.)</em></span></span></p></li>
+<li><p><span><span><em>(Notation)</em></span></span> on a posé <span class="math inline">\(x = u (t)\)</span> et <span class="math inline">\(dx = u&#39;(t) {\,\mathrm{d}}t\)</span>. Alors <span class="math inline">\(t=a \leadsto x = u (a)\)</span> …</p></li>
+</ul>
+</dd>
+</dl>
 <h1 id="intégration-sur-un-intervalle-quelconque">Intégration sur un intervalle quelconque</h1>
 <dl>
 <dt>Convergence d’une intégrale</dt>
