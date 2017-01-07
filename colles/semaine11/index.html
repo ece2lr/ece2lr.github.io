@@ -204,42 +204,92 @@ function deplierReplier(identifiant) {
 
 
     <div class="container">
-<article class="page">
 
-  <h1>Devoirs</h1>
-
-  <div class="entry">
-    <h2 id="devoirs-en-temps-libre">Devoirs en temps libre</h2>
-
+<h1 id="indépendance-dun-couple">Indépendance d’un couple</h1>
+<dl>
+<dt>Définition <span><span><em>(couple discret)</em></span></span></dt>
+<dd><p><span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> sont <span><strong>indépendantes</strong></span> si : <span class="math display">\[\begin{aligned}
+      \forall (x , y) \in X (\Omega ) \times Y (\Omega) : \ {\mathbb P}(X = x , Y = y ) = {\mathbb P}(X = x) \times  {\mathbb P}( Y = y ) 
+    \end{aligned}\]</span></p>
+</dd>
+<dt>Non-indépendance</dt>
+<dd><p><span><span><em>(souvent)</em></span></span> recherche d’impossibilités <span><span><em>(ex. : <span class="math inline">\({\mathbb P}(X &gt; Y) \stackrel{(?)}{\leadsto} X, Y\)</span> pas indép)</em></span></span></p>
+</dd>
+<dt>Tableau des issues</dt>
+<dd><p>du couple <span class="math inline">\((X,Y)\)</span> à double entrée : valeurs de <span class="math inline">\(X\)</span>, valeurs de <span class="math inline">\(Y\)</span></p>
+</dd>
+<dt>Calcul de probabilité</dt>
+<dd><p>d’un évén portant sur le couple <span><span><em>(ex. : <span class="math inline">\(A = [X = Y], B = [X {\geqslant}Y]\)</span>)</em></span></span></p>
+<ol>
+<li><p>Recherche des issues favorables à l’év <span class="math inline">\(\longrightarrow\)</span> repérage de l’év sur le tableau</p></li>
+<li><p>Sommation des probabilités élémentaires <span class="math inline">\({\mathbb P}(X = x , Y = y )\)</span> favorables à l’év</p></li>
+</ol>
+</dd>
+<dt>Lois classiques</dt>
+<dd><p>l’expression des probabilités élémentaires pour <span class="math inline">\(X, Y\)</span> de loi</p>
+<p>uniformes<br />
+géométriques<br />
+de Poisson<br />
+</p>
+</dd>
+</dl>
+<h1 id="exemples-de-transfert">Exemples de transfert</h1>
+<dl>
+<dt>Cas classiques</dt>
+<dd><p>D’abord trouver les valeurs possibles pour <span class="math inline">\(Z = f(X, Y)\)</span>, puis la loi</p>
 <ul>
-  <li><a href="/dl/dl1">Devoir 1</a> <strong>Un exemple de dérivation logarithmique</strong> <em>pour le  08 Sep 2017</em></li>
-  <li><a href="/dl/dl2">Devoir 2</a> <strong>Une étude de suite récurrente par accroissements finis</strong> <em>pour le  29 Sep 2017</em></li>
-  <li><a href="/dl/dl3">Devoir 3</a> <strong>Une suite de tirages aléatoires avec/sans remise</strong> <em>pour le  13 Oct 2017</em></li>
-  <li><a href="/dl/dl4">Devoir 4</a> <strong>Remise en route algèbre linéaire</strong> <em>pour le  03 Nov 2017</em></li>
+<li><p><span class="math inline">\(S = X + Y\)</span> <span><span><em>(év élémentaires <span class="math inline">\([S = n] = \smash{\bigcup\limits_{k} [X = k, Y = n - k]}\)</span> <span>obliques </span> sur le tableau)</em></span></span></p></li>
+<li><p><span class="math inline">\(M = \max(X, Y)\)</span> <em>via</em> la fonction de répartition :</p>
+<ol>
+<li><p><span class="math inline">\(F_{M}(n) = {\mathbb P}(M {\leqslant}n) \stackrel{{\text{max}}}{=} \, {\mathbb P}(X {\leqslant}n , Y {\leqslant}n) \stackrel{{\text{ind\up{ce}}}}{=} \,{\mathbb P}(X {\leqslant}n) \cdot {\mathbb P}(Y {\leqslant}n) \)</span></p></li>
+<li><p>Calcul de <span class="math inline">\(F_M = F_X \cdot F_Y\)</span> <span class="math inline">\(\Longrightarrow\)</span> loi de <span class="math inline">\(M\)</span> : <span class="math inline">\({\mathbb P}(X = n) = F_M(n) - F_{M}(n-1)\)</span>.</p></li>
+</ol></li>
 </ul>
-
-<h2 id="devoirs-surveills">Devoirs surveillés</h2>
-
+</dd>
+<dt>Propriétés de la somme</dt>
+<dd><p>pour <span class="math inline">\(X, Y\)</span> admettant un moment d’ordre 2 :</p>
 <ul>
-  <li><a href="/ds/ds1">Devoir surveillé 1</a> <em>le  15 Sep 2017</em>
-    <ol>
-      <li>Étude des puissances d’une matrice, application à un calcul de somme</li>
-      <li>Une étude de fonction, avec tracé de courbe, et un encadrement d’intégrales</li>
-      <li>Une fonction densité, le théorème de la bijection, et l’algorithme de dichotomie.</li>
-    </ol>
-  </li>
-  <li><a href="/ds/ds2">Devoir surveillé 2</a> <em>le  09 Nov 2017</em>
-    <ol>
-      <li>Étude de fonctions et suite récurrente</li>
-      <li>Suite récurrente, étude asymptotique par une série</li>
-      <li>Chaîne de Markov dans une urne</li>
-    </ol>
-  </li>
-  <li><a href="/ds/ds3">Devoir surveillé 3</a> <em>le  24 Nov 2017</em></li>
+<li><p><span class="math inline">\({\mathbb E}[X + Y] = {\mathbb E}[X] + {\mathbb E}[Y]\)</span> <span><span><em>(même si <span class="math inline">\(X,Y\)</span> pas indépendantes)</em></span></span></p></li>
+<li><p><span class="math inline">\(\operatorname{Var}(X + Y) = \operatorname{Var}(X) + \operatorname{Var}(Y)\)</span> <span><span><em>(si <span class="math inline">\(X,Y\)</span> indépendantes)</em></span></span></p></li>
+<li><p>pour <span class="math inline">\(
+        \begin{array}[t]{@{}r}
+          X \hookrightarrow {\mathbb P}(\lambda) \\
+          Y \hookrightarrow {\mathbb P}(\mu)     \\
+        \end{array}
+        \)</span> indép <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(X + Y \hookrightarrow {\mathbb P}(\lambda + \mu)\)</span>.</p></li>
 </ul>
+<h1 id="indépendance-multiple">Indépendance multiple</h1>
+<dl>
+<dt>Définition</dt>
+<dd><p>des v.a. discrètes, <span class="math inline">\(X_1, \ldots,X_n\)</span> sont <span><strong>mutuellement indépendantes</strong></span> si <span class="math display">\[\begin{aligned}
+        \forall x_1 \in X_1(\Omega), \ldots, x_n \in X_n(\Omega), \quad 
+        {\mathbb P}\left ( \,\bigcap_{i=1}^{n} [X_i = x_i] \,\right ) = \prod_{i=1}^n {\mathbb P}(X_i = x_i).
+      \end{aligned}\]</span></p>
+</dd>
+<dt>Lemme des coalitions</dt>
+<dd><p>Soient <span class="math inline">\(X_1,\ldots , X_n\)</span> mut indépendantes.</p>
+<p>Posons <span class="math inline">\(Y = f (X_1 , \ldots X_r)\)</span> où <span class="math inline">\(f : {\mathbb{R}}^r \to {\mathbb{R}}\)</span>, avec <span class="math inline">\(r {\leqslant}n\)</span>. Alors <span class="math inline">\(Y, X_{r + 1} , \ldots ,X_{n}\)</span> sont encore mutuellement indépendantes.</p>
+</dd>
+<dt>Exemples de transfert multiples</dt>
+<dd><p> <br />
+Seulement dans les cas très simples et dans des situations favorables</p>
+<ul>
+<li><p><span class="math inline">\(\min\)</span> et <span class="math inline">\(\max\)</span> <span><span><em>(on procède comme pour deux variables, <em>mutatis mutandis</em>)</em></span></span></p></li>
+<li><p>somme <span><span><em>(classique mais pas évident : somme de variables géométriques en <span style="font-variant: small-caps;">Dl</span>)</em></span></span></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<h1 id="questions-de-cours">Questions de cours</h1>
+<ol>
+<li><p>Définition de l’indépendance de deux variables aléatoires discrètes</p></li>
+<li><p>On lance deux dés à <span class="math inline">\(n\)</span> faces. Quelle est la probabilité qu’ils tombent sur la même face ?</p></li>
+<li><p>Espérance et variance de la somme indépendante.</p></li>
+<li><p>La stabilité de la loi de Poisson par addition.</p></li>
+<li><p>La méthode pour trouver la loi du max indépendant.</p></li>
+</ol>
 
-  </div>
-</article>
  
     </div>
   </body>

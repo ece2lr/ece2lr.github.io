@@ -208,6 +208,220 @@ function deplierReplier(identifiant) {
 
 <div class="panel list-group" id="tableColles">
 
+  <div class="list-group-item">Semaine 12
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
+      <a href="/collesPdf/semaine12.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div class="aCollapser list-group-item">
+      
+<h1 id="dérivation">Dérivation</h1>
+<p>Soit <span class="math inline">\(f : I \to {\mathbb{R}}\)</span> une fonction continue.</p>
+<dl>
+<dt>Dérivabilité</dt>
+<dd><p>équation de la tangente, l’écriture <span class="math inline">\(f (x) = f (x_0) + f&#39;(x_0) (x - x_0) + o (x - x_0)\)</span>.</p>
+</dd>
+<dt>Formes indéterminées</dt>
+<dd><p>Application aux taux d’accroissement <span class="math inline">\(\lim\limits_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0} = f&#39;(x_0)\)</span></p>
+</dd>
+<dt>Application aux inégalités</dt>
+<dd><p><span> <span class="math inline">\([f(x) {\geqslant}g(x)]\)</span>   <span class="math inline">\(\Longleftrightarrow\)</span>   <span class="math inline">\([\underbrace{f(x) - g(x)}_{= u(x)} {\geqslant}0]\)</span> </span> puis étude de <span class="math inline">\(u(x)\)</span>.</p>
+</dd>
+</dl>
+<h1 id="développements-limités-à-lordre-2">Développements limités <span><span><em>(à l’ordre 2)</em></span></span></h1>
+<p><span class="math inline">\(
+\begin{array}{rlccccc}
+  \operatorname{e}^{x}      &amp; {} = {}                              &amp; 1 + x &amp; {} + {} &amp; \frac{x^2}{2}     &amp; {} + {} &amp; o \big(x^2\big)      \\ 
+  \ln(1 +  h) &amp; {} \stackrel{{h\to 0}}{=} &amp; h              &amp; {} - {} &amp; \frac{h^2}{2}     &amp; {} + {} &amp; o \big(h^2\big)      \\
+  \ln(x)      &amp; {} \stackrel{{x\to 1}}{=} &amp; (x-1)          &amp; {} - {} &amp; \frac{(x-1)^2}{2} &amp; {} + {} &amp; o \big((x-1)^2 \big) \\
+\end{array}
+\)</span> <span class="math inline">\(
+\begin{array}{rl*{2}{cl}cl}
+            (1 + x)^a    &amp; {}= 1 &amp; {}+{} &amp; a x &amp; {}+{} &amp; \frac{a(a-1)}{2} x^2 &amp; {}+{} &amp; o (x^2) \\
+  (1 + x)^2    &amp; {}= 1 &amp; {}+{} &amp; 2x  &amp; {}+{} &amp; x^2                  &amp;       &amp;         \\
+  (1 + x)^3    &amp; {}= 1 &amp; {}+{} &amp; 3 x &amp; {}+{} &amp; 3 x^2                &amp; {}+{} &amp; o (x^2) \\[4.2pt]
+ \frac{1}{1+x} &amp; {}= 1 &amp; {}-{} &amp; x   &amp; {}+{} &amp; x^2                  &amp; {}+{} &amp; o (x^2) \\
+\end{array}
+\)</span></p>
+<dl>
+<dt>Principe</dt>
+<dd><p>approximation de <span class="math inline">\(f(x)\)</span> par un polynôme de degré <span class="math inline">\({\leqslant}2\)</span>, avec une erreur <span class="math inline">\(o(x-x_0)^2\)</span>.</p>
+</dd>
+<dt>Formes indéterminées</dt>
+<dd><p><span class="math inline">\(\lim\limits_{x \to 0} \frac{\operatorname{e}^{x}-1-x}{x^2}\)</span> <span class="math inline">\(\lim\limits_{x \to 0} \frac{\ln(1+x)-x}{x^2}\)</span> <span class="math inline">\(\lim\limits_{x \to 0} \frac{(1+x)^a-1-ax}{x^2}\)</span></p>
+</dd>
+<dt>Formule de Taylor à l’ordre 2</dt>
+<dd><p>Si <span class="math inline">\(f : I \to {\mathbb{R}}\)</span> est <span class="math inline">\({\mathcal C}^2\)</span>, alors pour <span class="math inline">\(x \to x_0\)</span>, <span class="math display">\[\begin{aligned}
+      \def\arraystretch{1.4}
+    \begin{array}{rllllllll}
+      f (x)             &amp;  =  &amp; f (x_0) &amp;  +  &amp; f&#39;(x_0) \left (x - x_0 \right ) &amp;  +  &amp; \frac{f&#39;&#39;(x_0)}{2} \left (x - x_0 \right)^2 &amp;  +  &amp; o \left (x - x_0 \right)^2 \\
+      f (x_0  +  h) &amp;  =  &amp; f (x_0) &amp;  +  &amp; f&#39;(x_0) \, h                    &amp;  +  &amp; \frac{f&#39;&#39;(x_0)}{2} \, h^2                   &amp;  +  &amp; o (h^2) \\ 
+    \end{array}  \end{aligned}\]</span></p>
+</dd>
+</dl>
+<h1 id="convexité">Convexité</h1>
+<p>Soit <span class="math inline">\(f : I \to {\mathbb{R}}\)</span> une fonction continue.</p>
+<dl>
+<dt>Inégalité de convexité</dt>
+<dd><p><span class="math inline">\(f\)</span> est <span><strong>convexe</strong></span> si <span class="math display">\[\begin{aligned}
+    \forall a {\leqslant}b \in I, \quad t \in {\mathopen{[}0\,;1\mathclose{]}}, \quad 
+    \underbrace
+    {      
+        f \big((1-t) \cdot a + t \cdot b \big) 
+    }_{\substack{\text{image de la moyenne}\\\text{(sur la courbe)} }}
+    \ 
+    {\leqslant}\ 
+    \underbrace
+    {      
+        (1-t) \cdot f ( a ) + t \cdot f ( b )
+        }_{\substack{\text{moyenne des images}\\\text{(sur la corde)} }}
+  \end{aligned}\]</span></p>
+</dd>
+<dt>Caractérisation</dt>
+<dd><p>Pour <span class="math inline">\(f\)</span> de classe <span class="math inline">\({\mathcal C}^2\)</span> : <span class="math inline">\(f\)</span> convexe sur <span class="math inline">\(I\)</span> <span class="math inline">\(\Longleftrightarrow\)</span> <span class="math inline">\(f&#39;&#39; {\geqslant}0\)</span> sur <span class="math inline">\(I\)</span>.</p>
+</dd>
+<dt>Recherche de points d’inflexion</dt>
+<dd><p>où la dérivée seconde s’annule <span><strong>en changeant de signe</strong></span></p>
+</dd>
+<dt>Tangentes</dt>
+<dd><p>Pour <span class="math inline">\(f\)</span> <span><strong>dérivable</strong></span> et <span><strong>convexe</strong></span>, sur <span class="math inline">\(I\)</span> et <span class="math inline">\(x, x_0 \in I\)</span>, on a : <span class="math inline">\(f(x) {\geqslant}f(x_0) + f&#39;(x_0)\cdot (x-x_0)\)</span>.</p>
+</dd>
+<dt>Fonction concave</dt>
+<dd><p><span class="math inline">\(f\)</span> concave <span class="math inline">\(\Longleftrightarrow\)</span> <span class="math inline">\(-f\)</span> convexe <span><span><em>(on renverse tout ci-dessus)</em></span></span></p>
+</dd>
+</dl>
+<h1 id="inégalité-des-accroissements-finis">Inégalité des accroissements finis</h1>
+<dl>
+<dt>Inégalité des accroissements finis</dt>
+<dd><p> <br />
+Si on a <span class="math inline">\(k &gt; 0\)</span> tel que <span class="math inline">\(\forall x \in I, \ {\left\lvert f&#39;(x)\right\rvert} {\leqslant}k\)</span>,</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">alors <span class="math inline">\(\forall a, b \in I\)</span>,</td>
+<td align="left"><span class="math inline">\(\displaystyle {\left\lvert \frac{f(b) - f(a)}{b - a}\right\rvert}\)</span></td>
+<td align="left"><span class="math inline">\({\leqslant}k\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+<span><span><em>(la version la plus utile, mais aussi les versions sans valeur absolue)</em></span></span></p>
+</dd>
+<dt>Application aux suites récurrentes</dt>
+<dd><p>Soit <span class="math inline">\((u_n)\)</span> avec : <span class="math inline">\(\forall n \in {\mathbb{N}}, \ u_{n+1} = f(u_n)\)</span>.<br />
+Pour <span class="math inline">\(a = \ell\)</span> <span><span><em>(un point fixe : <span class="math inline">\(f(\ell) = \ell\)</span>)</em></span></span>, et <span class="math inline">\(b = u_n\)</span>, on a <span class="math inline">\({\left\lvert u_{n+1} - \ell\right\rvert} {\leqslant}k {\left\lvert u_{n} - \ell\right\rvert}\)</span>.  <span><span><em>(<span class="math inline">\(k\)</span> comme ci-dessus)</em></span></span></p>
+<p>On trouve alors par récurrence : <span class="math inline">\({\left\lvert u_{n} - \ell\right\rvert} {\leqslant}k^n {\left\lvert u_0 - \ell\right\rvert}\)</span>.</p>
+</dd>
+</dl>
+<h1 id="questions-de-cours">Questions de cours</h1>
+<ol>
+<li><p>Les trois développements limités au programme</p></li>
+<li><p>L’inégalité de convexité <span><span><em>(version graphe / corde)</em></span></span></p></li>
+<li><p>Convexité et position relative graphe / tangentes <span><span><em>(en écrivant inégalité)</em></span></span></p></li>
+<li><p>Caractérisations des points d’inflexion</p></li>
+<li><p>L’inégalité des accroissements finis <span><span><em>(version valeur absolue)</em></span></span></p></li>
+</ol>
+
+
+  </div>
+  
+  <div class="list-group-item">Semaine 11
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
+      <a href="/collesPdf/semaine11.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div class="aCollapser list-group-item">
+      
+<h1 id="indépendance-dun-couple">Indépendance d’un couple</h1>
+<dl>
+<dt>Définition <span><span><em>(couple discret)</em></span></span></dt>
+<dd><p><span class="math inline">\(X\)</span> et <span class="math inline">\(Y\)</span> sont <span><strong>indépendantes</strong></span> si : <span class="math display">\[\begin{aligned}
+      \forall (x , y) \in X (\Omega ) \times Y (\Omega) : \ {\mathbb P}(X = x , Y = y ) = {\mathbb P}(X = x) \times  {\mathbb P}( Y = y ) 
+    \end{aligned}\]</span></p>
+</dd>
+<dt>Non-indépendance</dt>
+<dd><p><span><span><em>(souvent)</em></span></span> recherche d’impossibilités <span><span><em>(ex. : <span class="math inline">\({\mathbb P}(X &gt; Y) \stackrel{(?)}{\leadsto} X, Y\)</span> pas indép)</em></span></span></p>
+</dd>
+<dt>Tableau des issues</dt>
+<dd><p>du couple <span class="math inline">\((X,Y)\)</span> à double entrée : valeurs de <span class="math inline">\(X\)</span>, valeurs de <span class="math inline">\(Y\)</span></p>
+</dd>
+<dt>Calcul de probabilité</dt>
+<dd><p>d’un évén portant sur le couple <span><span><em>(ex. : <span class="math inline">\(A = [X = Y], B = [X {\geqslant}Y]\)</span>)</em></span></span></p>
+<ol>
+<li><p>Recherche des issues favorables à l’év <span class="math inline">\(\longrightarrow\)</span> repérage de l’év sur le tableau</p></li>
+<li><p>Sommation des probabilités élémentaires <span class="math inline">\({\mathbb P}(X = x , Y = y )\)</span> favorables à l’év</p></li>
+</ol>
+</dd>
+<dt>Lois classiques</dt>
+<dd><p>l’expression des probabilités élémentaires pour <span class="math inline">\(X, Y\)</span> de loi</p>
+<p>uniformes<br />
+géométriques<br />
+de Poisson<br />
+</p>
+</dd>
+</dl>
+<h1 id="exemples-de-transfert">Exemples de transfert</h1>
+<dl>
+<dt>Cas classiques</dt>
+<dd><p>D’abord trouver les valeurs possibles pour <span class="math inline">\(Z = f(X, Y)\)</span>, puis la loi</p>
+<ul>
+<li><p><span class="math inline">\(S = X + Y\)</span> <span><span><em>(év élémentaires <span class="math inline">\([S = n] = \smash{\bigcup\limits_{k} [X = k, Y = n - k]}\)</span> <span>obliques </span> sur le tableau)</em></span></span></p></li>
+<li><p><span class="math inline">\(M = \max(X, Y)\)</span> <em>via</em> la fonction de répartition :</p>
+<ol>
+<li><p><span class="math inline">\(F_{M}(n) = {\mathbb P}(M {\leqslant}n) \stackrel{{\text{max}}}{=} \, {\mathbb P}(X {\leqslant}n , Y {\leqslant}n) \stackrel{{\text{ind\up{ce}}}}{=} \,{\mathbb P}(X {\leqslant}n) \cdot {\mathbb P}(Y {\leqslant}n) \)</span></p></li>
+<li><p>Calcul de <span class="math inline">\(F_M = F_X \cdot F_Y\)</span> <span class="math inline">\(\Longrightarrow\)</span> loi de <span class="math inline">\(M\)</span> : <span class="math inline">\({\mathbb P}(X = n) = F_M(n) - F_{M}(n-1)\)</span>.</p></li>
+</ol></li>
+</ul>
+</dd>
+<dt>Propriétés de la somme</dt>
+<dd><p>pour <span class="math inline">\(X, Y\)</span> admettant un moment d’ordre 2 :</p>
+<ul>
+<li><p><span class="math inline">\({\mathbb E}[X + Y] = {\mathbb E}[X] + {\mathbb E}[Y]\)</span> <span><span><em>(même si <span class="math inline">\(X,Y\)</span> pas indépendantes)</em></span></span></p></li>
+<li><p><span class="math inline">\(\operatorname{Var}(X + Y) = \operatorname{Var}(X) + \operatorname{Var}(Y)\)</span> <span><span><em>(si <span class="math inline">\(X,Y\)</span> indépendantes)</em></span></span></p></li>
+<li><p>pour <span class="math inline">\(
+        \begin{array}[t]{@{}r}
+          X \hookrightarrow {\mathbb P}(\lambda) \\
+          Y \hookrightarrow {\mathbb P}(\mu)     \\
+        \end{array}
+        \)</span> indép <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(X + Y \hookrightarrow {\mathbb P}(\lambda + \mu)\)</span>.</p></li>
+</ul>
+<h1 id="indépendance-multiple">Indépendance multiple</h1>
+<dl>
+<dt>Définition</dt>
+<dd><p>des v.a. discrètes, <span class="math inline">\(X_1, \ldots,X_n\)</span> sont <span><strong>mutuellement indépendantes</strong></span> si <span class="math display">\[\begin{aligned}
+        \forall x_1 \in X_1(\Omega), \ldots, x_n \in X_n(\Omega), \quad 
+        {\mathbb P}\left ( \,\bigcap_{i=1}^{n} [X_i = x_i] \,\right ) = \prod_{i=1}^n {\mathbb P}(X_i = x_i).
+      \end{aligned}\]</span></p>
+</dd>
+<dt>Lemme des coalitions</dt>
+<dd><p>Soient <span class="math inline">\(X_1,\ldots , X_n\)</span> mut indépendantes.</p>
+<p>Posons <span class="math inline">\(Y = f (X_1 , \ldots X_r)\)</span> où <span class="math inline">\(f : {\mathbb{R}}^r \to {\mathbb{R}}\)</span>, avec <span class="math inline">\(r {\leqslant}n\)</span>. Alors <span class="math inline">\(Y, X_{r + 1} , \ldots ,X_{n}\)</span> sont encore mutuellement indépendantes.</p>
+</dd>
+<dt>Exemples de transfert multiples</dt>
+<dd><p> <br />
+Seulement dans les cas très simples et dans des situations favorables</p>
+<ul>
+<li><p><span class="math inline">\(\min\)</span> et <span class="math inline">\(\max\)</span> <span><span><em>(on procède comme pour deux variables, <em>mutatis mutandis</em>)</em></span></span></p></li>
+<li><p>somme <span><span><em>(classique mais pas évident : somme de variables géométriques en <span style="font-variant: small-caps;">Dl</span>)</em></span></span></p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<h1 id="questions-de-cours">Questions de cours</h1>
+<ol>
+<li><p>Définition de l’indépendance de deux variables aléatoires discrètes</p></li>
+<li><p>On lance deux dés à <span class="math inline">\(n\)</span> faces. Quelle est la probabilité qu’ils tombent sur la même face ?</p></li>
+<li><p>Espérance et variance de la somme indépendante.</p></li>
+<li><p>La stabilité de la loi de Poisson par addition.</p></li>
+<li><p>La méthode pour trouver la loi du max indépendant.</p></li>
+</ol>
+
+
+  </div>
+  
   <div class="list-group-item">Semaine 10
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
