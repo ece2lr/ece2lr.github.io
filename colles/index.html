@@ -161,6 +161,136 @@ function deplierReplier(identifiant) {
 
 <div class="panel list-group" id="tableColles">
 
+  <div class="list-group-item">Semaine 13
+    <div class="btn-group btn-group-sm pull-right">
+      <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
+      <a href="/collesPdf/semaine13.pdf" class="btn btn-primary">Fichier Pdf</a>
+    </div>
+  </div>
+  <div class="aCollapser list-group-item">
+      
+<h1 id="définitions">Définitions</h1>
+<dl>
+<dt>Équation des couples propres</dt>
+<dd><p>Le couple <span class="math inline">\((\lambda, {\vec{X}})\)</span> est <span><strong>propre</strong></span> pour <span class="math inline">\(A \in {\mathcal M}_{n}({\mathbb{R}})\)</span> si : <span class="math display">\[\begin{aligned}
+      A {\vec{X}} = \lambda {\vec{X}}  &amp; &amp; 
+      \text{avec }
+      {\vec{X}} \neq {\vec{0}}
+    \end{aligned}\]</span></p>
+</dd>
+<dt>Vocabulaire</dt>
+<dd><p>dans l’équation ci-dessus, on dit que :</p>
+<ul>
+<li><p><span class="math inline">\(\lambda\)</span> est une <span><strong>valeur propre</strong></span> de <span class="math inline">\(A\)</span>.</p></li>
+<li><p><span class="math inline">\({\vec{X}}\)</span> est un <span><strong>vecteur propre</strong></span> de <span class="math inline">\(A\)</span>, associé à la valeur propre <span class="math inline">\(\lambda\)</span>.</p></li>
+</ul>
+</dd>
+<dt>Spectre d’une matrice carrée <span class="math inline">\(A\)</span> :</dt>
+<dd><p>l’ensemble, noté <span class="math inline">\(\operatorname{Sp}(A)\)</span>, des valeurs propres de <span class="math inline">\(A\)</span></p>
+</dd>
+</dl>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="center"><span class="math inline">\(\lambda \in \operatorname{Sp}(A)\)</span></td>
+<td align="left"><span><span><em>(<span class="math inline">\(\Leftrightarrow \lambda \)</span> valeur propre de <span class="math inline">\(A\)</span>)</em></span></span></td>
+</tr>
+<tr class="even">
+<td align="left"><span><em>ssi</em> </span></td>
+<td align="center"><span class="math inline">\(\operatorname{Ker}(A - \lambda I_n) \neq \{{\vec{0}} \}\)</span></td>
+<td align="left"><span><span><em>(<span class="math inline">\(E_\lambda (A)\)</span> sous-espace propre associé)</em></span></span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span><em>ssi</em> </span></td>
+<td align="center"><span class="math inline">\(A - \lambda I_n\)</span> n’est <span><strong>pas</strong></span> inversible</td>
+<td align="left"><span><span><em>(<span class="math inline">\(\Leftrightarrow A - \lambda I_n\)</span> a <span>du noyau </span>)</em></span></span></td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>Vérifier si <span class="math inline">\(\lambda \in \operatorname{Sp}(A)\)</span> <span><span><em>(<span class="math inline">\(\lambda\)</span> donnée)</em></span></span> :</dt>
+<dd><p>pivot de Gauss <span><span><em>(résol de <span class="math inline">\(A {\vec{X}} = \lambda {\vec{X}} \Leftrightarrow (A-\lambda I_n) \cdot {\vec{X}} = {\vec{0}}\)</span>)</em></span></span></p>
+</dd>
+<dt>Sous-espace propre</dt>
+<dd><p>associé à une valeur propre <span class="math inline">\(\lambda\)</span>. C’est : <span class="math inline">\(
+          E_{\lambda}(A) = \operatorname{Ker}(A - \lambda I_n)
+          \)</span></p>
+</dd>
+</dl>
+<p><span class="math inline">\(\longrightarrow\)</span> Comment réduire le champ d’étude à un petit nombre de <span class="math inline">\(\lambda\)</span> ?</p>
+<h1 id="approche-directe-seulement-dans-quelques-cas">Approche directe <span class="nodecor"><span><span><em>(seulement dans quelques cas)</em></span></span></span></h1>
+<h4 id="matrice-2-times-2">Matrice <span class="math inline">\(2 \times 2\)</span></h4>
+<p>La matrice <span class="math inline">\(
+A - \lambda I_2 = 
+\begin{bmatrix}
+  a - \lambda &amp; c           \\ 
+  b             &amp; d - \lambda   \\ 
+\end{bmatrix}
+\)</span> a <span>du noyau </span></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span><em>ssi</em> </span>ses 2 vecteurs colonnes sont colinéaires</td>
+</tr>
+<tr class="even">
+<td align="left"><span><em>ssi</em> </span><span><span><em>(règle de trois)</em></span></span> <span class="math inline">\((a - \lambda) (d - \lambda ) = bc\)</span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="matrice-triangulaire">Matrice triangulaire </h4>
+<dl>
+<dt>Critère d’inversibilité des matrices triangulaires</dt>
+<dd><p> <br />
+<span class="math inline">\(T\)</span> inversible <span><em>ssi</em> </span>tous ses coefficients diagonaux sont <span class="math inline">\(\neq 0\)</span>.</p>
+</dd>
+<dt>Valeurs propres d’une matrice triangulaire</dt>
+<dd><p><span><span><em>(Elles sont <span>déjà </span> sur sa diagonale)</em></span></span></p>
+<ul>
+<li><p>Les <span><strong>valeurs propres</strong></span> d’une matrice triangulaire <span><strong>sont</strong></span> ses coefficients diagonaux.</p></li>
+<li><p>Le <span><strong>spectre</strong></span> d’une matrice triangulaire est <span><strong>l’ensemble de</strong></span> ses coefficients diagonaux</p></li>
+</ul>
+</dd>
+</dl>
+<h4 id="pivot-de-gauss-à-paramètres-approche-déconseillée-en-général">Pivot de Gauss à paramètres <span><span><em>(Approche déconseillée en général !)</em></span></span></h4>
+<p>On écrit <span class="math inline">\(\lambda \in \operatorname{Sp}(A) \Leftrightarrow (A - \lambda I_n)\)</span> pas inversible <span><span><em>(puis pivot de Gauss avec discussion selon <span class="math inline">\(\lambda\)</span>)</em></span></span></p>
+<p><span>2</span> Pour <span class="math inline">\(
+        A = 
+        \begin{bmatrix}
+          0 &amp; 0 &amp; -a_0 \\ 
+          1 &amp; 0 &amp; -a_1 \\ 
+          0 &amp; 1 &amp; -a_2 \\ 
+        \end{bmatrix}
+        \)</span> <span><span><em>(<span class="math inline">\(A\)</span> : matrice compagnon)</em></span></span></p>
+<p>Les <span><strong>valeurs propres</strong></span> de <span class="math inline">\(A\)</span> sont les <span><strong>racines du polynôme</strong></span> <span class="math inline">\(R (x) = x^3 + a_2 x^2 + a_1 x + a_0\)</span>.</p>
+<h1 id="avec-un-polynôme-annulateur-méthode-plus-générale">Avec un polynôme annulateur <span class="nodecor"><span><span><em>(méthode plus générale)</em></span></span></span></h1>
+<dl>
+<dt>Définition</dt>
+<dd><p>Un polynôme <span class="math inline">\(P\)</span> est un polynôme annulateur de <span class="math inline">\(A\)</span> si <span class="math inline">\(P (A) = 0_{n}\)</span>.</p>
+</dd>
+<dt>Recherche d’un polynôme annulateur</dt>
+<dd><p>par calcul des premières puissances de <span class="math inline">\(A\)</span>.</p>
+</dd>
+<dt>Polynôme annulateur et calcul d’inverse</dt>
+<dd>
+</dd>
+<dt>Condition nécessaire de valeur propres</dt>
+<dd><p><span><span><em>(<span><strong>Si</strong></span> <span class="math inline">\(\lambda\)</span> est une <em>vp</em> de <span class="math inline">\(A\)</span>, <span><strong>alors</strong></span> <span class="math inline">\(P (\lambda) = 0\)</span>.)</em></span></span><br />
+<span><span><em>(En testant toutes les racines <span class="math inline">\(\lambda\)</span> de <span class="math inline">\(P\)</span>, on est sûr de ne manquer aucune <em>vp</em> de <span class="math inline">\(A\)</span>.)</em></span></span></p>
+</dd>
+</dl>
+<h1 id="questions-de-cours">Questions de cours</h1>
+<ol>
+<li><p>Définition d’une matrice triangulaire supérieure. Le spectre d’une matrice triangulaire.</p></li>
+<li><p>Le sous-espace propre associé à une valeur propre <span class="math inline">\(\lambda\)</span>. Lien avec l’équation <span class="math inline">\(A {\vec{X}} = \lambda {\vec{X}}\)</span>.</p></li>
+<li><p>Inverser une matrice grâce à un polynôme annulateur.</p></li>
+<li><p>Valeurs propres et polynôme annulateur.</p></li>
+<li><p>Plan d’étude d’une suite linéaire récurrente à deux termes.</p></li>
+</ol>
+
+
+  </div>
+  
   <div class="list-group-item">Semaine 12
     <div class="btn-group btn-group-sm pull-right">
       <a data-toggle="collapse" data-parent="tableColles" class="btn btn-default boutonDeplieur">Déplier/Replier</a>
