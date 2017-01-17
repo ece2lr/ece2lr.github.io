@@ -154,26 +154,76 @@ function deplierReplier(identifiant) {
 
 
     <div class="container">
+
+
+
+
+
+
 <div class="page-header">
-<h1>
-Tp de Scilab
-</h1>
+  <h1>Diagonalisation et chaînes de Markov</h1>
+</div>
+<script>
+$(document).ready(function() {
+  $("#toc").append('<h2 class="titreToc">Table des matières</h2>') ; 
+  $("#toc").append('<div class="list-group table-of-contents">') ; 
+  $("h2").each(function(i) {
+    var $current = $(this);
+    if (!$current.hasClass("titreToc"))
+    {
+    $current.attr("id", "title" + i);
+
+    $('#toc').append('<a class="list-group-item" id="link' + i + '" href="#title' + i + '" title="' + $current.attr('tagName') + '">' + $current.text() + '</a>');
+    $current[0].innerHTML = $current[0].innerHTML + '<div class="btn-group btn-group-sm pull-right">\n   <a href="#" class="btn btn-primary">Remonter</a>\n </div>' ; 
+    }
+  });
+
+  $("#toc").append('</div>'); 
+});
+</script>
+
+<div class="row">
+  <div class="col-lg-6 col-md-8 col-sm-12">
+    <div id="toc"></div>
+  </div>
 </div>
 
+<h2 id="les-fichiers--tlcharger">Les fichiers à télécharger</h2>
+
 <ul>
-  <li><a href="/scilabTP/tp1/">Remise en route</a> <em>le  05 Sep 2016</em> <strong>avec corrigé</strong></li>
-  <li><a href="/scilabTP/tp2/">Statistiques univariées</a> <em>le  13 Sep 2016</em> <strong>avec corrigé</strong></li>
-  <li><a href="/scilabTP/tp3/">Simulations de lois discrètes</a> <em>le  27 Sep 2016</em></li>
-  <li><a href="/scilabTP/tp4/">Marches de Bernoulli</a> <em>le  10 Oct 2016</em></li>
-  <li><a href="/scilabTP/tp5/">Chaînes de Markov</a> <em>le  15 Nov 2016</em></li>
-  <li><a href="/scilabTP/tp6/">Divers (intégrales, indépendance de <em>v.a.</em>)</a> <em>le  29 Nov 2016</em></li>
-  <li><a href="/scilabTP/tp7/">Couples de variables et la régression linéaire</a> <em>le  13 Dec 2016</em></li>
-  <li><a href="/scilabTP/tp8/">Diagonalisation et chaînes de Markov</a> <em>le  17 Jan 2017</em></li>
+  <li>
+    <p><a href="tp8.pdf">l’énoncé du tp</a></p>
+  </li>
+  <li>
+    <p><a href="circulante.sci" download="circulante.sci">le fichier <code>circulante.sci</code></a></p>
+  </li>
 </ul>
 
-<h2 id="gnralits-sur-scilab">Généralités sur Scilab</h2>
+<h3 id="circulantesci">circulante.sci</h3>
 
-<p><a href="/scilabRef">Quelques fiches</a></p>
+<div id="snippetcirculantesci">
+  <span class="aremplir"></span>
+  
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippetcirculantesci')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  
+
+<figure class="highlight"><pre><code class="language-scilab" data-lang="scilab"><span class="k">function</span><span class="w"> </span>C <span class="p">=</span><span class="w"> </span><span class="nf">circulante</span><span class="p">(</span>n<span class="p">)</span><span class="w"> </span><span class="c1">// retourne la matrice circulante de format n</span>
+  <span class="n">x</span> <span class="p">=</span> <span class="nb">poly</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;x&quot;</span><span class="p">)</span>  <span class="c1">// inconnue du polynôme</span>
+  <span class="n">p</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">x</span>^<span class="n">n</span>      <span class="c1">// polynome caractérixtique</span>
+  <span class="n">C</span> <span class="p">=</span> <span class="nb">companion</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="c1">// résultat retourné</span>
+<span class="k">endfunction</span>
+<span class="c1">//C = circulante(4) // exemple d&#39;utilisation</span>
+<span class="c1">//inverse = inv(C) // matrice circulante dans l&#39;autre sens</span></code></pre></figure>
+ 
+</div>
+
+
  
     </div>
   </body>
