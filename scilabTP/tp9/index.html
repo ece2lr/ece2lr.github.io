@@ -154,49 +154,46 @@ function deplierReplier(identifiant) {
 
 
     <div class="container">
-## Fiches de références sur Scilab
 
-<div class="panel list-group" id="tableScilabRef">
-  
-    
-    <a href="#" class="list-group-item" href="/scilabRef/arbGraph">Arbgraph</a>
-  
-    
-    <a href="#" class="list-group-item" href="/scilabRef/animation">Animation</a>
-  
-    
-    <a href="#" class="list-group-item" href="/scilabRef/ergonomie">Ergonomie</a>
-  
+
+
+
+
+
+<div class="page-header">
+  <h1>Simulation de lois</h1>
+</div>
+<script>
+$(document).ready(function() {
+  $("#toc").append('<h2 class="titreToc">Table des matières</h2>') ; 
+  $("#toc").append('<div class="list-group table-of-contents">') ; 
+  $("h2").each(function(i) {
+    var $current = $(this);
+    if (!$current.hasClass("titreToc"))
+    {
+    $current.attr("id", "title" + i);
+
+    $('#toc').append('<a class="list-group-item" id="link' + i + '" href="#title' + i + '" title="' + $current.attr('tagName') + '">' + $current.text() + '</a>');
+    $current[0].innerHTML = $current[0].innerHTML + '<div class="btn-group btn-group-sm pull-right">\n   <a href="#" class="btn btn-primary">Remonter</a>\n </div>' ; 
+    }
+  });
+
+  $("#toc").append('</div>'); 
+});
+</script>
+
+<div class="row">
+  <div class="col-lg-6 col-md-8 col-sm-12">
+    <div id="toc"></div>
+  </div>
 </div>
 
-## Travaux pratiques de Scilab
+<h2 id="les-fichiers--tlcharger">Les fichiers à télécharger</h2>
 
-<div class="panel list-group" id="tableScilabTP">
-  
-    <div class="list-group-item" >Tp1</div>
-  
-    <div class="list-group-item" >Tp2</div>
-  
-    <div class="list-group-item" >Tp3</div>
-  
-    <div class="list-group-item" >Tp4</div>
-  
-    <div class="list-group-item" >Tp5</div>
-  
-    <div class="list-group-item" >Tp6</div>
-  
-    <div class="list-group-item" >Tp7</div>
-  
-    <div class="list-group-item" >Tp8</div>
-  
-    <div class="list-group-item" >Tp9</div>
-  
-</div>
+<ul>
+  <li><a href="tp9.pdf">l’énoncé du tp</a></li>
+</ul>
 
-
-<div class="panel list-group" id="tableScilab">
-  
-</div>
 
  
     </div>
