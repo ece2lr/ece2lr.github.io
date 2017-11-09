@@ -1,0 +1,64 @@
+---
+titre: Ergonomie et *workflow* sous Scilab
+date: 2016-09-17
+---
+
+{% include toc.html %}
+
+## Raccourcis clavier usuels
+
+Je conseille à tout le monde de consulter [ce tableau très utile](https://fr.wikipedia.org/wiki/Tableau_de_raccourcis_clavier)
+
+- Notamment la vedette : `Ctrl+Tab` et `Shift+Ctrl+Tab` pour passer à la fenêtre suivante/précédente.
+- et son attaché de presse `Alt+F4` pour fermer une fenêtre.
+
+## Raccourcies clavier pour éditeurs de texte 
+
+Les raccourcis suivants fonctionnent pour la plupart des éditeurs de texte (sauv vim !)
+
+- `Ctrl+Z` pour annuler la dernière action et `Ctrl+Y` pour dés-annuler (avec vim : `u` et `Ctrl-R`)
+- `Ctrl+S` pour sauvegarder le fichier courant. (avec vim : `:w<CR>`)
+- `Ctrl+Droite` et `Ctrl+Gauche` pour sauter au début du mot suivant/précédent (avec vim : `w` et `b` en mode normal)
+- `Orig.` et `Fin` pour sauter au début/à la fin de ligne en cours (avec vim : `0` ou `^` et `$` en mode normal)
+- Maintenir `Shift` pour sélectionner du texte au clavier. Compatible avec les mouvements du curseur ci-dessus (avec vim : `v` en mode normal)
+- `Ctrl+V` pour **copier** le texte sélectionné (avec vim : `y`)
+- `Ctrl+X` pour **couper** le texte sélectionné (avec vim : `x`)
+- `Ctrl+C` pour **coller** le texte dans le presse-papier (avec vim : `p`)
+
+## Raccourcis clavier pour Scinotes
+
+Le petit *ide* `scinotes` inclus dans Scilab propose les deux *features* suivants : 
+
+- coloration syntaxique
+- indentation automatique
+
+En plus des raccourcis-clavier usuels ci-dessus, sont très utiles :
+
+- `F5` pour sauvegarder et lancer le script actuel en mode silencieux.  
+  Équivaut à la commande : `exec("/mon/dossier/actuel/monScript.sce",-1)`
+- `Ctrl+D` pour commenter les lignes sélectionnées.   
+  Équivaut à insérer `//` au début de chaque ligne de la sélection
+- `Shift+Ctrl+D` pour décommenter les lignes sélectionnées.  
+  Équivaut à supprimer `//` au début de chaque ligne de la sélection
+- `Ctrl+I` pour corriger automatiquement l'indentation des lignes sélectionnées
+  (avec vim : `=` en mode sélection)
+
+## Autocomplétion et historique dans la console
+
+- `Haut` et `Bas` pour parcourir les commandes tapées précédemment.  
+  **Attention :**
+  La recherche se fait en fonction du texte à gauche de la position actuelle du curseur !
+- `Tab` pour autocompléter les noms de commandes ou de variables existantes (`Shift+Tab` pour l'autre sens)
+- `Ctrl+Droite` et `Ctrl+Gauche` pour sauter au début du mot suivant/précédent (avec vim : `w` et `b` en mode normal)
+- `Orig.` et `Fin` pour sauter au début/à la fin de ligne en cours (avec vim : `0` ou `^` et `$` en mode normal)
+- Maintenir `Shift` pour sélectionner du texte au clavier. Compatible avec les mouvements du curseur ci-dessus (avec vim : `v` en mode normal)
+- `Ctrl+V` pour **copier** le texte sélectionné (avec vim : `y`)
+- `Ctrl+X` pour **couper** le texte sélectionné (avec vim : `x`)
+- `Ctrl+C` pour **coller** le texte dans le presse-papier (avec vim : `p`)
+
+
+## *"Window tiling"* dans l'interface graphique de Scilab
+
+
+
+

@@ -1,0 +1,15 @@
+current directory: /home/ced/Dropbox/website/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.11/ext
+/usr/bin/ruby -r ./siteconf20170129-18474-1f7caru.rb extconf.rb 
+creating Makefile
+
+current directory: /home/ced/Dropbox/website/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.11/ext
+make "DESTDIR=" clean
+
+current directory: /home/ced/Dropbox/website/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.11/ext
+make "DESTDIR="
+compiling posix-spawn.c
+linking shared-object posix_spawn_ext.so
+
+current directory: /home/ced/Dropbox/website/vendor/bundle/ruby/2.3.0/gems/posix-spawn-0.3.11/ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 posix_spawn_ext.so ./.gem.20170129-18474-19axto6

@@ -1,0 +1,20 @@
+{% assign nom = include.codeurl %}
+{% assign identif = nom | remove: "."%}
+{% assign codeurl = dossierIncludes | append: "/" | append: include.codeurl %}
+### {{ nom }}
+
+<div id="snippet{{ identif }}">
+  <span class="aremplir"></span>
+  {% if plier %}{% assign plier = false %}
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippet{{ identif }}')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  {% endif %}
+{% highlight scilab %}
+{% include_relative {{ codeurl }} %}
+{% endhighlight %} 
+</div>

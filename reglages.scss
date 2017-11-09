@@ -1,0 +1,36 @@
+---
+---
+
+// Éviter les sauts de ligne pour les {description}
+dt { 
+  float: left; 
+  clear: left; 
+  padding: 0 1em 0 0 ;
+  vertical-align: baseline ; 
+}
+//dt:after { content: ":"; } 
+dd { 
+  margin-left: 40px ; 
+  vertical-align: bottom ; 
+}
+p {
+  vertical-align: bottom ; 
+}
+
+code, kbd, pre, samp {
+  font-family: 'Source Code Pro', monospace;
+}
+
+
+// réglage standard de Bootstrap, overwritten par certains thèmes
+.list-group-item {
+  padding: 10px 15px; 
+}
+
+//
+// IMPORTS
+//
+
+@import "fix";
+@import "variables";
+@import "highlights";

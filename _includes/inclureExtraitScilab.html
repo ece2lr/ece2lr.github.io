@@ -1,0 +1,53 @@
+{% include ici.html %}
+
+{% assign codeurl = dossierIncludes | append: "/" | append: include.codeurl %}
+{% assign mot = include.mot %} 
+
+{% capture abcde %}
+  {% include_relative {{ codeurl }} %}
+{% endcapture %}
+
+{% assign lignes = abcde | newline_to_br | strip_newlines | split: '<br />' %}
+
+{% assign numLigneMatch = 10000 %}
+{% assign baliseDebut = "citer:" | append: mot %}
+{% assign baliseFin = "finCiter" %}
+
+{% comment %} 
+
+{% for ligne in lignes %}
+  {{ ligne }}
+{% endfor %} 
+{% endcomment %} 
+
+<div id="snippet{{ mot }}">
+  <span class="aremplir"></span>
+  {% if plier %}{% assign plier = false %}
+<div class="btn-group btn-group-justified boutonPartialCollapse" role="group" aria-label="...">
+  <div class="btn-group btn-group-sm" role="group">
+  <button class="btn btn-default" onclick="deplierReplier('snippet{{ mot }}')">
+    Déplier/Replier le snippet
+  </button>
+  </div>
+</div>
+  {% endif %}
+{% highlight scilab %}{% 
+  for ligne in lignes %}{% 
+    assign ligneTest = ligne | remove: "/" | strip %}{% 
+    unless baliseDebut == ligneTest %}{% 
+      continue %}{% 
+    else %}{% 
+      assign numLigneMatch = forloop.index %}{% 
+      break %}{% 
+    endunless %}{% 
+  endfor %}{% 
+  for ligne in lignes offset:numLigneMatch %}{% 
+    assign ligneTest = ligne | remove: "/" | strip %}{% 
+    unless baliseFin == ligneTest %}
+{{ ligne }}{% 
+    else %}{% 
+      break %}{% 
+    endunless %}{% 
+    endfor %}{% 
+endhighlight %} 
+</div>

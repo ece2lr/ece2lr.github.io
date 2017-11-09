@@ -1,0 +1,35 @@
+- court: Utile
+  url: /utile
+  long: Documents et liens utiles
+  sous: false
+- long: Mathématiques
+  court: Maths
+  sous: 
+    - long: Travaux dirigés
+      court: Td
+      url: /td
+    - court: Cours
+      long: Extraits du cours
+      url: /cours
+    - court: Devoirs
+      long: Les devoirs de maths (Dl, Ds)
+      url: /devoirs
+- court: Colles
+  long: Colles de mathématiques
+  url: /colles
+  sous: 
+    - court: Année courante
+      long: Colles année courante
+      url: /colles
+    - court: Année 2015-2016
+      long: Colles année 2015-2016
+      url: /colles2015
+- court: Scilab
+  long: Modélisation en Scilab
+  sous: 
+    - court: TP
+      long: TP de Scilab
+      url: /scilabTP
+    - court: Ref
+      url: /scilabRef
+      long: Fiches de référence Scilab

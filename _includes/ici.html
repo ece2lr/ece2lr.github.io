@@ -1,0 +1,5 @@
+{% assign ici = page.path %}
+{% assign liste = ici | split: "/" %}
+{% assign fichierAppelant = liste.last %}
+{% assign liste = fichierAppelant | split: "." %}
+{% assign dossierIncludes = liste.first %}

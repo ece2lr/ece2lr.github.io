@@ -1,0 +1,24 @@
+<script>
+$( document ).ready(
+  function ()
+  {
+    $divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
+    $prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
+    $prePartialCollapse.css("height","200px") ;
+    $prePartialCollapse.addClass("plie") ; 
+  }
+) ; 
+function deplierReplier(identifiant) {
+  $lePre = $("#"+identifiant+" > figure > pre ") ; 
+  if ($lePre.hasClass("plie"))
+  {
+    $lePre.css("height","auto") ;
+    $lePre.removeClass("plie") ; 
+  }
+  else
+  {
+    $lePre.css("height","200px") ;
+    $lePre.addClass("plie") ; 
+  }
+}
+</script>

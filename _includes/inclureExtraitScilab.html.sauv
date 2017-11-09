@@ -1,0 +1,45 @@
+
+{% assign codeurl = include.codeurl %}
+{% assign mot = include.mot %} 
+
+
+{% capture abcde %}
+  {% include_relative {{ codeurl }} %}
+{% endcapture %}
+
+{% assign lignes = abcde | newline_to_br | strip_newlines | split: '<br />' %}
+
+
+
+{% assign numLigneMatch = 10000 %}
+{% assign baliseDebut = "deb" | append: mot %}
+{% assign baliseFin = "fin" | append: mot %}
+
+{% comment %} 
+
+{% for ligne in lignes %}
+  {{ ligne }}
+{% endfor %} 
+{% endcomment %} 
+
+
+{% highlight scilab %}{% 
+  for ligne in lignes %}{% 
+    assign ligneTest = ligne | remove: "/" | strip %}{% 
+    unless baliseDebut == ligneTest %}{% 
+      continue %}{% 
+    else %}{% 
+      assign numLigneMatch = forloop.index %}{% 
+      break %}{% 
+    endunless %}{% 
+  endfor %}{% 
+  for ligne in lignes offset:numLigneMatch %}{% 
+    assign ligneTest = ligne | remove: "/" | strip %}{% 
+    unless baliseFin == ligneTest %}
+{{ ligne }}{% 
+    else %}{% 
+      break %}{% 
+    endunless %}{% 
+    endfor %}{% 
+endhighlight %} 
+

@@ -1,0 +1,6 @@
+---
+layout: default
+---
+
+{% include ababa.html codeurl="commandes.sce" mot="AttributsFigure" %}
+

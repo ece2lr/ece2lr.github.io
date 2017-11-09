@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{% assign plan = site.data.sitemap %}
+
+
+<nav class="navbar">
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#maNavbar">
+          <span class="sr-only">Ouvrir menu</span> <!-- Pour accessibilités screen-readers -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+        </button>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> {{ site.nom }}</a>
+      </div>
+      <div class="container">
+        <ul class="nav navbar-nav">
+          {% for item in plan %}
+            {% assign sous = item["sous"]%}
+            {% if sous %}
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+                  {{ item["court"] }}
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  {% for sousItem in sous %}
+                    {% assign sousTitre = sousItem["court"]%}
+                    {% assign url = sousItem["url"]%}
+                    <li>
+                      <a href="{{ url }}">
+                        {{ sousTitre }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li>{% assign url = item["url"]%}
+                <a href="{{ url }}">
+                  {{ item["court"] }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+ parent     children
+  <--          -->
+
+Figure
+├─────────── Axes_A
+│            ├────────── Compound_1
+│            │           ├───────────── Polyline_a
+│            │           └───────────── Polyline_b
+│            └────────── Compound_2
+│                        ├───────────── Polyline_c
+│                        └───────────── Polyline_d
+└─────────── Axes_B
+             ├────────── Compound_3
+             │           ├───────────── Polyline_e
+             │           └───────────── Polyline_f
+             └────────── Compound_4
+                         ├───────────── Polyline_g
+                         └───────────── Polyline_h
+
+  <--          -->
+ parent     children

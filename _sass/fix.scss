@@ -1,0 +1,73 @@
+body {
+  padding-top: 0px;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 20px;
+}
+
+h2:before { /* pour les liens internes avec un href="#tag" ne saute pas trop https://css-tricks.com/hash-tag-links-padding/ */
+  display: block; 
+  content: " "; 
+  margin-top: -80px; 
+  height: 80px; 
+  visibility: hidden; 
+}
+
+.lienInterne {
+  /* http://nicolasgallagher.com/jump-links-and-viewport-positioning/ */
+   position: relative;
+   border-top: 80px solid transparent;
+   margin: -30px 0 0;
+   -webkit-background-clip: padding-box;
+   -moz-background-clip: padding;
+   background-clip: padding-box;
+}
+
+.lienInterne:before {
+   content: "";
+   position: absolute;
+   top: -2px;
+   left: 0;
+   right: 0;
+   border-top: 2px solid #ccc;
+}
+
+div .no-padding {
+  padding:0;
+}
+
+
+.panel-heading [role="tab"] {
+}
+
+
+.panel .panel-heading, .panel .panel-title{
+  font-size: 30px;
+  text-transform: initial;
+}
+
+/*
+*/
+
+button .full-width{
+  width:100%;
+}
+
+
+.list-group-item{
+    line-height:24px;
+}
+
+/*
+.list-group-item > .btn-group > .btn {
+  padding: 8px 100px
+}
+*/
+
+.panel-heading {
+    overflow: hidden;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}

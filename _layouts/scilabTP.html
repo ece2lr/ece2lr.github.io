@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% comment %}
+{% include ici.html %}
+{% endcomment %}
+<div class="page-header">
+  <h1>{% if page.numeroTP %}TP Scilab {{ page.numeroTP }}. {% endif %}{{ page.titre }}</h1>
+</div>
+{{ content }}

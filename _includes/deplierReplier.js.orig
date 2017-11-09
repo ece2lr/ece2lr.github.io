@@ -1,0 +1,26 @@
+function deplier($unDiv){
+  $unDiv.load($unDiv.attr("lien")+" #aInclure", 
+      function(){
+        $unDiv.addClass("ouvert") ; 
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub,$unDiv.get(0)]);
+      }) ; 
+}
+function replier($unDiv){
+  $unDiv.text("")
+    $unDiv.removeClass("ouvert") ; 
+}
+$(document).ready( function() {
+  $("#load_home").on("click", function() {
+    $monPanel = $("#content") ; 
+    if ($monPanel.hasClass("ouvert"))
+    {
+      replier($monPanel) ; 
+    }
+    else
+    {
+      deplier($monPanel) ; 
+    } 
+    ;
+  }) ;
+});
+

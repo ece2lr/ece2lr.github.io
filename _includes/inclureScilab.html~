@@ -1,0 +1,5 @@
+{% assign codeurl = include.codeurl %}
+{% highlight scilab %}
+{% include_relative {{ codeurl }} %}
+{% endhighlight %}
+<a href="{{codeurl}}">link to code</a>

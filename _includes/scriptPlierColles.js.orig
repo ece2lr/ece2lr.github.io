@@ -1,0 +1,33 @@
+// $('#tableColles > .aCollapser ').css('color', 'blue' ) ; 
+//var panelsPliants = $('#tableColles > span > .aCollapser').hide() ; 
+var panelsPliants = $('#tableColles > .aCollapser') ;
+var boutonsDeplieurs = $('#tableColles > .list-group-item > .btn-group > .boutonDeplieur ') ; 
+
+panelsPliants.hide() ; 
+//panelsPliants.addClass('collapse') ; 
+
+panelsPliants.first().show() ; 
+boutonsDeplieurs.first().text("Replier") ; 
+//panelsPliants.first().removeClass('collapse') ; 
+
+//$('#tableColles > span > .list-group-item > .btn-group > .boutonDeplieur ').hide() ; 
+$('#tableColles > .list-group-item > .btn-group > .boutonDeplieur ').click(
+    function() {
+      var $this = $(this) ; 
+      $lePanel = $this.parent().parent().next() ; 
+
+      if ( $lePanel.is(":visible") )
+      {
+        $lePanel.slideUp() ; 
+        $this.text("Déplier") ; 
+      } else {
+        boutonsDeplieurs.text("Déplier") ; 
+        $this.text("Replier") ; 
+        //panelsPliants.addClass('collapse') ; 
+
+        panelsPliants.slideUp() ; 
+        $lePanel.slideDown() ; 
+        //$this.parent().parent().next().removeClass('collapse');
+      }
+    }
+    )

@@ -1,179 +1,72 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <title>Ece 2 La Rochelle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/sandstone/bootstrap.min.css">
+---
+layout: page
+title: Documents et liens utiles
+permalink: /utile/
+tableau:
+  - title: Programmes
+    tag: programmes
+---
 
-    <!--- Fonts ------------------------------------------------------------------------------> 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
-    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
-
-    <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-    });
-    </script>
-    <script type="text/javascript" async 
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-    <link rel="stylesheet" href="/reglages.css">
-
-  </head>
-
-  <body style= " min-height: 100% ">
-<script>
-$( document ).ready(
-  function ()
-  {
-    $divPartialCollapse = $(".boutonPartialCollapse").parent() ; 
-    $prePartialCollapse = $divPartialCollapse.children("figure").children("pre")
-    $prePartialCollapse.css("height","200px") ;
-    $prePartialCollapse.addClass("plie") ; 
-  }
-) ; 
-function deplierReplier(identifiant) {
-  $lePre = $("#"+identifiant+" > figure > pre ") ; 
-  if ($lePre.hasClass("plie"))
-  {
-    $lePre.css("height","auto") ;
-    $lePre.removeClass("plie") ; 
-  }
-  else
-  {
-    $lePre.css("height","200px") ;
-    $lePre.addClass("plie") ; 
-  }
-}
-</script>
-
-
-
-
-
-
-
-<nav class="navbar">
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#maNavbar">
-          <span class="sr-only">Ouvrir menu</span> <!-- Pour accessibilités screen-readers -->
-          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
-          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
-          <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
-        </button>
-        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> Ece 2 L-R</a>
-      </div>
-      <div class="container">
-        <ul class="nav navbar-nav">
-          <li><a href="/utile">
-              <span class = "visible-sm">
-                Utile
-              </span>
-              <span class = "hidden-sm">
-                Documents et liens utiles
-              </span>
-            </a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
-              <span class = "visible-sm">
-                Maths
-                <span class="caret"></span>
-              </span>
-              <span class = "hidden-sm">
-                Mathématiques
-                <span class="caret"></span>
-              </span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="/td">
-                  <span class = "visible-sm">
-                    Td
-                  </span>
-                  <span class = "hidden-sm">
-                    Travaux dirigés
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="/cours">
-                  <span class = "visible-sm">
-                    Cours
-                  </span>
-                  <span class = "hidden-sm">
-                    Extraits du cours
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="/devoirs">
-                  <span class = "visible-sm">
-                    Devoirs
-                  </span>
-                  <span class = "hidden-sm">
-                    Les devoirs de maths (Dl, Ds)
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="/colles">
-              <span class = "visible-sm">
-                Colles
-              </span>
-              <span class = "hidden-sm">
-                Colles de mathématiques
-              </span>
-            </a>
-          </li>
-          <li><a href="/scilabTP">
-              <span class = "visible-sm">
-                Scilab
-              </span>
-              <span class = "hidden-sm">
-                TP de Scilab
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-
-
-    <div class="container">
-<article class="page">
-
-  <h1>Documents et liens utiles</h1>
-
-  <div class="entry">
-    <div class="row">
+<div class="row">
   <div class="col-lg-3 col-md-3 col-sm-4">
     <div class="list-group table-of-contents">
-      
-      <a class="list-group-item" href="#programmes">
-        Programmes
+      {% for link in page.tableau %}
+      <a class="list-group-item" href="#{{link.tag}}">
+        {{link.title}}
       </a>
-      
+      {% endfor%}
     </div>
   </div>
 </div>
 
 
 
+{% comment %}
+   {{{
 
+   Pour l'année 2016-2017, le thème de deuxième année est **la parole**.
+   
+   <ul class="nav nav-tabs">
+     <li class=""><a aria-expanded="true" href="#progMath" data-toggle="tab">Maths</a></li>
+     <li class=""><a aria-expanded="false" href="#progEco" data-toggle="tab">Eco</a></li>
+     <li class=""><a aria-expanded="false" href="#progEsh" data-toggle="tab">Esh</a></li>
+     <li class=""><a aria-expanded="false" href="#progLve" data-toggle="tab">Lve</a></li>
+   </ul>
+   <div id="myTabContent" class="tab-content">
+     <div class="tab-pane fade active in" id="progMath">
+       <h3 id="mathmatiques-et-informatique">Mathématiques et informatique</h3>
+       <h4>Lycée</h4>
+       <ul>
+         <li><a href="./progPrem.pdf" title="fichier PDF">Programme Première</a></li>
+         <li><a href="./progTerm.pdf" title="fichier PDF">Programme Terminale</a></li>
+       </ul>
+       <h4>Cpge Ece</h4>
+       <ul>
+         <li><a href="./progMathEce1.pdf" title="fichier PDF">Programme Ece 1</a></li>
+         <li><a href="./progMathEce2.pdf" title="fichier PDF">Programme Ece 2</a></li>
+       </ul>
+     </div>
+     <div class="tab-pane fade" id="progEco">
+       <h3 id="economie-approfondie">Economie approfondie</h3>
+       <ul>
+         <li><a href="./progEcoApprofECE12.pdf" title="fichier PDF">Programme Ece 1 &amp; 2</a></li>
+       </ul>
+     </div>
+     <div class="tab-pane fade" id="progEsh">
+       <h3 id="conomie-sociologie-et-histoire-du-monde-contemporain-esh">Économie, sociologie et histoire du monde contemporain (ESH)</h3>
+       <ul>
+         <li><a href="./progEshEce12.pdf" title="fichier PDF">Programme Ece 1 &amp; 2</a></li>
+       </ul>
+     </div>
+     <div class="tab-pane fade" id="progLve">
+       <h3 id="langues-vivantes-trangres">Langues vivantes étrangères</h3>
+       <ul>
+         <li><a href="./progLveCpgeEco.pdf" title="fichier PDF">Objectifs de formation</a></li>
+       </ul>
+     </div>
+   </div>
+   }}} 
+{% endcomment %}
 
 <h2 id="programmes">Programmes officiels de nos classes</h2>
 <div class="row">
@@ -216,10 +109,3 @@ function deplierReplier(identifiant) {
 </div>
 
 
-
-  </div>
-</article>
- 
-    </div>
-  </body>
-</html>

@@ -1,0 +1,58 @@
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#maNavbar">
+        <span class="sr-only">Toggle navigation</span> <!-- Pour accessibilités screen-readers -->
+        <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+        <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+        <span class="icon-bar"></span> <!-- Bouton à droite -mini-menu -->
+      </button>
+      <a class="navbar-brand" href="/index"><span class="glyphicon glyphicon-home"></span>    Ece 2 L-R</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="maNavbar">
+      <ul class="nav navbar-nav">
+        {% for link in site.data.arborescence %}
+        <li {% if page.url == link.url %}class="active"{% endif %}>
+          <a href="{{link.url}}" title="{{link.title}}">
+            <span class = "visible-sm">
+              {{link.texteCourt}}
+            </span>
+            <span class = "hidden-sm">
+              {{link.texte}}
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+        <!-- Menu déroulant Maths -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" >
+            <span class = "visible-sm">Maths<span class="caret"></span></span>
+            <span class = "hidden-sm">Ressources de maths<span class="caret"></span> </span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            {% for link in site.data.menuMaths %}
+            <li {% if page.url == link.url %}class="current"{% endif %}>
+              <a href="{{link.url}}" title="{{link.title}}">
+                <span class = "visible-sm">
+                  {{link.texteCourt}}
+                </span>
+                <span class = "hidden-sm">
+                  {{link.texte}}
+                </span>
+                <li class="divider"></li>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <!-- Fin menu déroulant Maths -->
+      </ul>
+      {% comment %}
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+      </ul>
+      {% endcomment %}
+    </div>
+  </div>
+</div>

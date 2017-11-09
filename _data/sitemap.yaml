@@ -1,0 +1,14 @@
+- long: Travaux dirigés
+  court: Td
+  url: /td
+- court: Devoirs
+  long: Les devoirs de maths (Dl, Ds)
+  url: /devoirs
+- court: Colles
+  long: Colles de mathématiques
+  url: /colles
+  sous: false
+- court: Scilab
+  long: TP de Scilab
+  url: /scilabTP
+  sous: false
