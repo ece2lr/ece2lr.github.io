@@ -3,7 +3,7 @@ layout: default
 titre: Programmes de devoirs
 ---
 
-## Les programmes de devoirs : 
+## Les devoirs maison :
 
 {% assign listeDevoirs = site.data.devoirs %}
 <div class="panel list-group" id="tableDL">

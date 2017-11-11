@@ -10,9 +10,12 @@ titre: Programmes de colles
 {% for colle in listeColles reversed %}
   <div class="list-group-item" >{{ colle.titreColle }} <em>semaine du {{ colle.du }}</em>
     <div class="btn-group btn-group-sm pull-right">
-      <a href="{{ adressePdf }}" class="btn btn-default">Fichier Pdf</a>
-      <a href="{{ adressePdf }}" class="btn btn-primary">Fichier Pdf</a>
+      <a href="{{ colle.fichier }}" class="btn btn-primary">Fichier Pdf</a>
     </div>
   </div>{% 
   endfor %}
 </div>
+
+## Fiches de colle de Mme Blanchet
+
+[Cliquer ici](mmeBlanchet/)

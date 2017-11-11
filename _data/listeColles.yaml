@@ -1,24 +1,21 @@
 - titreColle: "Semaine 1 - Espaces vectoriels, applications linéaires"
   fichier: semaine01.pdf
-  du: 6 septembre
+  du: 11 septembre
 - titreColle: "Semaine 2 - Propriétés de familles de vecteurs"
   fichier: semaine02.pdf
-  du: 11 septembre
+  du: 18 septembre
 - titreColle: "Semaine 3 - Séries numériques"
   fichier: semaine03.pdf
-  du: 18 septembre
+  du: 25 septembre
 - titreColle: "Semaine 4 - Indépendance de variables aléatoires"
   fichier: semaine04.pdf
-  du: 25 septembre
+  du: 2 octobre
 - titreColle: "Semaine 5 - Situations markoviennes"
   fichier: semaine05.pdf
-  du: 2 octobre
+  du: 9 octobre
 - titreColle: "Semaine 6 - Représentations matricielles des endomorphismes"
   fichier: semaine06.pdf
-  du: 9 octobre
+  du: 16 octobre
 - titreColle: "Semaine 7 - La notion de dimension"
   fichier: semaine07.pdf
-  du: 16 octobre
-- titreColle: "Semaine 8 - Compléments sur l'intégration"
-  fichier: semaine08.pdf
-  du: 9 novembre
+  du: 13 novembre
