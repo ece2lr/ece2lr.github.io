@@ -18,7 +18,7 @@ titre: Programmes de colles
 
 ## Fiches de colle de Mme Blanchet
 
-- [IO 1 EV Appli linéaire.pdf](mmeBlanchet/IO 1 EV Appli linéaire.pdf)
-- [IO2 famille génératrice, libre, bases.pdf](mmeBlanchet/IO2 famille génératrice, libre, bases.pdf)
-- [IO4 couple de VAR.pdf](mmeBlanchet/IO4 couple de VAR.pdf)
-- [IO5 chaines de Markov.pdf](mmeBlanchet/IO5 chaines de Markov.pdf)
+{% assign listeMmeBlanchet = "IO 1 EV Appli linéaire.pdf; IO2 famille génératrice, libre, bases.pdf; IO3 suites séries.pdf; IO4 couple de VAR.pdf; IO5 chaines de Markov.pdf; IO6 Matrice d'endomorphisme.pdf; " | split: "; " %}
+{% for colle in listeMmeBlanchet %}
+  - [{{colle}}](mmeBlanchet/{{colle}}){%
+endfor%}
