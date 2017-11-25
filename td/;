@@ -1,3 +1,7 @@
+---
+layout: default
+titre: TD de maths
+listeTD:
 - titreTD: "Td1 - Espaces vectoriels, applications linéaires"
   fichier: td01.pdf
   du: 6 septembre
@@ -22,3 +26,17 @@
 - titreTD: "Td8 - Compléments sur l'intégration"
   fichier: td08.pdf
   du: 9 novembre
+---
+
+# {{ page.titre }}
+
+{% assign listeTD = page.listeTD %}
+<div class="panel list-group" id="tableTD">
+{% for td in listeTD %}
+  <div class="list-group-item" >{{ td.titreTD }} <em>le {{ td.du }}</em>
+    <div class="btn-group btn-group-sm pull-right">
+      <a href="{{ td.fichier }}" class="btn btn-primary">Énoncé (PDF)</a>
+    </div>
+  </div>{% 
+  endfor %}
+</div>
