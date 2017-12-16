@@ -26,9 +26,18 @@ listeColles:
 - titreColle: "Semaine 8 - Intégration"
   fichier: semaine08.pdf
   du: 20 novembre
-- titreColle: "Semaine 9 - Diagonalisation"
+- titreColle: "Semaine 9 - Pratique de la diagonalisation"
   fichier: semaine09.pdf
   du: 27 novembre
+- titreColle: "Semaine 10 - Applications de la diagonalisation"
+  fichier: semaine10.pdf
+  du: 4 décembre
+- titreColle: "Semaine 11 - Couples de variables aléatoires"
+  fichier: semaine11.pdf
+  du: 11 décembre
+- titreColle: "Semaine 12 - Dérivation - compléments sur les fonctions numériques"
+  fichier: semaine12.pdf
+  du: 18 décembre
 listeMmeBlanchet:
   - "IO 1 EV Appli linéaire.pdf"
   - "IO2 famille génératrice, libre, bases.pdf"
